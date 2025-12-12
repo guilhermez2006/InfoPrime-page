@@ -1,0 +1,76 @@
+header {
+  background-color: #ffffff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* sombra sutil */
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+#logoHeader {
+  height: 70px;
+  margin-right: 20%;
+  margin-left: 5%;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 50px;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}
+
+nav ul li a {
+  color: #055c76;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+nav ul li a:hover {
+  color: #034a5f;
+  transform: translateY(-1px); /* sobe 2px suavemente */
+}
+
+#Contato a {
+  display: inline-block; /* para o padding funcionar corretamente */
+  background-color: #055c76;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 40px;
+  font-weight: 700;
+  font-family: "Montserrat", "Poppins", sans-serif;
+  font-size: 15px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#Contato {
+  background-color: #055c76;
+  padding: 15px 20px;
+  border-radius: 40px;
+  color: white;
+  text-decoration: none;
+  outline: none;
+  font-weight: 700;
+  font-family: "Montserrat", "Poppins", sans-serif;
+  font-size: 15px;
+  margin-left: 10%;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#Contato:hover {
+  background-color: #034a5f; /* azul mais escuro ao passar o mouse */
+  cursor: pointer;
+}
