@@ -1,37 +1,59 @@
 <!DOCTYPE html>
 <html lang="PT-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>InfoPrime – Soluções e Tecnologia</title>
-    <link
-      rel="shortcut icon"
-      href="assets/img/logo infoprime padrao.png"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" href="/assets/css/style.css" />
-  </head>
-  <body>
-    <header>
-      <nav>
-        <img
-          src="assets/img/Logo_Site (3).png"
-          alt="LogoSite"
-          id="logoHeader"
-        />
 
-        <ul>
-          <li><a href="#Home">Home</a></li>
-          <li><a href="#NossoProposito">Nosso Propósito</a></li>
-          <li><a href="#Empresas">Empresas</a></li>
-          <li><a href="#Servicos">Serviços</a></li>
-        </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InfoPrime – Soluções e Tecnologia</title>
+  <link rel="shortcut icon" href="assets/img/logo infoprime padrao.png" type="image/x-icon" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+  <div id="tsparticles" style="position:fixed;inset:0;z-index:-1;"></div>
+  <script>
+    tsParticles.load("tsparticles", {
+      fullScreen: { enable: false },
+      particles: {
+        number: { value: 60 },
+        color: { value: "#00ffcc" },
+        links: { enable: true, color: "#00ffcc", distance: 140, opacity: 0.5 },
+        move: { speed: 0.8 }
+      },
+      detectRetina: true,
+      background: { color: "#071022" },
+      interactivity: { events: { onhover: { enable: true, mode: "repulse" } } }
+    });
+    // ajustar canvas para ocupar toda a viewport:
+    document.getElementById('tsparticles').style.cssText = 'position:fixed;inset:0;z-index:-1;';
+  </script>
 
-        <a href="#Contato" id="Contato">Entre em Contato Conosco</a>
-      </nav>
-    </header>
 
-    <main></main>
-    <footer></footer>
-  </body>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <img src="assets/img/Logo_Site (3).png" alt="LogoSite" id="logoHeader" />
+
+      <ul>
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#NossoProposito">Nosso Propósito</a></li>
+        <li><a href="#Empresas">Empresas</a></li>
+        <li><a href="#Servicos">Serviços</a></li>
+      </ul>
+
+      <a href="#Contato" id="Contato">Entre em Contato Conosco</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1 id="H1Principal">
+      <span style="color:#01244cec">Oferecemos serviços de TI para empresas</span><br>
+      <span style="color:#D6B407;">priorizando segurança,<br> suporte e qualidade.</span>
+    </h1>
+    <p id="pHeader">Possuímos conhecimento técnico <br> para cuidar da TI da sua empresa com segurança e eficiência.</p>
+    <img src="assets/img/FotoTI.svg" alt="FotoTI" id="FotoTI" />
+  </main>
+  <footer></footer>
+</body>
+
 </html>

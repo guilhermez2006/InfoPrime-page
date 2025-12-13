@@ -1,12 +1,13 @@
 header {
-  background-color: #ffffff;
+ 
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 1000;
   padding: 10px 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* sombra sutil */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* sombra sutil */
 }
 
 nav {
@@ -32,7 +33,8 @@ nav ul {
 }
 
 nav ul li a {
-  color: #055c76;
+  color: #01244C;
+  ;
   text-decoration: none;
   display: inline-block;
   transition: transform 0.25s ease, color 0.25s ease;
@@ -40,11 +42,13 @@ nav ul li a {
 
 nav ul li a:hover {
   color: #034a5f;
-  transform: translateY(-1px); /* sobe 2px suavemente */
+  transform: translateY(-1px);
+  /* sobe 2px suavemente */
 }
 
 #Contato a {
-  display: inline-block; /* para o padding funcionar corretamente */
+  display: inline-block;
+  /* para o padding funcionar corretamente */
   background-color: #055c76;
   color: white;
   padding: 15px 20px;
@@ -57,7 +61,8 @@ nav ul li a:hover {
 }
 
 #Contato {
-  background-color: #055c76;
+  background-color: #01244C;
+  ;
   padding: 15px 20px;
   border-radius: 40px;
   color: white;
@@ -71,6 +76,34 @@ nav ul li a:hover {
 }
 
 #Contato:hover {
-  background-color: #034a5f; /* azul mais escuro ao passar o mouse */
+  background-color: #01244cec;
+  /* azul mais escuro ao passar o mouse */
   cursor: pointer;
+}
+
+main {
+  margin-top: 10%;
+  /* ajuste conforme a altura real do header */
+
+}
+
+#H1Principal {
+  color: #01244C;
+  font-size: 50px;
+  margin-left: 7%;
+  margin-top: 13%;
+}
+
+#pHeader{
+  font-size: 22px;
+margin-left: 7%;
+color: #01244C;
+font-family: 'Open Sans', sans-serif;
+}
+
+#FotoTI{
+  position: absolute; /* Posição absoluta para controle */
+  right: 5%;
+  top: 150px;
+  width: 40%;
 }
