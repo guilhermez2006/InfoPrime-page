@@ -2,11 +2,12 @@ header {
  
   position: fixed;
   width: 100%;
+  height: 50px;
   top: 0;
   left: 0;
   z-index: 1000;
-  padding: 10px 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 10px;
+  box-shadow: 0 2px 4px #01244ce1;
   /* sombra sutil */
 }
 
@@ -16,9 +17,10 @@ nav {
 }
 
 #logoHeader {
-  height: 70px;
+  height: 60px;
   margin-right: 20%;
   margin-left: 5%;
+margin-top: -05px;
 }
 
 nav ul {
@@ -106,4 +108,61 @@ font-family: 'Open Sans', sans-serif;
   right: 5%;
   top: 150px;
   width: 40%;
+}
+/* --- ESTILIZAÇÃO OTIMIZADA DOS CARDS DE SERVIÇO --- */
+
+.servico-card-base {
+    position: absolute;
+    display: flex; 
+    align-items: center; 
+    
+    width: fit-content;
+    height: 30px;
+    padding: 18px 12px;
+    
+    /* Fundo semi-transparente e efeito de desfoque (Blur) */
+    background-color: rgba(0, 0, 0, 0.4); 
+    backdrop-filter: blur(5px); 
+    -webkit-backdrop-filter: blur(5px);
+    
+    border: 1px solid #144e14;
+    border-radius: 12px;
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.233); 
+}
+
+.icone-container-base {
+    margin-right: 15px; 
+    width: 30px;
+    height: 30px;
+}
+
+.icone-container-base img {
+    width: 100%; 
+    height: 100%;
+    object-fit: contain;
+    filter: invert(70%) sepia(90%) saturate(500%) hue-rotate(80deg); 
+}
+
+.titulo-servico-base {
+    color: #00ff00; 
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif; 
+    font-weight: 600;
+    margin: 0; 
+}
+
+/* --- POSICIONAMENTO DOS CARDS (Absolute) --- */
+.servico-card-1 {
+    right: 7%;
+    top: 200px;
+}
+
+.servico-card-2 {
+    right: 7%;
+    top: 260px;
+}
+
+.servico-card-3 {
+    right: 7%;
+    top: 320px;
 }
