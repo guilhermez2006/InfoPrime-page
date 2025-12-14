@@ -1,5 +1,4 @@
 header {
- 
   position: fixed;
   width: 100%;
   height: 50px;
@@ -20,7 +19,7 @@ nav {
   height: 60px;
   margin-right: 20%;
   margin-left: 5%;
-margin-top: -05px;
+  margin-top: -05px;
 }
 
 nav ul {
@@ -35,8 +34,7 @@ nav ul {
 }
 
 nav ul li a {
-  color: #01244C;
-  ;
+  color: #01244c;
   text-decoration: none;
   display: inline-block;
   transition: transform 0.25s ease, color 0.25s ease;
@@ -63,8 +61,7 @@ nav ul li a:hover {
 }
 
 #Contato {
-  background-color: #01244C;
-  ;
+  background-color: #01244c;
   padding: 15px 20px;
   border-radius: 40px;
   color: white;
@@ -86,83 +83,83 @@ nav ul li a:hover {
 main {
   margin-top: 10%;
   /* ajuste conforme a altura real do header */
-
 }
 
 #H1Principal {
-  color: #01244C;
+  color: #01244c;
   font-size: 50px;
-  margin-left: 7%;
+  margin-left: 3%;
   margin-top: 13%;
 }
 
-#pHeader{
+#pHeader {
   font-size: 22px;
-margin-left: 7%;
-color: #01244C;
-font-family: 'Open Sans', sans-serif;
+  margin-left: 7%;
+  color: #01244c;
+  font-family: "Open Sans", sans-serif;
 }
 
-#FotoTI{
+#FotoTI {
   position: absolute; /* Posição absoluta para controle */
   right: 5%;
-  top: 150px;
-  width: 40%;
+  top: 60px;
+  width: 45%;
+  height: 85%;
 }
 /* --- ESTILIZAÇÃO OTIMIZADA DOS CARDS DE SERVIÇO --- */
 
 .servico-card-base {
-    position: absolute;
-    display: flex; 
-    align-items: center; 
-    
-    width: fit-content;
-    height: 30px;
-    padding: 18px 12px;
-    
-    /* Fundo semi-transparente e efeito de desfoque (Blur) */
-    background-color: rgba(0, 0, 0, 0.4); 
-    backdrop-filter: blur(5px); 
-    -webkit-backdrop-filter: blur(5px);
-    
-    border: 1px solid #144e14;
-    border-radius: 12px;
-    box-shadow: 0 0 5px rgba(0, 255, 0, 0.233); 
+  position: absolute;
+  display: flex;
+  align-items: center;
+
+  width: fit-content;
+  height: 30px;
+  padding: 18px 12px;
+
+  /* Fundo semi-transparente e efeito de desfoque (Blur) */
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+
+  border: 1px solid #144e14;
+  border-radius: 12px;
+  box-shadow: 0 0 5px rgba(0, 255, 0, 0.233);
 }
 
 .icone-container-base {
-    margin-right: 15px; 
-    width: 30px;
-    height: 30px;
+  margin-right: 15px;
+  width: 30px;
+  height: 30px;
 }
 
 .icone-container-base img {
-    width: 100%; 
-    height: 100%;
-    object-fit: contain;
-    filter: invert(70%) sepia(90%) saturate(500%) hue-rotate(80deg); 
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: invert(70%) sepia(90%) saturate(500%) hue-rotate(80deg);
 }
 
 .titulo-servico-base {
-    color: #00ff00; 
-    font-size: 18px;
-    font-family: "Montserrat", sans-serif; 
-    font-weight: 600;
-    margin: 0; 
+  color: #00ff00;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  margin: 0;
 }
 
 /* --- POSICIONAMENTO DOS CARDS (Absolute) --- */
 .servico-card-1 {
-    right: 7%;
-    top: 200px;
+  right: 30%;
+  top: 200px;
 }
 
 .servico-card-2 {
-    right: 7%;
-    top: 260px;
+  right: 2%;
+  top: 350px;
 }
 
 .servico-card-3 {
-    right: 7%;
-    top: 320px;
+  right: 25%;
+  top: 400px;
 }
