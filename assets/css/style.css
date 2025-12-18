@@ -7,7 +7,6 @@ header {
   z-index: 1000;
   padding: 10px 10px;
   box-shadow: 0 2px 4px #01244ce1;
-  /* sombra sutil */
 }
 
 nav {
@@ -43,12 +42,10 @@ nav ul li a {
 nav ul li a:hover {
   color: #034a5f;
   transform: translateY(-1px);
-  /* sobe 2px suavemente */
 }
 
 #Contato a {
   display: inline-block;
-  /* para o padding funcionar corretamente */
   background-color: #055c76;
   color: white;
   padding: 15px 20px;
@@ -76,13 +73,11 @@ nav ul li a:hover {
 
 #Contato:hover {
   background-color: #01244cec;
-  /* azul mais escuro ao passar o mouse */
   cursor: pointer;
 }
 
 main {
   margin-top: 10%;
-  /* ajuste conforme a altura real do header */
 }
 
 #H1Principal {
@@ -99,38 +94,58 @@ main {
   font-family: "Open Sans", sans-serif;
 }
 
+/* imagem principal */
 #FotoTI {
-  position: absolute; /* Posição absoluta para controle */
+  position: absolute;
   right: 5%;
-  top: 60px;
-  width: 45%;
+  top: 50px;
+  width: 41%;
   height: 85%;
 }
-/* --- ESTILIZAÇÃO OTIMIZADA DOS CARDS DE SERVIÇO --- */
 
+/* --- CARDS DE SERVIÇO (ajustado, Opção B: até 2 linhas) --- */
 .servico-card-base {
   position: absolute;
   display: flex;
   align-items: center;
+  gap: 10px;
 
-  width: fit-content;
-  height: 30px;
-  padding: 18px 12px;
+  width: auto;
+  max-width: 300px; /* controla largura máxima do card sem quebrar o layout */
+  padding: 10px 8px; /* padding menor para cards compactos */
+  box-sizing: border-box;
+  height: auto; /* permite expansão conforme conteúdo (evita cortes) */
 
-  /* Fundo semi-transparente e efeito de desfoque (Blur) */
   background-color: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
 
-  border: 1px solid #144e14;
+  border: 1px solid  #144e14;
   border-radius: 12px;
-  box-shadow: 0 0 5px rgba(0, 255, 0, 0.233);
+  box-shadow: 0 0 12px rgba(0, 255, 0, 0.233);
 }
 
 .icone-container-base {
-  margin-right: 15px;
-  width: 30px;
-  height: 30px;
+  margin-right: 12px;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:#144e14;; /* cor que os SVGs vão herdar */
+}
+
+/* SVGs inline herdam a cor definida aqui */
+.icone-container-base svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
 }
 
 .icone-container-base img {
@@ -140,26 +155,47 @@ main {
   filter: invert(70%) sepia(90%) saturate(500%) hue-rotate(80deg);
 }
 
+/* permite até 2 linhas, depois mostra "..." */
 .titulo-servico-base {
-  color: #00ff00;
-  font-size: 18px;
+  color: #144e14;
+  font-size: 16px;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   margin: 0;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* até 2 linhas */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
 }
 
-/* --- POSICIONAMENTO DOS CARDS (Absolute) --- */
+/* --- POSICIONAMENTO DOS CARDS (mantido conforme seu layout) --- */
 .servico-card-1 {
-  right: 30%;
-  top: 200px;
+  right: 31%;
+  top: 240px;
 }
 
 .servico-card-2 {
-  right: 2%;
-  top: 350px;
+  right: 1%;
+  top: 450px;
+  width: 378px; /* se quiser largura fixa em algum card específico, mantém */
 }
 
 .servico-card-3 {
-  right: 25%;
-  top: 400px;
+  right: 36%;
+  top: 635px;
+  width: 333px;
+}
+
+/* responsividade: na telas pequenas, permita cards mais largos e mais linhas */
+@media (max-width: 768px) {
+  .servico-card-base {
+    max-width: 85vw;
+    padding: 8px 10px;
+  }
+  .titulo-servico-base {
+    -webkit-line-clamp: 3;
+  }
 }

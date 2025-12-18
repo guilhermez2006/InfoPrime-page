@@ -1,100 +1,92 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>InfoPrime – Soluções e Tecnologia</title>
-    <link
-      rel="shortcut icon"
-      href="assets/img/logo infoprime padrao.png"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" href="/assets/css/style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
-    <div id="tsparticles" style="position: fixed; inset: 0; z-index: -1"></div>
-    <script>
-      tsParticles.load("tsparticles", {
-        fullScreen: { enable: false },
-        particles: {
-          number: { value: 60 },
-          color: { value: "#00ffcc" },
-          links: {
-            enable: true,
-            color: "#00ffcc",
-            distance: 140,
-            opacity: 0.5,
-          },
-          move: { speed: 0.8 },
-        },
-        detectRetina: true,
-        background: { color: "#071022" },
-        interactivity: {
-          events: { onhover: { enable: true, mode: "repulse" } },
-        },
-      });
-      // ajustar canvas para ocupar toda a viewport:
-      document.getElementById("tsparticles").style.cssText =
-        "position:fixed;inset:0;z-index:-1;";
-    </script>
-  </head>
+<html lang="pt-BR">
 
-  <body>
-    <header>
-      <nav>
-        <img
-          src="assets/img/Logo_Site (3).png"
-          alt="LogoSite"
-          id="logoHeader"
-        />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>InfoPrime – Soluções e Tecnologia</title>
+  <link rel="shortcut icon" href="assets/img/logo infoprime padrao.png" type="image/x-icon" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+</head>
 
-        <ul>
-          <li><a href="#Home">Home</a></li>
-          <li><a href="#NossoProposito">Nosso Propósito</a></li>
-          <li><a href="#Empresas">Empresas</a></li>
-          <li><a href="#Servicos">Serviços</a></li>
-        </ul>
+<body>
+  <!-- canvas de partículas (fundo) -->
+  <div id="tsparticles" style="position:fixed;inset:0;z-index:-1;"></div>
+  <script>
+    /* inicialização simples do tsParticles */
+    tsParticles.load("tsparticles", {
+      particles: { number: { value: 50 }, color: { value: "#00ffcc" }, links: { enable: true, color: "#00ffcc" } },
+      background: { color: "#071022" }
+    });
+  </script>
 
-        <a href="#Contato" id="Contato">Entre em Contato Conosco</a>
-      </nav>
-    </header>
+  <header>
+    <nav>
+      <img src="assets/img/Logo_Site (3).png" alt="LogoSite" id="logoHeader" />
+      <ul>
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#NossoProposito">Nosso Propósito</a></li>
+        <li><a href="#Empresas">Empresas</a></li>
+        <li><a href="#Servicos">Serviços</a></li>
+      </ul>
+      <a href="#Contato" id="Contato">Entre em Contato Conosco</a>
+    </nav>
+  </header>
 
-    <main>
-      <h1 id="H1Principal">
-        <span style="color: #01244cec"
-          >Oferecemos serviços de TI <br>
-          para as empresas,</span
-        ><br />
-        <span style="color: #d6b407"
-          >priorizando segurança,<br />
-          suporte e qualidade.</span
-        >
-      </h1>
-      <p id="pHeader">
-        Possuímos conhecimento técnico <br />
-        para cuidar da TI da sua empresa com segurança e eficiência.
-      </p>
-      <img src="assets/img/FotoTI.svg" alt="FotoTI" id="FotoTI" />
-      <div class="servico-card-base servico-card-1">
-        <div class="icone-container-base">
-          <img src="caminho/para/icone-servidor.png" alt="Ícone Servidor" />
-        </div>
-        <p class="titulo-servico-base">Gerenciamento de Servidores</p>
+  <main>
+    <h1 id="H1Principal">
+      <span style="color: #01244cec">Oferecemos serviços de TI <br />para as empresas,</span><br />
+      <span style="color: #d6b407">priorizando segurança,<br />suporte e qualidade.</span>
+    </h1>
+
+    <p id="pHeader">Possuímos conhecimento técnico <br />para cuidar da TI da sua empresa com segurança e eficiência.
+    </p>
+
+    <img src="assets/img/FotoTI.svg" alt="FotoTI" id="FotoTI" />
+
+    <div class="servico-card-base servico-card-1">
+      <div class="icone-container-base">
+        <!-- ícone rack/servidor -->
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="2" y="3" width="20" height="6" rx="1"></rect>
+          <rect x="2" y="12" width="20" height="6" rx="1"></rect>
+          <circle cx="6" cy="6" r="0.7" />
+          <circle cx="10" cy="6" r="0.7" />
+          <circle cx="14" cy="6" r="0.7" />
+          <circle cx="18" cy="6" r="0.7" />
+          <path d="M6 15h.01M10 15h4" stroke-linecap="round"></path>
+        </svg>
       </div>
+      <p class="titulo-servico-base">Gerenciamento de Servidores</p>
+    </div>
 
-      <div class="servico-card-base servico-card-2">
-        <div class="icone-container-base">
-          <img src="caminho/para/icone-seguranca.png" alt="Ícone Segurança" />
-        </div>
-        <p class="titulo-servico-base">Segurança e Monitoramento de Dados</p>
+    <div class="servico-card-base servico-card-2">
+      <div class="icone-container-base">
+        <!-- ícone escudo/segurança -->
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12 2l7 3v5c0 5-4 9-7 11-3-2-7-6-7-11V5l7-3z"></path>
+          <path d="M9.5 12.5l1.8 1.8L15 10.6" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
       </div>
+      <p class="titulo-servico-base">Segurança e Monitoramento de Dados</p>
+    </div>
 
-      <div class="servico-card-base servico-card-3">
-        <div class="icone-container-base">
-          <img src="caminho/para/icone-backup.png" alt="Ícone Backup" />
-        </div>
-        <p class="titulo-servico-base">Backup e Recuperação de Dados</p>
+    <div class="servico-card-base servico-card-3">
+      <div class="icone-container-base">
+        <!-- ícone backup (nuvem + seta) -->
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M20.39 16.56A5.5 5.5 0 0 0 18 9h-1.26A8 8 0 1 0 4 16.25" stroke-linecap="round"
+            stroke-linejoin="round"></path>
+          <path d="M12 12v6" stroke-linecap="round" stroke-linejoin="round"></path>
+          <polyline points="9 15 12 12 15 15" stroke-linecap="round" stroke-linejoin="round"></polyline>
+        </svg>
       </div>
-    </main>
-    <footer></footer>
-  </body>
+      <p class="titulo-servico-base">Backup e Recuperação de Dados</p>
+    </div>
+  </main>
+
+  <footer></footer>
+</body>
+
 </html>
