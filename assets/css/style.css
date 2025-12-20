@@ -1,3 +1,7 @@
+body{
+  background-color: #071428;
+}
+
 header {
   position: fixed;
   width: 100%;
@@ -111,10 +115,10 @@ main {
 /* imagem principal */
 #FotoTI {
   position: absolute;
-  right: 5%;
-  top: 50px;
-  width: 41%;
-  height: 85%;
+  right: -1%;
+  top: 100px;
+  width: 45%;
+  height: 60%;
 }
 
 /* --- CARDS DE SERVIÇO (ajustado, Opção B: até 2 linhas) --- */
