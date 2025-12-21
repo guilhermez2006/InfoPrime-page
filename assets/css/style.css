@@ -1,4 +1,4 @@
-body{
+body {
   background-color: #071428;
 }
 
@@ -44,40 +44,46 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color:   #d8ba22;
+  color: #d8ba22;
   transform: translateY(-1px);
 }
+
 /* === Opção 2: Dourado primário refinado === */
-:root{
+:root {
   --gold: #d6b407;
   --gold-dark: #b88f08;
   --navy-contrast: #071428;
   --radius: 40px;
 }
 
-a#Contato{
-  display:inline-block;
-  margin-left:auto;
-  padding:12px 22px;
-  border-radius:var(--radius);
+a#Contato {
+  display: inline-block;
+  margin-left: auto;
+  padding: 12px 22px;
+  border-radius: var(--radius);
   background: linear-gradient(180deg, var(--gold), var(--gold-dark));
   color: var(--navy-contrast);
-  font-weight:700;
-  font-family:"Montserrat","Poppins",sans-serif;
-  text-decoration:none;
-  box-shadow: 0 8px 20px rgba(212,175,55,0.14), inset 0 -2px 0 rgba(0,0,0,0.06);
+  font-weight: 700;
+  font-family: "Montserrat", "Poppins", sans-serif;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.14), inset 0 -2px 0 rgba(0, 0, 0, 0.06);
   transition: transform .12s ease, box-shadow .18s ease, filter .12s ease;
   margin-left: 10%;
 }
 
 /* hover: levemente escurece o dourado e eleva */
 a#Contato:hover,
-a#Contato:focus{
+a#Contato:focus {
   transform: translateY(-3px);
   filter: brightness(.95);
-  box-shadow: 0 18px 40px rgba(212,175,55,0.18);
+  box-shadow: 0 18px 40px rgba(212, 175, 55, 0.18);
 }
-a#Contato:focus{ outline: 3px solid rgba(7,20,40,0.12); outline-offset:4px; }
+
+a#Contato:focus {
+  outline: 3px solid rgba(7, 20, 40, 0.12);
+  outline-offset: 4px;
+}
+
 main {
   margin-top: 10%;
 }
@@ -102,7 +108,8 @@ main {
 
 #pHeader {
   font-family: "Inter", "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  font-weight: 400; /* de 300 -> 400 dá uma espessura leve e limpa */
+  font-weight: 400;
+  /* de 300 -> 400 dá uma espessura leve e limpa */
   font-size: clamp(0.95rem, 1.4vw, 1.325rem);
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -112,14 +119,105 @@ main {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+/* luz ambiente (atrás da imagem) */
+.luz-ti-back {
+  position: absolute;
+  left: 61%;
+  top: 40%;
+
+  width: 460px;
+  height: 360px;
+
+  background: radial-gradient(
+    ellipse at top,
+    rgba(17, 0, 255, 0.45),
+    rgba(0, 140, 255, 0.22),
+    rgba(174, 0, 255, 0.14),
+    transparent 72%
+  );
+
+  filter: blur(75px);
+  animation: luzPulseBack 7s ease-in-out infinite;
+
+  z-index: 0;
+  pointer-events: none;
+}
+
+
+
 /* imagem principal */
 #FotoTI {
   position: absolute;
-  right: -1%;
-  top: 100px;
-  width: 45%;
-  height: 60%;
+  left: 50%;
+  top: 120px;
+  max-width: 50%;
+  height: auto;
+
+  z-index: 1;
 }
+
+/* luz frontal (interage com a imagem) */
+.luz-ti-front {
+  position: absolute;
+  left: 61%;
+  top: 37%;
+
+  width: 480px;
+  height: 340px;
+
+  background: radial-gradient(
+    ellipse at top,
+    rgba(1, 22, 214, 0.55),
+    rgba(17, 0, 255, 0.32),
+    transparent 65%
+  );
+
+  filter: blur(50px);
+  mix-blend-mode: screen;
+
+  animation: luzPulseFront 6.5s ease-in-out infinite;
+
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* cards sempre acima */
+.servico-card-base {
+  position: absolute;
+  z-index: 4;
+}
+
+/* ===============================
+   ANIMAÇÕES
+   =============================== */
+
+@keyframes luzPulseBack {
+  0% {
+    opacity: 0.45;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.06);
+  }
+  100% {
+    opacity: 0.45;
+    transform: scale(0.95);
+  }
+}
+
+@keyframes luzPulseFront {
+  0% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0.35;
+  }
+}
+
 
 /* --- CARDS DE SERVIÇO (ajustado, Opção B: até 2 linhas) --- */
 .servico-card-base {
@@ -141,9 +239,9 @@ main {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
 
-  border: 1px solid  #01244c;
+  border: 1px solid #01244c;
   border-radius: 12px;
-  box-shadow: 0 0 14px  #01244c;
+  box-shadow: 0 0 14px #01244c;
 }
 
 .icone-container-base {
@@ -180,7 +278,7 @@ main {
 
 /* permite até 2 linhas, depois mostra "..." */
 .titulo-servico-base {
-  color:#d7ff2f;
+  color: #d7ff2f;
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
