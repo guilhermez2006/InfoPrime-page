@@ -105,7 +105,45 @@ main {
   text-rendering: optimizeLegibility;
 
 }
+#H1PROPOSITO {
+  font-family: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-weight: 500;
+  /* ajustar entre 600-800 conforme necessário */
+  font-size: clamp(1.5rem, 2.1vw, 3rem);
+  /* responsivo */
+  line-height: 1.1;
+  /* linhas próximas */
+  letter-spacing: -0.015em;
+  /* tracking levemente negativo */
+  color: #ffffff;
+  /* cor verde-lima (ajuste conforme seu design) */
+  margin-left: 52%;
+  margin-top: 20%;
+  text-rendering: optimizeLegibility;
 
+}
+#pPROPOSITO{
+  font-family: "Inter", "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-weight: 400;
+  /* de 300 -> 400 dá uma espessura leve e limpa */
+  font-size: clamp(0.95rem, 1.4vw, 1.325rem);
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  margin-left: 52%;
+  max-width: 70ch;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#FotoProposito{
+  position: absolute;
+  left: 5%;
+  top: 100%;
+  max-width: 40%;
+  height: auto;
+
+  z-index: 1;
+}
 #pHeader {
   font-family: "Inter", "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   font-weight: 400;
