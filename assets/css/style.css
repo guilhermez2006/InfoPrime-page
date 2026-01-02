@@ -172,9 +172,9 @@ a#Contato:focus {
   height: 360px;
 
   background: radial-gradient(ellipse at top,
-      rgba(17, 0, 255, 0.45),
-      rgba(0, 140, 255, 0.22),
-      rgba(174, 0, 255, 0.14),
+      rgba(0, 153, 255, 0.45),
+      rgba(0, 17, 255, 0.22),
+      rgba(38, 0, 255, 0.14),
       transparent 72%);
 
   filter: blur(75px);
@@ -207,8 +207,8 @@ a#Contato:focus {
   height: 340px;
 
   background: radial-gradient(ellipse at top,
-      rgba(1, 22, 214, 0.55),
-      rgba(17, 0, 255, 0.32),
+      rgb(0, 26, 255),
+      rgba(38, 0, 255, 0.32),
       transparent 65%);
 
   filter: blur(50px);
