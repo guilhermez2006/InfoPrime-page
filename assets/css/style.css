@@ -179,8 +179,8 @@ a#Contato:focus {
 /* Foto TI Dourado */
 #FotoTIDourado {
   position: absolute;
-  top: 100%;
-  max-width: 40%;
+  top: 20%;
+  width: 90%;        /* aumenta a imagem */
   height: auto;
   z-index: 1;
 }
