@@ -1,143 +1,169 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>InfoPrime – Soluções e Tecnologia</title>
+    <link
+      rel="shortcut icon"
+      href="assets/img/logo infoprime padrao.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/particles-background.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <body>
+    <div id="particles-js"></div>
 
-  <title>InfoPrime – Soluções e Tecnologia</title>
+    <header>
+      <nav>
+        <img
+          src="assets/img/Logo_Site (3).png"
+          alt="LogoSite"
+          id="logoHeader"
+        />
+        <ul>
+          <li><a href="#Home">Home</a></li>
+          <li><a href="#NossoProposito">Nosso Propósito</a></li>
+          <li><a href="#Empresas">Empresas</a></li>
+          <li><a href="#Servicos">Serviços</a></li>
+        </ul>
+        <a href="#Contato" id="Contato">Entre em Contato Conosco</a>
+      </nav>
+    </header>
 
-  <link rel="shortcut icon" href="assets/img/logo infoprime padrao.png" type="image/x-icon" />
+    <main class="main-container">
+      <h1 id="H1Principal">
+        <span style="color: #012a5aec">
+          Oferecemos serviços de TI <br />
+          para as empresas,
+        </span
+        ><br />
+        <span style="color: #d6b407">
+          priorizando segurança,<br />
+          suporte e qualidade.
+        </span>
+      </h1>
 
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="stylesheet" href="assets/css/particles-background.css" />
-</head>
+      <p id="pHeader">
+        Possuímos conhecimento técnico <br />
+        para cuidar da TI da sua empresa com segurança e eficiência.
+      </p>
 
-<body>
+      <div class="luz-ti-back"></div>
+      <img
+        src="assets/img/FotoTI_Azul_4K_Transparente.png"
+        alt="FotoTIAzul"
+        id="FotoTIAzul"
+      />
+      <div class="luz-ti-front"></div>
 
-  <div id="particles-js"></div>
-
-  <header>
-    <nav>
-      <img src="assets/img/Logo_Site (3).png" alt="LogoSite" id="logoHeader" />
-      <ul>
-        <li><a href="#Home">Home</a></li>
-        <li><a href="#NossoProposito">Nosso Propósito</a></li>
-        <li><a href="#Empresas">Empresas</a></li>
-        <li><a href="#Servicos">Serviços</a></li>
-      </ul>
-      <a href="#Contato" id="Contato">Entre em Contato Conosco</a>
-    </nav>
-  </header>
-
-  <main>
-    <h1 id="H1Principal">
-      <span style="color: #012a5aec">
-        Oferecemos serviços de TI <br />
-        para as empresas,
-      </span><br />
-      <span style="color: #d6b407">
-        priorizando segurança,<br />
-        suporte e qualidade.
-      </span>
-    </h1>
-
-    <p id="pHeader">
-      Possuímos conhecimento técnico <br />
-      para cuidar da TI da sua empresa com segurança e eficiência.
-    </p>
-
-    <div class="luz-ti-back"></div>
-    <img src="assets/img/FotoTI_Azul_4K_Transparente.png" alt="FotoTIAzul" id="FotoTIAzul" />
-    <div class="luz-ti-front"></div>
-
-    <div id="cardsTI">
-
-      <div class="servico-card-base servico-card-1">
-        <div class="servico-card-inner">
-          <div class="icone-container-base">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <rect x="2" y="3" width="20" height="6" rx="1"></rect>
-              <rect x="2" y="12" width="20" height="6" rx="1"></rect>
-              <circle cx="6" cy="6" r="0.7" />
-              <circle cx="10" cy="6" r="0.7" />
-              <circle cx="14" cy="6" r="0.7" />
-              <circle cx="18" cy="6" r="0.7" />
-              <path d="M6 15h.01M10 15h4"></path>
-            </svg>
+      <div id="cardsTI">
+        <div class="servico-card-base servico-card-1">
+          <div class="servico-card-inner">
+            <div class="icone-container-base">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="3" width="20" height="6" rx="1"></rect>
+                <rect x="2" y="12" width="20" height="6" rx="1"></rect>
+                <circle cx="6" cy="6" r="0.7" />
+                <circle cx="10" cy="6" r="0.7" />
+                <circle cx="14" cy="6" r="0.7" />
+                <circle cx="18" cy="6" r="0.7" />
+                <path d="M6 15h.01M10 15h4"></path>
+              </svg>
+            </div>
+            <p class="titulo-servico-base">Gerenciamento de Servidores</p>
           </div>
-          <p class="titulo-servico-base">Gerenciamento de Servidores</p>
         </div>
-      </div>
 
-      <div class="servico-card-base servico-card-2">
-        <div class="servico-card-inner">
-          <div class="icone-container-base">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2l7 3v5c0 5-4 9-7 11-3-2-7-6-7-11V5l7-3z"></path>
-              <path d="M9.5 12.5l1.8 1.8L15 10.6"></path>
-            </svg>
+        <div class="servico-card-base servico-card-2">
+          <div class="servico-card-inner">
+            <div class="icone-container-base">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2l7 3v5c0 5-4 9-7 11-3-2-7-6-7-11V5l7-3z"></path>
+                <path d="M9.5 12.5l1.8 1.8L15 10.6"></path>
+              </svg>
+            </div>
+            <p class="titulo-servico-base">
+              Segurança e Monitoramento de Dados
+            </p>
           </div>
-          <p class="titulo-servico-base">Segurança e Monitoramento de Dados</p>
         </div>
-      </div>
 
-      <div class="servico-card-base servico-card-3">
-        <div class="servico-card-inner">
-          <div class="icone-container-base">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M20.39 16.56A5.5 5.5 0 0 0 18 9h-1.26A8 8 0 1 0 4 16.25"></path>
-              <path d="M12 12v6"></path>
-              <polyline points="9 15 12 12 15 15"></polyline>
-            </svg>
+        <div class="servico-card-base servico-card-3">
+          <div class="servico-card-inner">
+            <div class="icone-container-base">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M20.39 16.56A5.5 5.5 0 0 0 18 9h-1.26A8 8 0 1 0 4 16.25"
+                ></path>
+                <path d="M12 12v6"></path>
+                <polyline points="9 15 12 12 15 15"></polyline>
+              </svg>
+            </div>
+            <p class="titulo-servico-base">Backup e Recuperação de Dados</p>
           </div>
-          <p class="titulo-servico-base">Backup e Recuperação de Dados</p>
         </div>
       </div>
 
-    </div>
-    <!-- Seção Nosso Propósito - Sofisticada -->
-    <section id="NossoProposito" class="proposito-section">
-      <div class="proposito-wrapper">
-        <div class="proposito-image">
-          <div class="luz-dourada-sutil"></div>
-          <img src="assets/img/Personagem Malicioso 4K (1).png" alt="Nossa Tecnologia" id="FotoTIDourado" />
+      <!-- Seção Nosso Propósito - Sofisticada -->
+      <section id="NossoProposito" class="proposito-section">
+        <div class="proposito-wrapper">
+          <div class="proposito-image">
+            <div class="luz-dourada-sutil"></div>
+            <img
+              src="assets/img/Personagem Malicioso 4K.png"
+              alt="Nossa Tecnologia"
+              id="FotoTIDourado"
+            />
+          </div>
+
+          <div class="proposito-texto">
+            <h1 id="H1PROPOSITO">Excelência e Compromisso</h1>
+
+            <p id="pPROPOSITO">
+              Garantimos segurança total, disponibilidade contínua e proteção
+              avançada dos sistemas da sua empresa. Nossa gestão proativa reduz
+              riscos operacionais e mantém você sempre preparado contra ameaças
+              digitais.
+            </p>
+
+            <a href="#Contato" class="btn-proposito"
+              >Saiba Mais Sobre Nossa Abordagem</a
+            >
+          </div>
         </div>
+      </section>
 
-        <div class="proposito-texto">
-          <h1 id="H1PROPOSITO">Excelência e Compromisso</h1>
+      <section id="Empresas" class="empresas-section">
+        <h2 class="empresas-title">Empresas que confiam na InfoPrime</h2>
 
-          <p id="pPROPOSITO">
-            Garantimos segurança total, disponibilidade contínua e proteção avançada dos sistemas da sua empresa. Nossa
-            gestão proativa reduz riscos operacionais e mantém você sempre preparado contra ameaças digitais.
-          </p>
-
-          <a href="#Contato" class="btn-proposito">Saiba Mais Sobre Nossa Abordagem</a>
+        <div class="empresas-container">
+          <div class="empresa-card"><i class="fas fa-building"></i></div>
+          <div class="empresa-card"><i class="fas fa-building"></i></div>
+          <div class="empresa-card"><i class="fas fa-building"></i></div>
+          <div class="empresa-card"><i class="fas fa-building"></i></div>
+          <div class="empresa-card"><i class="fas fa-building"></i></div>
+          <div class="empresa-card"><i class="fas fa-building"></i></div>
         </div>
-      </div>
-    </section>
-    <section id="Empresas" class="empresas-section">
-      <h2 class="empresas-title">Empresas que confiam na InfoPrime</h2>
+      </section>
 
+      <section id="Servicos" class="servicos-section">
+        <h1 class="servicos-title">Descubra os nossos serviços</h1>
+        <p class="servicos-subtitle">Eficiência e inovação</p>
 
-      <div class="empresas-container">
-        <div class="empresa-card"><i class="fas fa-building"></i></div>
-        <div class="empresa-card"><i class="fas fa-building"></i></div>
-        <div class="empresa-card"><i class="fas fa-building"></i></div>
-        <div class="empresa-card"><i class="fas fa-building"></i></div>
-        <div class="empresa-card"><i class="fas fa-building"></i></div>
-        <div class="empresa-card"><i class="fas fa-building"></i></div>
-      </div>
-    </section>
+        <div class="servicos-container">
+          <div class="servico-box"></div>
+          <div class="servico-box"></div>
+          <div class="servico-box"></div>
+        </div>
+      </section>
+    </main>
 
+    <footer></footer>
 
-  </main>
-
-  <footer></footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
-  <script src="assets/js/script.js"></script>
-
-</body>
-
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
 </html>

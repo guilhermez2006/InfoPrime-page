@@ -1,19 +1,32 @@
+/* SUA METADE CORRIGIDA - EXATAMENTE COMO KLOR SECURITY */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* ✅ SEM ROLAGEM LATERAL */
+}
+
 body {
   background-color: #ffffff;
-  padding-top: 52px;
+  padding-top: 52px; /* ✅ MESMA ALTURA HEADER */
 }
 
 header {
   position: fixed;
   width: 100%;
-  height: 52px;
+  height: 12%; /* ✅ ALTURA FIXA */
   top: 0;
   left: 0;
   z-index: 1000;
-  padding: 10px 16px;
-  /* header simples e escuro, sem blur/frosted */
+  padding: 10px 3%; /* ✅ LATERAIS ENCURTADAS */
   background: #091b38;
-  color: #E8F3FF;
+  color: #e8f3ff;
   border-bottom: 1px solid rgba(255, 255, 255, 0.03);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
@@ -21,31 +34,40 @@ header {
 nav {
   display: flex;
   align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
 }
 
 #logoHeader {
   height: 60px;
-  margin-right: 20%;
-  margin-left: 5%;
-  margin-top: -05px;
+  margin-right: 15%; /* ✅ RESPONSIVO */
+  margin-left: 2%;
+  margin-top: -5px;
+  flex-shrink: 0;
 }
 
 nav ul {
   display: flex;
   list-style: none;
-  gap: 50px;
+  gap: clamp(25px, 4vw, 50px);
   margin: 0;
   padding: 0;
   font-size: 15px;
   font-family: "Roboto", sans-serif;
   font-weight: 600;
+  flex: 1;
+  justify-content: center;
 }
 
 nav ul li a {
-  color: #E8F3FF;
+  color: #e8f3ff;
   text-decoration: none;
   display: inline-block;
   transition: transform 0.25s ease, color 0.25s ease;
+  white-space: nowrap;
 }
 
 nav ul li a:hover {
@@ -53,7 +75,6 @@ nav ul li a:hover {
   transform: translateY(-1px);
 }
 
-/* === Opção 2: Dourado primário refinado === */
 :root {
   --gold: #f0c800;
   --gold-dark: #cf9f00;
@@ -62,25 +83,28 @@ nav ul li a:hover {
 }
 
 a#Contato {
-  display: inline-block;
+  padding: 15px 20px;
   margin-left: auto;
-  padding: 15px 15px;
+  margin-right: 3%; /* ✅ LATERAL DIREITA */
   border-radius: var(--radius);
-  background: linear-gradient(180deg, rgba(2, 124, 231, 0.86), rgba(0, 17, 34, 0.8));
-  color: #F8FAFC;
+  background: linear-gradient(
+    180deg,
+    rgba(2, 124, 231, 0.86),
+    rgba(0, 17, 34, 0.8)
+  );
+  color: #f8fafc;
   font-weight: 550;
   font-family: "Montserrat", "Poppins", sans-serif;
   text-decoration: none;
-
-  transition: transform .12s ease, box-shadow .18s ease, filter .12s ease;
-  margin-left: 10%;
+  transition: transform 0.12s ease, box-shadow 0.18s ease, filter 0.12s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
-/* hover: levemente escurece o dourado e eleva */
 a#Contato:hover,
 a#Contato:focus {
   transform: translateY(-3px);
-  filter: brightness(.95);
+  filter: brightness(0.95);
   box-shadow: 0px 10px 20px rgba(10, 91, 167, 0.37);
 }
 
@@ -88,39 +112,59 @@ a#Contato:focus {
   outline: 3px solid rgba(7, 20, 40, 0.12);
   outline-offset: 4px;
 }
+/* APENAS H1 E P ALINHADOS NA MESMA LINHA ESQUERDA */
+
+/* H1 E P PERFEITAMENTE ALINHADOS - MESMO VALOR EXATO */
 
 #H1Principal {
-  font-family: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-family: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
   font-weight: 700;
-  /* ajustar entre 600-800 conforme necessário */
-  font-size: clamp(2.1rem, 3vw, 6rem);
-  /* responsivo */
+  font-size: clamp(2.5rem, 4vw, 6rem);
   line-height: 0.95;
-  /* linhas bem próximas como na imagem */
   letter-spacing: -0.02em;
-  /* tracking levemente negativo */
   color: #d7ff2f;
-  /* cor verde-lima (ajuste conforme seu design) */
-  margin-left: 5%;
-  margin-top: 11%;
+  margin-left: 3% !important; /* ✅ FIXO 3% */
+  margin-top: clamp(80px, 10vw, 120px); /* ✅ SÓ TOP responsivo */
+  margin-bottom: 0; /* ✅ ZERO */
+  margin-right: 0;
+  padding-left: 0 !important;
+  max-width: 95%;
   text-rendering: optimizeLegibility;
 }
 
-/* Brilho Dourado FORTE pra fundo branco */
+#pHeader {
+  font-family: "Inter", "Nunito", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+  font-weight: 400;
+  font-size: clamp(0.95rem, 1.6vw, 1.325rem);
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #012f63;
+  margin-left: 3% !important; /* ✅ MESMO 3% DO H1 */
+  margin-top: 0; /* ✅ ZERO */
+  margin-bottom: 20px;
+  margin-right: 0;
+  padding-left: 0 !important;
+  max-width: 70ch;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .luz-dourada-sutil {
   position: absolute;
   top: 10%;
   left: 10%;
   width: 80%;
   height: 80%;
-  background: radial-gradient(ellipse at center,
-      rgba(240, 200, 0, 0.61) 0%,
-      /* 25% MUITO mais visível */
-      rgba(207, 159, 0, 0.15) 40%,
-      rgba(240, 200, 0, 0.08) 70%,
-      transparent 80%);
+  background: radial-gradient(
+    ellipse at center,
+    rgba(240, 200, 0, 0.61) 0%,
+    rgba(207, 159, 0, 0.15) 40%,
+    rgba(240, 200, 0, 0.08) 70%,
+    transparent 80%
+  );
   filter: blur(35px) brightness(1.3);
-  /* +brightness pro branco */
   z-index: 1;
   pointer-events: none;
   animation: pulseDourado 6s ease-in-out infinite;
@@ -132,7 +176,6 @@ a#Contato:focus {
     opacity: 0.7;
     transform: scale(0.97);
   }
-
   50% {
     opacity: 1;
     transform: scale(1.03);
@@ -145,61 +188,48 @@ a#Contato:focus {
 
 #FotoProposito {
   position: absolute;
-  left: 5%;
+  left: clamp(1%, 3%, 5%);
   top: 100%;
-  max-width: 40%;
+  max-width: clamp(35%, 40%, 45%);
   height: auto;
   z-index: 1;
 }
 
-#pHeader {
-  font-family: "Inter", "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  font-weight: 400;
-  /* de 300 -> 400 dá uma espessura leve e limpa */
-  font-size: clamp(0.95rem, 1.4vw, 1.325rem);
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #012f63;
-  margin-left: 7%;
-  max-width: 70ch;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* Foto TI azul */
 #FotoTIAzul {
   position: absolute;
-  left: 51%;
-  top: 120px;
-  max-width: 40%;
+  left: clamp(52%, 55%, 58%);
+  top: clamp(110px, 14vh, 160px);
+  max-width: clamp(35%, 38%, 42%);
   height: auto;
-  z-index: 1;
+  z-index: 5;
 }
 
-/* Foto TI Dourado */
+/* Notebook específico */
+@media (max-width: 1200px) and (min-width: 1025px) {
+  #FotoTIAzul {
+    left: 55%;
+    top: 130px;
+    max-width: 38%;
+  }
+}
+
 #FotoTIDourado {
   position: absolute;
-  top: 20%;
-  width: 90%;        /* aumenta a imagem */
+  top: clamp(18%, 20%, 22%);
+  width: clamp(80%, 90%, 95%);
   height: auto;
   z-index: 1;
 }
-
-/*
-  ANIMAÇÕES
-*/
 
 @keyframes luzPulseBack {
   0% {
     opacity: 0.45;
     transform: scale(0.95);
   }
-
   50% {
     opacity: 0.9;
     transform: scale(1.06);
   }
-
   100% {
     opacity: 0.45;
     transform: scale(0.95);
@@ -210,77 +240,75 @@ a#Contato:focus {
   0% {
     opacity: 0.35;
   }
-
   50% {
     opacity: 0.7;
   }
-
   100% {
     opacity: 0.35;
   }
 }
-/* Luzes AZUL MAIS ESCURO - igual cards */
+
 .luz-ti-front {
   position: absolute;
-  left: 58%;
-  top: 35%;
-  width: 450px;
-  height: 320px;
-  
-  background: radial-gradient(ellipse at 30% 20%,
-    rgba(1, 91, 200, 0.692) 0%,      /* AZUL MAIS ESCURO */
-    rgba(2, 65, 120, 0.562) 40%,     /* Card background */
+  left: clamp(56%, 58%, 60%);
+  top: clamp(32%, 35%, 38%);
+  width: clamp(320px, 30vw, 450px);
+  height: clamp(240px, 24vh, 320px);
+  background: radial-gradient(
+    ellipse at 30% 20%,
+    rgba(1, 91, 200, 0.692) 0%,
+    rgba(2, 65, 120, 0.562) 40%,
     rgba(1, 91, 200, 0.329) 70%,
-    transparent 80%);
-  
+    transparent 80%
+  );
   filter: blur(40px) brightness(1.3);
   mix-blend-mode: screen;
   animation: luzPulseFront 6s ease-in-out infinite;
-  z-index: 2;
+  z-index: 3; /* ✅ SOBRE LUZ BACK, ABAIXO IMAGEM */
 }
 
 .luz-ti-back {
   position: absolute;
-  left: 65%;
-  top: 22%;
-  width: 500px;
-  height: 400px;
-  
-  background: radial-gradient(ellipse at 25% 15%,
-    rgba(1, 91, 200, 0.418) 0%,      /* AZUL ESCURO suave */
-    rgba(0, 17, 34, 0.301) 50%,      /* Card gradiente */
+  left: clamp(62%, 65%, 68%);
+  top: clamp(20%, 22%, 26%);
+  width: clamp(380px, 36vw, 500px);
+  height: clamp(300px, 28vh, 400px);
+  background: radial-gradient(
+    ellipse at 25% 15%,
+    rgba(1, 91, 200, 0.418) 0%,
+    rgba(0, 17, 34, 0.301) 50%,
     rgba(2, 65, 120, 0.178) 75%,
-    transparent 85%);
-  
+    transparent 85%
+  );
   filter: blur(65px) brightness(1.2);
   animation: luzPulseBack 7.5s ease-in-out infinite;
-  z-index: 0;
+  z-index: 2; /* ✅ ABAIXO TUDO */
 }
 
-/*
-   CARDS DE SERVIÇOS
-*/
 .servico-card-base {
-  position: absolute;
+  position: absolute; /* ✅ FICA SOBRE IMAGEM TI AZUL */
   z-index: 4;
+  width: 100%;
+  max-width: clamp(280px, 90%, 360px);
 }
 
 .servico-card-inner {
   display: flex;
   align-items: center;
   gap: 10px;
-
-  padding: 10px 8px;
+  padding: 10px 16px;
   box-sizing: border-box;
-
-  background: linear-gradient(180deg, rgba(2, 124, 231, 0.86), rgba(0, 17, 34, 0.8));
-  background-color: rgba(2, 64, 120, 0.86);
+  background: linear-gradient(
+      180deg,
+      rgba(2, 124, 231, 0.86),
+      rgba(0, 17, 34, 0.8)
+    ),
+    rgba(2, 64, 120, 0.86);
   backdrop-filter: blur(6px) saturate(110%);
   -webkit-backdrop-filter: blur(6px) saturate(110%);
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(1, 32, 60, 0.22),
     inset 0 1px 0 rgba(255, 255, 255, 0.02);
-
   transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   transform: translateZ(0);
   will-change: transform;
@@ -290,7 +318,6 @@ a#Contato:focus {
   transform: translateY(-8px);
 }
 
-/* Ícone do Card */
 .icone-container-base {
   margin-right: 12px;
   width: 45px;
@@ -298,7 +325,8 @@ a#Contato:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #7AD1FF;
+  color: #7ad1ff;
+  flex-shrink: 0;
 }
 
 .icone-container-base svg {
@@ -313,62 +341,74 @@ a#Contato:focus {
   vector-effect: non-scaling-stroke;
 }
 
-/* Titulo do Card */
 .titulo-servico-base {
-  color: #F8FAFC;
-  font-size: 16px;
-  font-family: "Montserrat", sans-serif;
+  color: #f8fafc;
+  font-size: clamp(14px, 2vw, 16px);
+  font-family: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
   font-weight: 600;
   margin: 0;
-  font-family: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  display: block;
-  white-space: nowrap;
-  overflow: visible;
-  text-overflow: clip;
-  max-width: none;
-  word-break: normal;
+  flex: 1;
 }
-
+/* POSIÇÕES CARDS RESPONSIVAS - SOBRE IMAGEM TI AZUL */
 .servico-card-1 {
-  right: 33%;
-  top: 240px;
+  right: clamp(28%, 33%, 38%);
+  top: clamp(200px, 24vh, 240px);
+  z-index: 6;
 }
 
 .servico-card-2 {
-  right: 1%;
-  top: 450px;
-  width: 360px;
+  right: clamp(0%, 1%, 3%);
+  top: clamp(400px, 46vh, 450px);
+  max-width: 360px;
+  z-index: 6;
 }
 
 .servico-card-3 {
-  right: 36%;
-  top: 635px;
-  width: 333px;
+  right: clamp(32%, 36%, 40%);
+  top: clamp(580px, 66vh, 635px);
+  max-width: 333px;
+  z-index: 6;
 }
 
-/* responsividade: na telas pequenas */
+/* NOVO: BREAKPOINT NOTEBOOK (1024px-1200px) - Cards MAIS PRÓXIMOS */
+@media (max-width: 1200px) and (min-width: 1025px) {
+  .servico-card-1 {
+    right: 32% !important;
+    top: 220px !important;
+  }
+
+  .servico-card-2 {
+    right: 1% !important;
+    top: 420px !important;
+  }
+
+  .servico-card-3 {
+    right: 36% !important;
+    top: 600px !important;
+  }
+}
+
 .proposito-section {
   position: relative;
-  width: 90vw;
+  width: clamp(90vw, 95%, 1200px);
   max-width: 1200px;
   min-height: 420px;
-  margin: 200px; /* ✅ 800px empurra pra BAIXO | 120px espaço embaixo */
-  padding: 2.5rem 3rem;
+  margin: clamp(150px, 25vh, 200px) auto;
+  padding: clamp(1.5rem, 5vw, 2.5rem) clamp(1rem, 5vw, 3rem);
   border-radius: 20px;
 }
 
-/* Grid foto | texto lado a lado */
 .proposito-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 6rem;
+  gap: clamp(2rem, 8vw, 6rem);
   width: 100%;
   max-width: 1200px;
   height: 100%;
   align-items: center;
 }
 
-/* Foto com luz dourada */
 .proposito-image {
   position: relative;
   justify-self: start;
@@ -382,70 +422,68 @@ a#Contato:focus {
   max-width: 480px;
 }
 
-/* Luz dourada sutil atrás da foto */
 .luz-dourada-sutil {
   position: absolute;
   top: 15%;
-  left: 28%;
+  left: 10%;
   width: 70%;
   height: 70%;
-  background: radial-gradient(ellipse at center,
-      rgba(240, 200, 0, 0.205) 0%,
-      rgba(207, 159, 0, 0.144) 50%,
-      transparent 70%);
+  background: radial-gradient(
+    ellipse at center,
+    rgba(240, 200, 0, 0.37) 0%,
+    rgba(207, 159, 0, 0.336) 50%,
+    transparent 70%
+  );
   filter: blur(40px);
   z-index: 1;
   pointer-events: none;
   animation: pulseDourado 8s ease-in-out infinite;
 }
 
-/* Coluna de texto alinhada */
 .proposito-texto {
   justify-self: end;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 1.5rem;
-  align-items: flex-start;  /* Alinha tudo à esquerda */
+  align-items: flex-start;
   max-width: 32rem;
 }
 
-/* Remove TODAS margens */
 #H1PROPOSITO {
   font-family: "Nunito", sans-serif;
   font-weight: 700;
-  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
   line-height: 1.1;
   letter-spacing: -0.025em;
   color: #012f63;
   white-space: nowrap;
-  margin: 0;  /* ZERO margem */
+  margin: 0;
   padding: 0;
 }
 
 #pPROPOSITO {
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  font-size: clamp(1rem, 1.5vw, 1.3rem);
+  font-size: clamp(1rem, 2vw, 1.3rem);
   line-height: 1.7;
   letter-spacing: 0.015em;
   color: #012f63;
-  margin: 0;  /* ZERO margem */
+  margin: 0;
   padding: 0;
 }
 
 .btn-proposito {
   display: inline-block;
   padding: 16px 28px;
-  background: linear-gradient(135deg, #f0c800 0%, #cf9f00 100%);
+  background: linear-gradient(135deg, #f8cf00 0%, #ffc400 100%);
   color: #071428;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 1rem;
   border-radius: var(--radius);
   text-decoration: none;
-  margin: 0 !important;  /* Único !important necessário */
-  padding: 16px 28px;
+  margin: 0;
 }
 
 .btn-proposito:hover {
@@ -454,9 +492,9 @@ a#Contato:focus {
   filter: brightness(1.05);
 }
 
-/* Animação da luz dourada */
 @keyframes pulseDourado {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0.6;
     transform: scale(0.98);
   }
@@ -466,30 +504,93 @@ a#Contato:focus {
   }
 }
 
-/* RESPONSIVO */
+/* MEDIA QUERIES - IGUAL KLOR SECURITY */
+@media (max-width: 1200px) {
+  header {
+    padding: 10px 4%;
+  }
+  #logoHeader {
+    margin-right: 12%;
+  }
+  a#Contato {
+    margin-right: 4%;
+  }
+}
+
+@media (max-width: 1024px) {
+  header {
+    padding: 10px 5%;
+  }
+  #logoHeader {
+    margin-right: 10%;
+  }
+  a#Contato {
+    margin-right: 5%;
+  }
+
+  .servico-card-1 {
+    right: 30%;
+    top: 230px;
+  }
+  .servico-card-2 {
+    right: 3%;
+    top: 430px;
+  }
+  .servico-card-3 {
+    right: 33%;
+    top: 610px;
+  }
+}
+
 @media (max-width: 768px) {
-  .proposito-section {
+  header {
+    padding: 10px 6%;
+  }
+  nav {
     flex-direction: column;
-    width: 95vw;
-    padding: 2rem 2.5rem;
-    min-height: 420px;
-    margin: 600px auto 80px; /* ✅ Mobile: menos push, espaço menor */
+    gap: 0.8rem;
   }
-  
-  .proposito-wrapper {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    text-align: center;
+
+  #logoHeader {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
   }
-  
-  .proposito-texto {
-    align-items: center;
-    justify-self: center;
+
+  nav ul {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
   }
-  
-  .proposito-image {
-    order: -1;
-    justify-self: center;
+
+  a#Contato {
+    order: 2;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  #H1Principal,
+  #pHeader {
+    margin-left: 5%;
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .servico-card-1 {
+    right: 5%;
+    top: 260px;
+  }
+  .servico-card-2 {
+    right: 5%;
+    top: 460px;
+    max-width: 90vw;
+  }
+  .servico-card-3 {
+    right: 5%;
+    top: 650px;
+    max-width: 90vw;
   }
 }
 
@@ -554,9 +655,49 @@ a#Contato:focus {
 .empresas-title {
   margin-bottom: 8rem;
 }
-
-/* Adicionando espaço abaixo da seção */
-.empresas-section {
-  min-height: 350px;
+.servicos-section {
+  padding: 120px 8%;
+  text-align: center;
 }
 
+/* TÍTULO */
+.servicos-title {
+  font-size: clamp(3rem, 4vw, 2.6rem);
+  color: #012a5a;
+  margin-bottom: 4px; /* aproxima do subtítulo */
+}
+
+/* SUBTÍTULO */
+.servicos-subtitle {
+  font-size: 1.2rem;
+  color: #002855;
+  margin-top: 0;
+}
+
+/* CONTAINER DOS SERVIÇOS */
+.servicos-container {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column; /* UMA SEÇÃO POR LINHA */
+  gap: 60px;
+}
+
+/* CARD / SEÇÃO DE SERVIÇO */
+.servico-box {
+  width: 95%;
+  min-height: 500px; /* altura maior */
+
+  background: rgba(255, 255, 255, 0.35); /* branco fosco */
+  backdrop-filter: blur(6px);
+
+  border: 1px solid #d6b407; /* dourado */
+  border-radius: 18px;
+
+  transition: all 0.3s ease;
+}
+
+/* HOVER SIMPLES */
+.servico-box:hover {
+  border-color: #f0cf3a;
+  transform: translateY(-4px);
+}
