@@ -720,46 +720,111 @@ a#Contato:focus {
   text-align: center;
 }
 
-/* TÍTULO */
-.servicos-title {
-  font-size: clamp(3rem, 4vw, 2.6rem);
-  color: #012a5a;
-  margin-bottom: 4px;
-  /* aproxima do subtítulo */
-}
+/* ===============================
+   CARD SERVIÇOS — DIVIDIDO EM 3
+   PREMIUM • SEM ESPAÇO EM BAIXO
+   =============================== */
 
-/* SUBTÍTULO */
-.servicos-subtitle {
-  font-size: 1.2rem;
-  color: #002855;
-  margin-top: 0;
-}
-
-/* CONTAINER DOS SERVIÇOS */
-.servicos-container {
-  margin-top: 70px;
+.servico-box-dividido {
+  width: 100%;
+  height: 520px; /* CONTROLA ALTURA TOTAL */
   display: flex;
   flex-direction: column;
-  /* UMA SEÇÃO POR LINHA */
-  gap: 60px;
-}
 
-/* CARD / SEÇÃO DE SERVIÇO */
-.servico-box {
-  width: 95%;
-  min-height: 500px;
-  /* altura maior */
-
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(3px) saturate(90%);
-  -webkit-backdrop-filter: blur(1px) saturate(90%);
-
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
   border: 1px solid #d6b407;
-  /* dourado */
   border-radius: 18px;
-
-  transition: all 0.3s ease;
+  padding: 40px;
+  overflow: hidden;
 }
+
+/* TÍTULO — APENAS DO CARD DIVIDIDO */
+.servico-box-dividido .servico-titulo {
+  font-size: 1.8rem;
+  color: #012a5a;
+  margin-bottom: 24px;
+}
+
+/* GRID OCUPA TODO O RESTANTE */
+.servico-divisoes {
+  flex: 1; /* ISSO FAZ ENCOSTAR EM BAIXO */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+/* CARD INTERNO */
+.servico-parte {
+  position: relative;
+  height: 100%;
+  padding: 36px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  color: #ffffff;
+  cursor: pointer;
+
+  background-size: cover;
+  background-position: center;
+}
+
+/* OVERLAY ESCURO PREMIUM */
+.servico-parte::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(1, 42, 88, 0.55);
+  z-index: 1;
+}
+
+/* TEXTO ACIMA DO OVERLAY */
+.servico-parte > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* DIVISÃO VERTICAL */
+.servico-parte:not(:last-child) {
+  border-right: 1px solid rgba(214, 180, 7, 0.6);
+}
+
+/* FUNDOS (AS 3 IMAGENS) */
+.servico-parte:nth-child(1) {
+  background-image: url("../img/Residencia_4k.jpeg");
+}
+
+.servico-parte:nth-child(2) {
+  background-image: url("../img/Salvador_empresas-4K.jpeg");
+}
+
+.servico-parte:nth-child(3) {
+  background-image: url("../img/suporte_tecnico_4k.jpeg");
+}
+
+/* TEXTO */
+.servico-parte h4 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+  color: #d6b407;
+}
+
+.servico-parte p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 90%;
+}
+
+/* HOVER PREMIUM */
+.servico-parte:hover::before {
+  background: rgba(1, 42, 88, 0.35);
+}
+
 
 /* =========================
    MODAL – ADIÇÃO SEM MEXER NOS CARDS
@@ -821,4 +886,42 @@ a#Contato:focus {
     opacity: 1;
     transform: translateY(0) scale(1);
   }
+}/* ===============================
+   CORREÇÃO DEFINITIVA DOS CARDS NORMAIS
+   =============================== */
+
+/* garante que APENAS os cards normais usem o estilo antigo */
+.servicos-container > .servico-box:not(.servico-box-dividido) {
+  height: 420px;
+  padding: 40px;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(214, 180, 7, 0.6);
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: #012a5a;
+}
+
+/* títulos dos cards normais */
+.servicos-container > .servico-box:not(.servico-box-dividido) h3 {
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+  color: #012a5a;
+}
+
+/* texto dos cards normais */
+.servicos-container > .servico-box:not(.servico-box-dividido) p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #012f63;
+}
+.servicos-container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px; /* ESPAÇO ENTRE OS CARDS */
 }
