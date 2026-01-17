@@ -4,11 +4,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>InfoPrime – Soluções e Tecnologia</title>
+
     <link
       rel="shortcut icon"
       href="assets/img/logo infoprime padrao.png"
       type="image/x-icon"
     />
+
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/particles-background.css" />
   </head>
@@ -18,28 +20,27 @@
 
     <header>
       <nav>
-        <img
-          src="assets/img/Logo_Site (3).png"
-          alt="LogoSite"
-          id="logoHeader"
-        />
+        <img src="assets/img/Logo_Site (3).png" alt="LogoSite" id="logoHeader" />
+
         <ul>
           <li><a href="#Home">Home</a></li>
           <li><a href="#NossoProposito">Nosso Propósito</a></li>
           <li><a href="#Empresas">Empresas</a></li>
           <li><a href="#Servicos">Serviços</a></li>
         </ul>
+
         <a href="#Contato" id="Contato">Entre em Contato Conosco</a>
       </nav>
     </header>
 
     <main class="main-container">
+      <!-- HERO -->
       <h1 id="H1Principal">
         <span style="color: #012a5aec">
           Oferecemos serviços de TI <br />
           para as empresas,
-        </span
-        ><br />
+        </span>
+        <br />
         <span style="color: #d6b407">
           priorizando segurança,<br />
           suporte e qualidade.
@@ -54,11 +55,12 @@
       <div class="luz-ti-back"></div>
       <img
         src="assets/img/FotoTI_Azul_4K_Transparente.png"
-        alt="FotoTIAzul"
+        alt="Foto TI"
         id="FotoTIAzul"
       />
       <div class="luz-ti-front"></div>
 
+      <!-- CARDS RÁPIDOS -->
       <div id="cardsTI">
         <div class="servico-card-base servico-card-1">
           <div class="servico-card-inner">
@@ -102,12 +104,14 @@
                 <polyline points="9 15 12 12 15 15"></polyline>
               </svg>
             </div>
-            <p class="titulo-servico-base">Backup e Recuperação de Dados</p>
+            <p class="titulo-servico-base">
+              Backup e Recuperação de Dados
+            </p>
           </div>
         </div>
       </div>
 
-      <!-- Seção Nosso Propósito - Sofisticada -->
+      <!-- PROPÓSITO -->
       <section id="NossoProposito" class="proposito-section">
         <div class="proposito-wrapper">
           <div class="proposito-image">
@@ -124,41 +128,95 @@
 
             <p id="pPROPOSITO">
               Garantimos segurança total, disponibilidade contínua e proteção
-              avançada dos sistemas da sua empresa. Nossa gestão proativa reduz
-              riscos operacionais e mantém você sempre preparado contra ameaças
-              digitais.
+              avançada dos sistemas da sua empresa.
             </p>
 
-            <a href="#Contato" class="btn-proposito"
-              >Saiba Mais Sobre Nossa Abordagem</a
-            >
+            <a href="#Contato" class="btn-proposito">
+              Saiba Mais Sobre Nossa Abordagem
+            </a>
           </div>
         </div>
       </section>
 
+      <!-- EMPRESAS -->
       <section id="Empresas" class="empresas-section">
         <h2 class="empresas-title">Empresas que confiam na InfoPrime</h2>
 
         <div class="empresas-container">
-          <div class="empresa-card"><i class="fas fa-building"></i></div>
-          <div class="empresa-card"><i class="fas fa-building"></i></div>
-          <div class="empresa-card"><i class="fas fa-building"></i></div>
-          <div class="empresa-card"><i class="fas fa-building"></i></div>
-          <div class="empresa-card"><i class="fas fa-building"></i></div>
-          <div class="empresa-card"><i class="fas fa-building"></i></div>
+          <div class="empresa-card"></div>
+          <div class="empresa-card"></div>
+          <div class="empresa-card"></div>
+          <div class="empresa-card"></div>
+          <div class="empresa-card"></div>
+          <div class="empresa-card"></div>
         </div>
       </section>
+<section id="Servicos" class="servicos-section">
+  <div class="servicos-container">
 
-      <section id="Servicos" class="servicos-section">
-        <h1 class="servicos-title">Descubra os nossos serviços</h1>
-        <p class="servicos-subtitle">Eficiência e inovação</p>
+    <div class="servico-box" data-modal="modal-empresas">
+      <h3 class="servico-titulo">Serviços em Empresas</h3>
+      <p class="servico-descricao">
+        O ambiente de TI da sua empresa pode ser complexo, mas o suporte não
+        precisa ser. A InfoPrime atua simplificando o gerenciamento de tecnologia,
+        garantindo estabilidade, segurança e desempenho para que seu negócio
+        continue crescendo sem interrupções.
+      </p>
+      <a class="btn-proposito">Saiba mais</a>
+    </div>
 
-        <div class="servicos-container">
-          <div class="servico-box"></div>
-          <div class="servico-box"></div>
-          <div class="servico-box"></div>
-        </div>
-      </section>
+    <div class="servico-box" data-modal="modal-residencias">
+      <h3 class="servico-titulo">Serviços em Residências</h3>
+      <p class="servico-descricao">
+        Sua rede doméstica também precisa de estabilidade e segurança.
+      </p>
+      <a class="btn-proposito">Saiba mais</a>
+    </div>
+
+    <div class="servico-box" data-modal="modal-avulso">
+      <h3 class="servico-titulo">Serviços Específicos</h3>
+      <p class="servico-descricao">
+        Precisa de um serviço pontual sem comprometer seu orçamento?
+      </p>
+      <a class="btn-proposito">Saiba mais</a>
+    </div>
+
+  </div>
+</section>
+<div class="modal-overlay" id="modal-empresas">
+  <div class="modal-box">
+    <span class="modal-close">&times;</span>
+    <h2>Serviços em Empresas</h2>
+    <p>
+      Diagnóstico de redes, nuvem, segurança, infraestrutura,
+      internet, backup, servidores e suporte contínuo.
+    </p>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-residencias">
+  <div class="modal-box">
+    <span class="modal-close">&times;</span>
+    <h2>Serviços em Residências</h2>
+    <p>
+      Otimização de Wi-Fi, roteadores, segurança, suporte técnico
+      e organização da rede doméstica.
+    </p>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-avulso">
+  <div class="modal-box">
+    <span class="modal-close">&times;</span>
+    <h2>Serviços Específicos</h2>
+    <p>
+      Serviços sob demanda: manutenção, backup, segurança,
+      hardware e diagnósticos pontuais.
+    </p>
+  </div>
+</div>
+
+
     </main>
 
     <footer></footer>

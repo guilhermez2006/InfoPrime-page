@@ -9,22 +9,26 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  overflow-x: hidden; /* ✅ SEM ROLAGEM LATERAL */
+  overflow-x: hidden;
+  /* ✅ SEM ROLAGEM LATERAL */
 }
 
 body {
   background-color: #ffffff;
-  padding-top: 52px; /* ✅ MESMA ALTURA HEADER */
+  padding-top: 52px;
+  /* ✅ MESMA ALTURA HEADER */
 }
 
 header {
   position: fixed;
   width: 100%;
-  height: 12%; /* ✅ ALTURA FIXA */
+  height: 8%;
+  /* ✅ ALTURA FIXA */
   top: 0;
   left: 0;
   z-index: 1000;
-  padding: 10px 3%; /* ✅ LATERAIS ENCURTADAS */
+  padding: 12px 2%;
+  /* ✅ LATERAIS ENCURTADAS */
   background: #091b38;
   color: #e8f3ff;
   border-bottom: 1px solid rgba(255, 255, 255, 0.03);
@@ -43,7 +47,8 @@ nav {
 
 #logoHeader {
   height: 60px;
-  margin-right: 15%; /* ✅ RESPONSIVO */
+  margin-right: 15%;
+  /* ✅ RESPONSIVO */
   margin-left: 2%;
   margin-top: -5px;
   flex-shrink: 0;
@@ -85,13 +90,12 @@ nav ul li a:hover {
 a#Contato {
   padding: 15px 20px;
   margin-left: auto;
-  margin-right: 3%; /* ✅ LATERAL DIREITA */
+  margin-right: 3%;
+  /* ✅ LATERAL DIREITA */
   border-radius: var(--radius);
-  background: linear-gradient(
-    180deg,
-    rgba(2, 124, 231, 0.86),
-    rgba(0, 17, 34, 0.8)
-  );
+  background: linear-gradient(180deg,
+      rgba(2, 124, 231, 0.86),
+      rgba(0, 17, 34, 0.8));
   color: #f8fafc;
   font-weight: 550;
   font-family: "Montserrat", "Poppins", sans-serif;
@@ -112,6 +116,7 @@ a#Contato:focus {
   outline: 3px solid rgba(7, 20, 40, 0.12);
   outline-offset: 4px;
 }
+
 /* APENAS H1 E P ALINHADOS NA MESMA LINHA ESQUERDA */
 
 /* H1 E P PERFEITAMENTE ALINHADOS - MESMO VALOR EXATO */
@@ -120,13 +125,16 @@ a#Contato:focus {
   font-family: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto,
     "Helvetica Neue", Arial;
   font-weight: 700;
-  font-size: clamp(2.5rem, 4vw, 6rem);
+  font-size: clamp(2.0rem, 3.3vw, 6rem);
   line-height: 0.95;
   letter-spacing: -0.02em;
   color: #d7ff2f;
-  margin-left: 3% !important; /* ✅ FIXO 3% */
-  margin-top: clamp(80px, 10vw, 120px); /* ✅ SÓ TOP responsivo */
-  margin-bottom: 0; /* ✅ ZERO */
+  margin-left: 3% !important;
+  /* ✅ FIXO 3% */
+  margin-top: clamp(80px, 10vw, 120px);
+  /* ✅ SÓ TOP responsivo */
+  margin-bottom: 0;
+  /* ✅ ZERO */
   margin-right: 0;
   padding-left: 0 !important;
   max-width: 95%;
@@ -141,8 +149,10 @@ a#Contato:focus {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #012f63;
-  margin-left: 3% !important; /* ✅ MESMO 3% DO H1 */
-  margin-top: 0; /* ✅ ZERO */
+  margin-left: 3% !important;
+  /* ✅ MESMO 3% DO H1 */
+  margin-top: 0;
+  /* ✅ ZERO */
   margin-bottom: 20px;
   margin-right: 0;
   padding-left: 0 !important;
@@ -157,13 +167,11 @@ a#Contato:focus {
   left: 10%;
   width: 80%;
   height: 80%;
-  background: radial-gradient(
-    ellipse at center,
-    rgba(240, 200, 0, 0.61) 0%,
-    rgba(207, 159, 0, 0.15) 40%,
-    rgba(240, 200, 0, 0.08) 70%,
-    transparent 80%
-  );
+  background: radial-gradient(ellipse at center,
+      rgba(240, 200, 0, 0.61) 0%,
+      rgba(207, 159, 0, 0.15) 40%,
+      rgba(240, 200, 0, 0.08) 70%,
+      transparent 80%);
   filter: blur(35px) brightness(1.3);
   z-index: 1;
   pointer-events: none;
@@ -171,11 +179,13 @@ a#Contato:focus {
 }
 
 @keyframes pulseDourado {
+
   0%,
   100% {
     opacity: 0.7;
     transform: scale(0.97);
   }
+
   50% {
     opacity: 1;
     transform: scale(1.03);
@@ -226,10 +236,12 @@ a#Contato:focus {
     opacity: 0.45;
     transform: scale(0.95);
   }
+
   50% {
     opacity: 0.9;
     transform: scale(1.06);
   }
+
   100% {
     opacity: 0.45;
     transform: scale(0.95);
@@ -240,9 +252,11 @@ a#Contato:focus {
   0% {
     opacity: 0.35;
   }
+
   50% {
     opacity: 0.7;
   }
+
   100% {
     opacity: 0.35;
   }
@@ -254,17 +268,16 @@ a#Contato:focus {
   top: clamp(32%, 35%, 38%);
   width: clamp(320px, 30vw, 450px);
   height: clamp(240px, 24vh, 320px);
-  background: radial-gradient(
-    ellipse at 30% 20%,
-    rgba(1, 91, 200, 0.692) 0%,
-    rgba(2, 65, 120, 0.562) 40%,
-    rgba(1, 91, 200, 0.329) 70%,
-    transparent 80%
-  );
+  background: radial-gradient(ellipse at 30% 20%,
+      rgba(1, 91, 200, 0.692) 0%,
+      rgba(2, 65, 120, 0.562) 40%,
+      rgba(1, 91, 200, 0.329) 70%,
+      transparent 80%);
   filter: blur(40px) brightness(1.3);
   mix-blend-mode: screen;
   animation: luzPulseFront 6s ease-in-out infinite;
-  z-index: 3; /* ✅ SOBRE LUZ BACK, ABAIXO IMAGEM */
+  z-index: 3;
+  /* ✅ SOBRE LUZ BACK, ABAIXO IMAGEM */
 }
 
 .luz-ti-back {
@@ -273,20 +286,20 @@ a#Contato:focus {
   top: clamp(20%, 22%, 26%);
   width: clamp(380px, 36vw, 500px);
   height: clamp(300px, 28vh, 400px);
-  background: radial-gradient(
-    ellipse at 25% 15%,
-    rgba(1, 91, 200, 0.418) 0%,
-    rgba(0, 17, 34, 0.301) 50%,
-    rgba(2, 65, 120, 0.178) 75%,
-    transparent 85%
-  );
+  background: radial-gradient(ellipse at 25% 15%,
+      rgba(1, 91, 200, 0.418) 0%,
+      rgba(0, 17, 34, 0.301) 50%,
+      rgba(2, 65, 120, 0.178) 75%,
+      transparent 85%);
   filter: blur(65px) brightness(1.2);
   animation: luzPulseBack 7.5s ease-in-out infinite;
-  z-index: 2; /* ✅ ABAIXO TUDO */
+  z-index: 2;
+  /* ✅ ABAIXO TUDO */
 }
 
 .servico-card-base {
-  position: absolute; /* ✅ FICA SOBRE IMAGEM TI AZUL */
+  position: absolute;
+  /* ✅ FICA SOBRE IMAGEM TI AZUL */
   z-index: 4;
   width: 100%;
   max-width: clamp(280px, 90%, 360px);
@@ -298,11 +311,9 @@ a#Contato:focus {
   gap: 10px;
   padding: 10px 16px;
   box-sizing: border-box;
-  background: linear-gradient(
-      180deg,
+  background: linear-gradient(180deg,
       rgba(2, 124, 231, 0.86),
-      rgba(0, 17, 34, 0.8)
-    ),
+      rgba(0, 17, 34, 0.8)),
     rgba(2, 64, 120, 0.86);
   backdrop-filter: blur(6px) saturate(110%);
   -webkit-backdrop-filter: blur(6px) saturate(110%);
@@ -350,6 +361,7 @@ a#Contato:focus {
   margin: 0;
   flex: 1;
 }
+
 /* POSIÇÕES CARDS RESPONSIVAS - SOBRE IMAGEM TI AZUL */
 .servico-card-1 {
   right: clamp(28%, 33%, 38%);
@@ -428,12 +440,10 @@ a#Contato:focus {
   left: 10%;
   width: 70%;
   height: 70%;
-  background: radial-gradient(
-    ellipse at center,
-    rgba(240, 200, 0, 0.37) 0%,
-    rgba(207, 159, 0, 0.336) 50%,
-    transparent 70%
-  );
+  background: radial-gradient(ellipse at center,
+      rgba(240, 200, 0, 0.37) 0%,
+      rgba(207, 159, 0, 0.336) 50%,
+      transparent 70%);
   filter: blur(40px);
   z-index: 1;
   pointer-events: none;
@@ -493,11 +503,13 @@ a#Contato:focus {
 }
 
 @keyframes pulseDourado {
+
   0%,
   100% {
     opacity: 0.6;
     transform: scale(0.98);
   }
+
   50% {
     opacity: 1;
     transform: scale(1.02);
@@ -509,9 +521,11 @@ a#Contato:focus {
   header {
     padding: 10px 4%;
   }
+
   #logoHeader {
     margin-right: 12%;
   }
+
   a#Contato {
     margin-right: 4%;
   }
@@ -521,14 +535,17 @@ a#Contato:focus {
   header {
     padding: 10px 5%;
   }
+
   #logoHeader {
     margin-right: 10%;
   }
+
   a#Contato {
     margin-right: 5%;
   }
+}
 
- /* POSIÇÕES CARDS RESPONSIVAS - SOBRE IMAGEM TI AZUL */
+/* POSIÇÕES CARDS RESPONSIVAS - SOBRE IMAGEM TI AZUL */
 .servico-card-1 {
   right: clamp(28%, 33%, 38%);
   top: clamp(200px, 24vh, 240px);
@@ -555,12 +572,12 @@ a#Contato:focus {
     right: 32% !important;
     top: 220px !important;
   }
-  
+
   .servico-card-2 {
     right: 1% !important;
     top: 420px !important;
   }
-  
+
   .servico-card-3 {
     right: 36% !important;
     top: 600px !important;
@@ -572,6 +589,7 @@ a#Contato:focus {
   header {
     padding: 10px 6%;
   }
+
   nav {
     flex-direction: column;
     gap: 0.8rem;
@@ -604,14 +622,33 @@ a#Contato:focus {
 }
 
 @media (max-width: 1024px) {
-  header { padding: 10px 5%; }
-  #logoHeader { margin-right: 10%; }
-  a#Contato { margin-right: 5%; }
-  
+  header {
+    padding: 10px 5%;
+  }
+
+  #logoHeader {
+    margin-right: 10%;
+  }
+
+  a#Contato {
+    margin-right: 5%;
+  }
+
   /* Cards tablet - mais centralizados */
-  .servico-card-1 { right: 28%; top: 240px; }
-  .servico-card-2 { right: 2%; top: 440px; }
-  .servico-card-3 { right: 34%; top: 620px; }
+  .servico-card-1 {
+    right: 28%;
+    top: 240px;
+  }
+
+  .servico-card-2 {
+    right: 2%;
+    top: 440px;
+  }
+
+  .servico-card-3 {
+    right: 34%;
+    top: 620px;
+  }
 }
 
 
@@ -647,6 +684,7 @@ a#Contato:focus {
   background: #1a1a1a;
   border-color: #666;
 }
+
 .empresas-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -676,6 +714,7 @@ a#Contato:focus {
 .empresas-title {
   margin-bottom: 8rem;
 }
+
 .servicos-section {
   padding: 120px 8%;
   text-align: center;
@@ -685,7 +724,8 @@ a#Contato:focus {
 .servicos-title {
   font-size: clamp(3rem, 4vw, 2.6rem);
   color: #012a5a;
-  margin-bottom: 4px; /* aproxima do subtítulo */
+  margin-bottom: 4px;
+  /* aproxima do subtítulo */
 }
 
 /* SUBTÍTULO */
@@ -699,27 +739,86 @@ a#Contato:focus {
 .servicos-container {
   margin-top: 70px;
   display: flex;
-  flex-direction: column; /* UMA SEÇÃO POR LINHA */
+  flex-direction: column;
+  /* UMA SEÇÃO POR LINHA */
   gap: 60px;
 }
 
 /* CARD / SEÇÃO DE SERVIÇO */
 .servico-box {
   width: 95%;
-  min-height: 500px; /* altura maior */
+  min-height: 500px;
+  /* altura maior */
 
-  background: rgba(255, 255, 255, 0.35); /* branco fosco */
-  backdrop-filter: blur(6px);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(3px) saturate(90%);
+  -webkit-backdrop-filter: blur(1px) saturate(90%);
 
-  border: 1px solid #d6b407; /* dourado */
+  border: 1px solid #d6b407;
+  /* dourado */
   border-radius: 18px;
 
   transition: all 0.3s ease;
 }
 
-/* HOVER SIMPLES */
-.servico-box:hover {
-  border-color: #f0cf3a;
-  transform: translateY(-4px);
+/* =========================
+   MODAL – ADIÇÃO SEM MEXER NOS CARDS
+   ========================= */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
 }
+
+.modal-box {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 32px;
+  max-width: 520px;
+  width: 90%;
+  text-align: left;
+
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+  animation: modalEntrada 0.35s ease;
+}
+
+.modal-box h2 {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.8rem;
+  color: #012a5a;
+  margin-bottom: 12px;
+}
+
+.modal-box p {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #012f63;
+}
+
+.modal-close {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  font-size: 28px;
+  color: #012a5a;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+@keyframes modalEntrada {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
