@@ -31,27 +31,39 @@ tsParticles.load("particles-js", {
   }
 });
 
-// ABRIR MODAL PELOS CARDS DIVIDIDOS
+// ABRIR MODAL PELOS CARDS DIVIDIDOS - VERSÃO CORRIGIDA
 document.querySelectorAll(".servico-parte").forEach(parte => {
-  parte.addEventListener("click", () => {
-    const modalId = parte.dataset.modal;
+  parte.addEventListener("click", function () {
+    const modalId = this.getAttribute("data-modal"); // Usar getAttribute
+    console.log("Abrindo modal:", modalId); // Para debug
+
     const modal = document.getElementById(modalId);
-    if (modal) modal.style.display = "flex";
+    if (modal) {
+      modal.style.display = "flex";
+      document.body.style.overflow = "hidden"; // Impede rolagem
+    } else {
+      console.error("Modal não encontrado com ID:", modalId);
+    }
   });
 });
 
-// FECHAR MODAL PELO X
+// FECHAR MODAL PELO X - VERSÃO CORRIGIDA
 document.querySelectorAll(".modal-close").forEach(btn => {
-  btn.addEventListener("click", () => {
-    btn.closest(".modal-overlay").style.display = "none";
+  btn.addEventListener("click", function () {
+    const modal = this.closest(".modal-overlay");
+    if (modal) {
+      modal.style.display = "none";
+      document.body.style.overflow = "auto"; // Restaura rolagem
+    }
   });
 });
 
-// FECHAR MODAL CLICANDO FORA
+// FECHAR MODAL CLICANDO FORA - VERSÃO CORRIGIDA
 document.querySelectorAll(".modal-overlay").forEach(modal => {
-  modal.addEventListener("click", e => {
-    if (e.target === modal) modal.style.display = "none";
+  modal.addEventListener("click", function (e) {
+    if (e.target === this) {
+      this.style.display = "none";
+      document.body.style.overflow = "auto"; // Restaura rolagem
+    }
   });
 });
-
-

@@ -694,7 +694,7 @@ a#Contato:focus {
 .empresas-title {
   font-family: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, Arial;
   font-weight: 700;
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-size: clamp(1.6rem, 3vw, 2.6rem);
   letter-spacing: -0.02em;
   color: #012f63;
   margin-bottom: 2.5rem;
@@ -830,7 +830,7 @@ a#Contato:focus {
 .servico-titulo {
   font-family: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, Arial;
   font-weight: 700;
-  font-size: clamp(1.6rem, 2vw, 2.0rem);
+  font-size: clamp(1.6rem, 2vw, 2.8rem);
   letter-spacing: -0.02em;
   color: #012f63;
   margin-bottom: 2.5rem;
@@ -864,55 +864,6 @@ a#Contato:focus {
 
 
 
-/* =========================
-   MODAL – ADIÇÃO SEM MEXER NOS CARDS
-   ========================= */
-
-.modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.7);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-}
-
-.modal-box {
-  background: #ffffff;
-  border-radius: 18px;
-  padding: 32px;
-  max-width: 520px;
-  width: 90%;
-  text-align: left;
-
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
-  animation: modalEntrada 0.35s ease;
-}
-
-.modal-box h2 {
-  font-family: "Nunito", sans-serif;
-  font-size: 1.8rem;
-  color: #012a5a;
-  margin-bottom: 12px;
-}
-
-.modal-box p {
-  font-family: "Inter", sans-serif;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #012f63;
-}
-
-.modal-close {
-  position: absolute;
-  top: 18px;
-  right: 22px;
-  font-size: 28px;
-  color: #012a5a;
-  cursor: pointer;
-  font-weight: bold;
-}
 
 @keyframes modalEntrada {
   from {
@@ -966,6 +917,289 @@ a#Contato:focus {
   flex-direction: column;
   gap: 60px;
   /* ESPAÇO ENTRE OS CARDS */
+}
+
+/* =========================
+   MODAL – ADIÇÃO SEM MEXER NOS CARDS
+   ========================= */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-box {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 750px;
+  width: 90%;
+  text-align: left;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+  animation: modalEntrada 0.35s ease;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.modal-box h2 {
+  font-family: "Nunito", sans-serif;
+  font-size: 2.2rem;
+  color: #012a5a;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.modal-subtitulo {
+  font-family: "Inter", sans-serif;
+  font-size: 1.1rem;
+  color: #0778b4;
+  margin-bottom: 25px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.modal-conteudo {
+  margin: 25px 0;
+}
+
+.modal-conteudo h3 {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.4rem;
+  color: #012a5a;
+  margin: 25px 0 15px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #d6b407;
+}
+
+.modal-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.modal-lista li {
+  padding: 10px 0 10px 30px;
+  position: relative;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #012f63;
+  border-bottom: 1px solid rgba(1, 42, 90, 0.1);
+}
+
+.modal-lista li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #d6b407;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.modal-lista.beneficios li {
+  color: #0778b4;
+  font-weight: 500;
+}
+
+.modal-lista.beneficios li:before {
+  content: "⭐";
+  color: #d6b407;
+}
+
+.modal-lista strong {
+  color: #012a5a;
+  font-weight: 600;
+}
+
+.modal-box p {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #012f63;
+}
+
+/* Botão do modal */
+.modal-btn {
+  display: block;
+  width: 100%;
+  padding: 18px 30px;
+  background: linear-gradient(135deg, #0778b4 0%, #012a5a 100%);
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 30px;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(7, 120, 180, 0.3);
+  background: linear-gradient(135deg, #012a5a 0%, #0778b4 100%);
+}
+
+.modal-close {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  font-size: 28px;
+  color: #012a5a;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+  background: rgba(1, 42, 90, 0.1);
+  transform: rotate(90deg);
+}
+
+@keyframes modalEntrada {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Lista no card 2 */
+.servico-lista {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  text-align: left;
+}
+
+.servico-lista li {
+  padding: 8px 0;
+  color: #012f63;
+  font-size: 1rem;
+  position: relative;
+  padding-left: 25px;
+}
+
+.servico-lista li:before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #d6b407;
+  font-weight: bold;
+}
+
+/* Diferenciais no card 3 */
+.diferenciais {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.diferencial-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 15px;
+  background: rgba(1, 42, 90, 0.05);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(1, 42, 90, 0.1);
+}
+
+.diferencial-item:hover {
+  transform: translateY(-3px);
+  background: rgba(1, 42, 90, 0.1);
+  border-color: rgba(214, 180, 7, 0.3);
+  box-shadow: 0 5px 15px rgba(1, 42, 90, 0.1);
+}
+
+.diferencial-icone {
+  font-size: 1.5rem;
+  min-width: 30px;
+}
+
+.diferencial-texto {
+  font-size: 0.9rem;
+  color: #012f63;
+  font-weight: 500;
+}
+
+/* Responsividade dos modais */
+@media (max-width: 768px) {
+  .modal-box {
+    padding: 25px;
+    max-width: 95%;
+  }
+  
+  .modal-box h2 {
+    font-size: 1.8rem;
+  }
+  
+  .modal-subtitulo {
+    font-size: 1rem;
+  }
+  
+  .modal-lista li {
+    padding-left: 25px;
+    font-size: 0.95rem;
+  }
+  
+  .modal-conteudo h3 {
+    font-size: 1.2rem;
+  }
+  
+  .diferenciais {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .modal-btn {
+    padding: 15px 20px;
+    font-size: 1rem;
+  }
+  
+  .modal-close {
+    top: 12px;
+    right: 15px;
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-box {
+    padding: 20px 15px;
+  }
+  
+  .modal-box h2 {
+    font-size: 1.5rem;
+  }
+  
+  .modal-lista li {
+    padding-left: 20px;
+    font-size: 0.9rem;
+  }
 }
 /* FOOTER STYLES - ALTURA REDUZIDA */
 footer {
