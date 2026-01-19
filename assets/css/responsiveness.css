@@ -205,3 +205,35 @@
   .modal-box h2 { font-size: 1.5rem; }
   .map-container iframe { height: 150px; }
 }
+
+/* AJUSTE DE FLUXO PARA TODAS AS MÍDIAS (Garante o Propósito abaixo da Home) */
+
+/* Desktop Geral */
+@media (min-width: 1025px) {
+  .proposito-section {
+    margin-top: 400px !important; /* Força o distanciamento da área Hero */
+  }
+}
+
+/* Tablet e Laptops Pequenos */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .proposito-section {
+    margin-top: 300px !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .proposito-section {
+    margin-top: 80px !important; /* Mobile não precisa de tanto espaço pois o layout empilha */
+  }
+  .proposito-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  #H1PROPOSITO {
+    white-space: normal;
+    text-align: center;
+  }
+}
