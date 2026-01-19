@@ -1,0 +1,207 @@
+/* ==========================================================
+   ARQUIVO DE RESPONSIVIDADE CONSOLIDADO (LIMPO)
+   ========================================================== */
+
+/* --- 1. TELAS ULTRA-WIDE E DESKTOP GRANDE (1551px para cima) --- */
+@media (min-width: 1551px) {
+  body footer {
+    padding: 40px 8%; /* Reduzido de 80px e 12% para não ficar gigante */
+  }
+
+  body .footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    /* Força as 4 colunas para não espremer */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 30px;
+  }
+
+  /* Fontes mais equilibradas */
+  body .footer-col .logo-title { font-size: 24px; }
+  body .footer-links a, 
+  body .contact-item span,
+  body .footer-slogan { font-size: 14px; line-height: 1.5; }
+  body .footer-title { font-size: 17px; margin-bottom: 15px; }
+  
+  /* Garante que o mapa não suma */
+  body .footer-map { grid-column: span 1; }
+}
+
+/* --- 2. DESKTOP PADRÃO (1400px até 1550px) --- */
+@media (min-width: 1400px) and (max-width: 1550px) {
+  body header {
+    height: 75px;
+    padding: 0 4%;
+    display: flex;
+    align-items: center;
+  }
+
+  body header nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
+  body #logoHeader { height: 55px; margin: 0; }
+  body header nav ul { gap: 35px; justify-content: center; }
+  body header nav ul li a { font-size: 16px; }
+
+  body a#Contato {
+    padding: 14px 30px; 
+    font-size: 15px;
+    margin: 0;
+  }
+
+  /* Mantendo o footer comportado nesta faixa */
+  body footer { padding: 40px 5%; }
+  body .footer-container { grid-template-columns: repeat(4, 1fr); gap: 20px; }
+}
+/* --- 3. TABLET E LAPTOPS PEQUENOS (769px até 1399px) --- */
+@media (min-width: 769px) and (max-width: 1399px) {
+  /* Header */
+  body header {
+    height: 70px;
+    padding: 0 2%;
+    display: flex;
+    align-items: center;
+  }
+
+  body header nav {
+    max-width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  body #logoHeader { height: 45px; margin: 0; }
+  body header nav ul { gap: 15px; padding: 0; }
+  body header nav ul li a { font-size: 13px; }
+  body a#Contato { padding: 14px 18px; font-size: 13px; margin: 0; }
+
+  /* Ajuste dos Cards Flutuantes (Hero) */
+  .servico-card-1 { right: 28%; top: 240px; }
+  .servico-card-2 { right: 2%; top: 440px; }
+  .servico-card-3 { right: 34%; top: 620px; }
+
+  /* COMPRIMINDO O FOOTER */
+  body footer {
+    padding: 25px 3% 10px; /* Reduzido o respiro superior e inferior */
+    margin-top: 30px;      /* Menor distância do conteúdo acima */
+  }
+
+  body .footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    gap: 20px;            /* Gap reduzido de 40px para 20px */
+  }
+
+  body .footer-col { 
+    flex: 1; 
+    min-width: 250px; 
+  }
+
+  /* Coluna do Mapa mais enxuta */
+  body .footer-col:last-child {
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;    /* Espaço reduzido antes do mapa */
+  }
+
+  body .footer-col iframe {
+    width: 500px;        /* Ligeiramente menor */
+    max-width: 90%; 
+    height: 180px;       /* Altura do mapa comprimida de 250px para 180px */
+  }
+
+  /* Copyright mais próximo */
+  body .footer-bottom {
+    width: 100%;
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;    /* Reduzido de 40px */
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  body .footer-bottom-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+}
+
+/* --- 4. MOBILE (Até 768px) --- */
+@media (max-width: 768px) {
+  body header {
+    height: auto;
+    min-height: 60px;
+    padding: 12px 10px;
+    position: fixed;
+  }
+
+  body header nav {
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+
+  body #logoHeader { height: 38px; margin: 0; }
+
+  body header nav ul {
+    gap: 12px;
+    font-size: 11px;
+    padding: 5px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  body a#Contato {
+    width: 90%;
+    text-align: center;
+    padding: 12px;
+    margin: 5px auto 0;
+    font-size: 14px;
+  }
+
+  /* Footer Mobile */
+  body .footer-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  body .footer-title, body .footer-col h3 {
+    margin: 20px auto 10px;
+  }
+
+  body .footer-bottom-links {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  /* Modais Mobile */
+  .modal-box {
+    padding: 25px;
+    max-width: 95%;
+  }
+  
+  .modal-box h2 { font-size: 1.8rem; }
+  .modal-subtitulo { font-size: 1rem; }
+  .diferenciais { grid-template-columns: 1fr; gap: 10px; }
+}
+
+/* --- 5. MOBILE PEQUENO (Até 480px) --- */
+@media (max-width: 480px) {
+  .modal-box { padding: 20px 15px; }
+  .modal-box h2 { font-size: 1.5rem; }
+  .map-container iframe { height: 150px; }
+}

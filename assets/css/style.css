@@ -214,14 +214,7 @@ a#Contato:focus {
   z-index: 5;
 }
 
-/* Notebook específico */
-@media (max-width: 1200px) and (min-width: 1025px) {
-  #FotoTIAzul {
-    left: 55%;
-    top: 130px;
-    max-width: 38%;
-  }
-}
+
 
 #FotoTIDourado {
   position: absolute;
@@ -383,23 +376,7 @@ a#Contato:focus {
   z-index: 6;
 }
 
-/* NOVO: BREAKPOINT NOTEBOOK (1024px-1200px) - Cards MAIS PRÓXIMOS */
-@media (max-width: 1200px) and (min-width: 1025px) {
-  .servico-card-1 {
-    right: 32% !important;
-    top: 220px !important;
-  }
 
-  .servico-card-2 {
-    right: 1% !important;
-    top: 420px !important;
-  }
-
-  .servico-card-3 {
-    right: 36% !important;
-    top: 600px !important;
-  }
-}
 
 .proposito-section {
   position: relative;
@@ -516,35 +493,6 @@ a#Contato:focus {
   }
 }
 
-/* MEDIA QUERIES - IGUAL KLOR SECURITY */
-@media (max-width: 1200px) {
-  header {
-    padding: 10px 4%;
-  }
-
-  #logoHeader {
-    margin-right: 12%;
-  }
-
-  a#Contato {
-    margin-right: 4%;
-  }
-}
-
-@media (max-width: 1024px) {
-  header {
-    padding: 10px 5%;
-  }
-
-  #logoHeader {
-    margin-right: 10%;
-  }
-
-  a#Contato {
-    margin-right: 5%;
-  }
-}
-
 /* POSIÇÕES CARDS RESPONSIVAS - SOBRE IMAGEM TI AZUL */
 .servico-card-1 {
   right: clamp(28%, 33%, 38%);
@@ -565,92 +513,6 @@ a#Contato:focus {
   max-width: 333px;
   z-index: 6;
 }
-
-/* NOVO: BREAKPOINT NOTEBOOK (1024px-1200px) - Cards MAIS PRÓXIMOS */
-@media (max-width: 1200px) and (min-width: 1025px) {
-  .servico-card-1 {
-    right: 32% !important;
-    top: 220px !important;
-  }
-
-  .servico-card-2 {
-    right: 1% !important;
-    top: 420px !important;
-  }
-
-  .servico-card-3 {
-    right: 36% !important;
-    top: 600px !important;
-  }
-}
-
-
-@media (max-width: 768px) {
-  header {
-    padding: 10px 6%;
-  }
-
-  nav {
-    flex-direction: column;
-    gap: 0.8rem;
-  }
-
-  #logoHeader {
-    margin-right: 0;
-    margin-bottom: 0.5rem;
-  }
-
-  nav ul {
-    order: 3;
-    width: 100%;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-
-  a#Contato {
-    order: 2;
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  #H1Principal,
-  #pHeader {
-    margin-left: 5%;
-    text-align: left;
-  }
-}
-
-@media (max-width: 1024px) {
-  header {
-    padding: 10px 5%;
-  }
-
-  #logoHeader {
-    margin-right: 10%;
-  }
-
-  a#Contato {
-    margin-right: 5%;
-  }
-
-  /* Cards tablet - mais centralizados */
-  .servico-card-1 {
-    right: 28%;
-    top: 240px;
-  }
-
-  .servico-card-2 {
-    right: 2%;
-    top: 440px;
-  }
-
-  .servico-card-3 {
-    right: 34%;
-    top: 620px;
-  }
-}
-
 
 /* CARD DE EMPRESAS */
 .empresa-card {
@@ -1146,61 +1008,6 @@ a#Contato:focus {
   font-weight: 500;
 }
 
-/* Responsividade dos modais */
-@media (max-width: 768px) {
-  .modal-box {
-    padding: 25px;
-    max-width: 95%;
-  }
-  
-  .modal-box h2 {
-    font-size: 1.8rem;
-  }
-  
-  .modal-subtitulo {
-    font-size: 1rem;
-  }
-  
-  .modal-lista li {
-    padding-left: 25px;
-    font-size: 0.95rem;
-  }
-  
-  .modal-conteudo h3 {
-    font-size: 1.2rem;
-  }
-  
-  .diferenciais {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-  
-  .modal-btn {
-    padding: 15px 20px;
-    font-size: 1rem;
-  }
-  
-  .modal-close {
-    top: 12px;
-    right: 15px;
-    font-size: 24px;
-  }
-}
-
-@media (max-width: 480px) {
-  .modal-box {
-    padding: 20px 15px;
-  }
-  
-  .modal-box h2 {
-    font-size: 1.5rem;
-  }
-  
-  .modal-lista li {
-    padding-left: 20px;
-    font-size: 0.9rem;
-  }
-}
 /* FOOTER STYLES - ALTURA REDUZIDA */
 footer {
   background: #061429;
@@ -1601,56 +1408,4 @@ footer {
 .map-btn::before {
   content: "📍";
   font-size: 14px;
-}
-
-
-/* Ajuste responsivo */
-@media (max-width: 1200px) {
-  .footer-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .footer-map {
-    grid-column: span 2;
-    min-width: auto;
-  }
-}
-
-@media (max-width: 768px) {
-  footer {
-    padding: 30px 20px 12px;
-  }
-
-  .footer-container {
-    grid-template-columns: 1fr;
-    gap: 25px;
-  }
-
-  .footer-map {
-    grid-column: span 1;
-  }
-
-  .map-links {
-    padding: 10px;
-  }
-
-  .map-btn {
-    padding: 7px 12px;
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 480px) {
-  .footer-container {
-    gap: 20px;
-  }
-
-  .map-container iframe {
-    height: 150px;
-  }
-
-  .footer-bottom-links {
-    flex-direction: column;
-    gap: 8px;
-  }
 }
