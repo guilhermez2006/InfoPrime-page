@@ -1,65 +1,173 @@
 /* ==========================================================
-   ARQUIVO DE RESPONSIVIDADE CONSOLIDADO (LIMPO)
+   SISTEMA DE RESPONSIVIDADE - INFO PRIME (ÓRBITA)
    ========================================================== */
 
-/* --- 1. TELAS ULTRA-WIDE E DESKTOP GRANDE (1551px para cima) --- */
+/* --- 1. FULL HD & ULTRA-WIDE (> 1551px) --- */
 @media (min-width: 1551px) {
+  body header {
+    height: 80px;
+  }
+
+  /* Hero: Ajuste de centralização e descida */
+  #H1Principal {
+    font-size: 4.3rem;
+    max-width: 800px;
+    margin-left: 4%;
+    margin-top: 9%;
+    line-height: 1.1;
+  }
+
+  #pHeader {
+    font-size: 1.3rem;
+    max-width: 550px;
+    margin-left: 4%;
+  }
+
+  #FotoTIAzul {
+    position: absolute;
+    right: 8%;
+    top: 180px;
+    width: 38%;
+    max-width: 750px;
+    z-index: 1;
+  }
+
+  /* Cards Orbitais */
+  .servico-card-base {
+    position: absolute;
+    width: 280px;
+    z-index: 10;
+  }
+
+  .servico-card-inner {
+    padding: 13px 11px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .servico-card-1 {
+    right: 32%;
+    top: 240px;
+  }
+
+  .servico-card-2 {
+    right: 5%;
+    top: 480px;
+  }
+
+  .servico-card-3 {
+    right: 32%;
+    top: 670px;
+  }
+
+  /* Footer & Seção Propósito */
   body footer {
-    padding: 40px 8%; /* Reduzido de 80px e 12% para não ficar gigante */
+    padding: 60px 8%;
   }
 
   body .footer-container {
-    max-width: 1400px;
+    max-width: 1600px;
     margin: 0 auto;
     display: grid;
-    /* Força as 4 colunas para não espremer */
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
   }
 
-  /* Fontes mais equilibradas */
-  body .footer-col .logo-title { font-size: 24px; }
-  body .footer-links a, 
-  body .contact-item span,
-  body .footer-slogan { font-size: 14px; line-height: 1.5; }
-  body .footer-title { font-size: 17px; margin-bottom: 15px; }
-  
-  /* Garante que o mapa não suma */
-  body .footer-map { grid-column: span 1; }
+  body .footer-col .logo-title {
+    font-size: 26px;
+  }
+
+  body .footer-title {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .proposito-section {
+    margin-top: 600px !important;
+  }
 }
 
-/* --- 2. DESKTOP PADRÃO (1400px até 1550px) --- */
+/* --- 2. DESKTOP / LAPTOP PADRÃO (1400px até 1550px) --- */
 @media (min-width: 1400px) and (max-width: 1550px) {
+
   body header {
     height: 75px;
-    padding: 0 4%;
+  }
+
+  #FotoTIAzul {
+    position: absolute;
+    right: 5%;
+    top: 150px;
+    width: 42%;
+    max-width: 600px;
+    z-index: 1;
+  }
+
+  .servico-card-base {
+    position: absolute;
+    width: 270px;
+    z-index: 10;
+  }
+
+  .servico-card-inner {
+    padding: 12px 8px;
     display: flex;
     align-items: center;
+    gap: 10px;
   }
 
-  body header nav {
-    max-width: 1200px;
-    margin: 0 auto;
-    justify-content: space-between;
-  }
-
-  body #logoHeader { height: 55px; margin: 0; }
-  body header nav ul { gap: 35px; justify-content: center; }
-  body header nav ul li a { font-size: 16px; }
-
-  body a#Contato {
-    padding: 14px 30px; 
-    font-size: 15px;
+  .titulo-servico-base {
+    font-size: 14px;
+    line-height: 1.1;
     margin: 0;
   }
 
-  /* Mantendo o footer comportado nesta faixa */
-  body footer { padding: 40px 5%; }
-  body .footer-container { grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .servico-card-1 {
+    right: 30%;
+    top: 200px;
+  }
+
+  .servico-card-2 {
+    right: 2%;
+    top: 420px;
+  }
+
+  .servico-card-3 {
+    right: 32%;
+    top: 560px;
+  }
+
+  #H1Principal {
+    font-size: 3.5rem;
+    max-width: 600px;
+    margin-left: 5%;
+    margin-top: 7%;
+  }
+
+  #pHeader {
+    font-size: 1.1rem;
+    max-width: 480px;
+    margin-left: 5%;
+  }
+
+  .proposito-section {
+    margin-top: 450px;
+  }
+
+  body footer {
+    padding: 40px 5%;
+  }
+
+  body .footer-container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
 }
+
 /* --- 3. TABLET E LAPTOPS PEQUENOS (769px até 1399px) --- */
 @media (min-width: 769px) and (max-width: 1399px) {
-  /* Header */
+
   body header {
     height: 70px;
     padding: 0 2%;
@@ -73,59 +181,112 @@
     gap: 10px;
   }
 
-  body #logoHeader { height: 45px; margin: 0; }
-  body header nav ul { gap: 15px; padding: 0; }
-  body header nav ul li a { font-size: 13px; }
-  body a#Contato { padding: 14px 18px; font-size: 13px; margin: 0; }
+  body #logoHeader {
+    height: 45px;
+    margin: 0;
+  }
 
-  /* Ajuste dos Cards Flutuantes (Hero) */
-  .servico-card-1 { right: 28%; top: 240px; }
-  .servico-card-2 { right: 2%; top: 440px; }
-  .servico-card-3 { right: 34%; top: 620px; }
+  body header nav ul {
+    gap: 15px;
+    padding: 0;
+  }
 
-  /* COMPRIMINDO O FOOTER */
+  body header nav ul li a {
+    font-size: 13px;
+  }
+
+  body a#Contato {
+    padding: 14px 18px;
+    font-size: 13px;
+    margin: 0;
+  }
+
+  #H1Principal {
+    font-size: 3.1rem;
+    margin-left: 5%;
+    max-width: 550px;
+  }
+
+  #pHeader {
+    font-size: 1.1rem;
+    margin-left: 5%;
+    max-width: 450px;
+  }
+
+  #FotoTIAzul {
+    right: 2%;
+    top: 150px;
+    width: 45%;
+    max-width: 480px;
+  }
+
+  .servico-card-base {
+    width: 250px;
+    min-width: auto;
+  }
+
+  .servico-card-inner {
+    padding: 7px 4px;
+  }
+
+  .titulo-servico-base {
+    font-size: 13px;
+  }
+
+  .servico-card-1 {
+    right: 23%;
+    top: 170px;
+  }
+
+  .servico-card-2 {
+    right: 2%;
+    top: 370px;
+  }
+
+  .servico-card-3 {
+    right: 25%;
+    top: 510px;
+  }
+
   body footer {
-    padding: 25px 3% 10px; /* Reduzido o respiro superior e inferior */
-    margin-top: 30px;      /* Menor distância do conteúdo acima */
+    padding: 25px 3% 10px;
+    margin-top: 30px;
   }
 
   body .footer-container {
     max-width: 1000px;
     margin: 0 auto;
-    display: flex; 
-    flex-wrap: wrap; 
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    gap: 20px;            /* Gap reduzido de 40px para 20px */
+    gap: 20px;
   }
 
-  body .footer-col { 
-    flex: 1; 
-    min-width: 250px; 
+  body .footer-col {
+    flex: 1;
+    min-width: 250px;
   }
 
-  /* Coluna do Mapa mais enxuta */
   body .footer-col:last-child {
     flex: 0 0 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 15px;    /* Espaço reduzido antes do mapa */
+    margin-top: 15px;
   }
 
   body .footer-col iframe {
-    width: 500px;        /* Ligeiramente menor */
-    max-width: 90%; 
-    height: 180px;       /* Altura do mapa comprimida de 250px para 180px */
+    width: 500px;
+    max-width: 90%;
+    height: 180px;
   }
 
-  /* Copyright mais próximo */
   body .footer-bottom {
     width: 100%;
-    grid-column: 1 / -1;
     display: flex;
     justify-content: center;
     text-align: center;
-    margin-top: 20px;    /* Reduzido de 40px */
+    margin-top: 20px;
     padding-top: 15px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
@@ -138,7 +299,7 @@
   }
 }
 
-/* --- 4. MOBILE (Até 768px) --- */
+/* --- 4. MOBILE (< 768px) --- */
 @media (max-width: 768px) {
   body header {
     height: auto;
@@ -153,7 +314,10 @@
     align-items: center;
   }
 
-  body #logoHeader { height: 38px; margin: 0; }
+  body #logoHeader {
+    height: 38px;
+    margin: 0;
+  }
 
   body header nav ul {
     gap: 12px;
@@ -171,7 +335,21 @@
     font-size: 14px;
   }
 
-  /* Footer Mobile */
+  .proposito-section {
+    margin-top: 80px !important;
+  }
+
+  .proposito-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  #H1PROPOSITO {
+    white-space: normal;
+    text-align: center;
+  }
+
   body .footer-container {
     display: flex;
     flex-direction: column;
@@ -179,7 +357,8 @@
     align-items: center;
   }
 
-  body .footer-title, body .footer-col h3 {
+  body .footer-title,
+  body .footer-col h3 {
     margin: 20px auto 10px;
   }
 
@@ -188,52 +367,44 @@
     gap: 8px;
   }
 
-  /* Modais Mobile */
+  /* Modais e Componentes */
   .modal-box {
     padding: 25px;
     max-width: 95%;
   }
-  
-  .modal-box h2 { font-size: 1.8rem; }
-  .modal-subtitulo { font-size: 1rem; }
-  .diferenciais { grid-template-columns: 1fr; gap: 10px; }
+
+  .modal-box h2 {
+    font-size: 1.8rem;
+  }
+
+  .modal-subtitulo {
+    font-size: 1rem;
+  }
+
+  .diferenciais {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
 }
 
-/* --- 5. MOBILE PEQUENO (Até 480px) --- */
+/* --- 5. MOBILE PEQUENO (< 480px) --- */
 @media (max-width: 480px) {
-  .modal-box { padding: 20px 15px; }
-  .modal-box h2 { font-size: 1.5rem; }
-  .map-container iframe { height: 150px; }
+  .modal-box {
+    padding: 20px 15px;
+  }
+
+  .modal-box h2 {
+    font-size: 1.5rem;
+  }
+
+  .map-container iframe {
+    height: 150px;
+  }
 }
 
-/* AJUSTE DE FLUXO PARA TODAS AS MÍDIAS (Garante o Propósito abaixo da Home) */
-
-/* Desktop Geral */
+/* --- AJUSTES GERAIS DE FLUXO --- */
 @media (min-width: 1025px) {
   .proposito-section {
-    margin-top: 400px !important; /* Força o distanciamento da área Hero */
-  }
-}
-
-/* Tablet e Laptops Pequenos */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .proposito-section {
-    margin-top: 300px !important;
-  }
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .proposito-section {
-    margin-top: 80px !important; /* Mobile não precisa de tanto espaço pois o layout empilha */
-  }
-  .proposito-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-  }
-  #H1PROPOSITO {
-    white-space: normal;
-    text-align: center;
+    margin-top: 400px !important;
   }
 }
