@@ -12,7 +12,7 @@
   #H1Principal {
     font-size: 4.3rem;
     max-width: 800px;
-    margin-left: 4%;
+    margin-left: 6%;
     margin-top: 9%;
     line-height: 1.1;
   }
@@ -20,12 +20,12 @@
   #pHeader {
     font-size: 1.3rem;
     max-width: 550px;
-    margin-left: 4%;
+    margin-left: 6%;
   }
 
   #FotoTIAzul {
     position: absolute;
-    right: 8%;
+    margin-right: -50%;
     top: 180px;
     width: 38%;
     max-width: 750px;
@@ -40,7 +40,7 @@
   }
 
   .servico-card-inner {
-    padding: 13px 11px;
+    padding: 13px 8px;
     display: flex;
     align-items: center;
     gap: 12px;
@@ -102,6 +102,12 @@
     width: 42%;
     max-width: 600px;
     z-index: 1;
+  }
+
+  #FotoTIDourado {
+    position: relative;
+    margin-left: 10%;
+    width: 115%;
   }
 
   .servico-card-base {
@@ -296,6 +302,131 @@
     flex-direction: column;
     align-items: center;
     gap: 5px;
+  }
+}
+
+/* --- AJUSTE ESPECÍFICO: 1680px --- */
+@media (min-width: 1600px) and (max-width: 1700px) {
+  #H1Principal {
+    margin-left: 3%;
+    margin-top: 10%;
+  }
+
+  #pHeader {
+    margin-left: 3%;
+  }
+
+  #FotoTIAzul {
+    top: 170px;
+    width: 42%;
+  }
+
+  #FotoTIDourado {
+    position: relative;
+    width: 120%;
+  }
+
+
+  .servico-card-1 {
+    right: 33%;
+    top: 240px;
+  }
+
+  .servico-card-2 {
+    right: 3%;
+    top: 450px;
+  }
+
+  .servico-card-3 {
+    right: 30%;
+    top: 670px;
+  }
+
+  .proposito-section {
+    margin-top: 550px !important;
+  }
+}
+
+/* --- AJUSTE IPAD (1024x768) - CLONE DO LAYOUT KLORE --- */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  #H1Principal {
+    font-size: 3.6rem;
+    max-width: 520px;
+    margin-left: 5%;
+    margin-top: 6%;
+    line-height: 1.1;
+    letter-spacing: -1px;
+  }
+
+  #pHeader {
+    font-size: 1.15rem;
+    max-width: 440px;
+    margin-left: 5%;
+  }
+
+  #H1PROPOSITO {
+    margin-top: 20%;
+    margin-left: 6%;
+  }
+
+  #pPROPOSITO1 {
+    margin-left: 6%;
+  }
+
+  #pPROPOSITO2 {
+    margin-left: 6%;
+  }
+
+  .btn-proposito {
+    margin-left: 6%;
+  }
+
+  .botoes-container {
+    display: flex;
+    gap: 20px;
+    margin-left: 5%;
+    margin-top: 30px;
+  }
+
+  #FotoTIAzul {
+    position: absolute;
+    top: 180px;
+    width: 92%;
+    z-index: 1;
+    transform: translateX(-50px);
+  }
+
+  #FotoTIDourado {
+    position: relative;
+    width: 160%;
+  }
+
+  .servico-card-base {
+    width: 290px;
+    z-index: 10;
+  }
+
+  .servico-card-1 {
+    right: 22%;
+    padding: 40px 30px;
+    top: 160px;
+  }
+
+  .servico-card-2 {
+    right: -1%;
+    top: 370px;
+    padding: 10px 30px;
+  }
+
+  .servico-card-3 {
+    right: 22%;
+    padding: 40px 16px;
+    top: 490px;
+  }
+
+  .proposito-section {
+    margin-top: 160px;
   }
 }
 

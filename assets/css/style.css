@@ -271,7 +271,7 @@ a#Contato:focus {
 .luz-ti-back {
   position: absolute;
   left: clamp(70%, 65%, 68%);
-  top: clamp(0%, 100%, 35%);
+  top: clamp(0%,90%, 50%);
   width: clamp(200px, 36vw, 500px);
   height: clamp(300px, 28vh, 400px);
   background: radial-gradient(ellipse at 25% 15%,
@@ -316,9 +316,8 @@ a#Contato:focus {
 }
 
 .icone-container-base {
-  margin-right: 12px;
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -399,17 +398,18 @@ a#Contato:focus {
 
 #FotoTIDourado {
   position: relative;
-  width: 100%;
+  width: 135%;
   height: auto;
-  max-width: 480px;
+  left: -33%;
+  /* Move 50px para a esquerda */
 }
 
 .luz-dourada-sutil {
   position: absolute;
-  top: 15%;
-  left: 10%;
-  width: 70%;
-  height: 70%;
+  top: 20%;
+  left: 0%;
+  width: 90%;
+  height: 75%;
   background: radial-gradient(ellipse at center,
       rgba(240, 200, 0, 0.37) 0%,
       rgba(207, 159, 0, 0.336) 50%,
@@ -442,14 +442,23 @@ a#Contato:focus {
   padding: 0;
 }
 
-#pPROPOSITO {
+#pPROPOSITO1 {
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  font-size: clamp(1rem, 2vw, 1.3rem);
-  line-height: 1.7;
-  letter-spacing: 0.015em;
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  line-height: 1.5;
   color: #012f63;
   margin: 0;
+  padding: 0;
+}
+
+#pPROPOSITO2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: clamp(0.1rem, 2vw, 1.3rem);
+  line-height: 1.4;
+  color: #012f63;
+  margin-top: -2.5%;
   padding: 0;
 }
 
@@ -463,7 +472,7 @@ a#Contato:focus {
   font-size: 1rem;
   border-radius: var(--radius);
   text-decoration: none;
-  margin: 0;
+  margin-bottom: 10%;
 }
 
 .btn-proposito:hover {
