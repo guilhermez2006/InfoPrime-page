@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="assets/css/responsiveness.css">
 </head>
 
-<body>
+<body id="Home">
   <div id="particles-js"></div>
 
   <header>
@@ -27,12 +27,11 @@
         <li><a href="#Servicos">Serviços</a></li>
       </ul>
 
-      <a href="#Contato" id="Contato">Entre em Contato Conosco</a>
+      <a href="https://wa.me/557187809733" id="Contato" target="_blank">Entre em Contato Conosco</a>
     </nav>
   </header>
 
   <main class="main-container">
-    <!-- HERO -->
     <h1 id="H1Principal">
       <span style="color: #012a5aec">
         Oferecemos serviços de TI
@@ -54,7 +53,6 @@
     <img src="assets/img/FotoTI_Azul_4K_Transparente.png" alt="Foto TI" id="FotoTIAzul" />
     <div class="luz-ti-front"></div>
 
-    <!-- CARDS RÁPIDOS -->
     <div id="cardsTI">
       <div class="servico-card-base servico-card-1">
         <div class="servico-card-inner">
@@ -103,7 +101,6 @@
       </div>
     </div>
 
-    <!-- PROPÓSITO -->
     <section id="NossoProposito" class="proposito-section">
       <div class="proposito-wrapper">
         <div class="proposito-image">
@@ -123,15 +120,13 @@
           </p>
           </p>
 
-
-          <a href="#Contato" class="btn-proposito">
+          <a href="https://wa.me/557187809733" class="btn-proposito" target="_blank">
             Saiba Mais Sobre Nossa Abordagem
           </a>
         </div>
       </div>
     </section>
 
-    <!-- EMPRESAS -->
     <section id="Empresas" class="empresas-section">
       <h2 class="empresas-title">Empresas que confiam na InfoPrime</h2>
 
@@ -149,7 +144,6 @@
       <h3 class="servico-titulo">Nossas Soluções em TI</h3>
       <div class="servicos-container">
 
-        <!-- CARD 1 — DIVIDIDO EM 3 -->
         <div class="servico-box servico-box-dividido">
           <div class="servico-divisoes">
             <div class="servico-parte" data-modal="modal-residencias">
@@ -178,7 +172,6 @@
           </div>
         </div>
 
-        <!-- CARD 2 — O QUE FAZEMOS -->
         <div class="servico-box">
           <h3 class="servico-titulo">🚀 Nossa Expertise</h3>
           <p class="servico-descricao">
@@ -194,7 +187,6 @@
           </ul>
         </div>
 
-        <!-- CARD 3 — DIFERENCIAIS -->
         <div class="servico-box">
           <h3 class="servico-titulo">⭐ Por que Escolher a InfoPrime?</h3>
           <p class="servico-descricao">
@@ -220,10 +212,9 @@
           </div>
         </div>
 
-        <!-- MODAL RESIDÊNCIAS -->
         <div class="modal-overlay" id="modal-residencias">
           <div class="modal-box">
-            <span class="modal-close">&times;</span>
+            <span class="modal-close">×</span>
             <h2>🏠 Serviços para Residências</h2>
             <p class="modal-subtitulo">Soluções práticas para sua casa e home office</p>
 
@@ -252,10 +243,9 @@
           </div>
         </div>
 
-        <!-- MODAL EMPRESAS -->
         <div class="modal-overlay" id="modal-empresas">
           <div class="modal-box">
-            <span class="modal-close">&times;</span>
+            <span class="modal-close">×</span>
             <h2>🏢 Gestão de TI para Empresas</h2>
             <p class="modal-subtitulo">Cuidamos da tecnologia para você focar no seu negócio</p>
 
@@ -297,10 +287,9 @@
           </div>
         </div>
 
-        <!-- MODAL AVULSO -->
         <div class="modal-overlay" id="modal-avulso">
           <div class="modal-box">
-            <span class="modal-close">&times;</span>
+            <span class="modal-close">×</span>
             <h2>⚡ Serviços Avulsos</h2>
             <p class="modal-subtitulo">Soluções pontuais para necessidades técnicas específicas</p>
 
@@ -341,9 +330,9 @@
       </div>
     </section>
   </main>
-  <footer>
+
+  <footer id="SessaoContato">
     <div class="footer-container">
-      <!-- Coluna 1: Logotipo e slogan -->
       <div class="footer-col footer-logo">
         <div class="logo-wrapper">
           <img src="assets/img/Logo_Site (3).png" alt="InfoPrime Logo" class="footer-logo-img">
@@ -358,7 +347,6 @@
         </p>
       </div>
 
-      <!-- Coluna 2: Empresa -->
       <div class="footer-col">
         <h3 class="footer-title">EMPRESA</h3>
         <ul class="footer-links">
@@ -366,11 +354,10 @@
           <li><a href="#NossoProposito">Sobre nós</a></li>
           <li><a href="#NossoProposito">Nosso propósito</a></li>
           <li><a href="#Servicos">Serviços</a></li>
-          <li><a href="#Contato">Entre em contato conosco</a></li>
+          <li><a href="#SessaoContato">Entre em contato conosco</a></li>
         </ul>
       </div>
 
-      <!-- Coluna 3: Contato -->
       <div class="footer-col">
         <h3 class="footer-title">INFORMAÇÕES DE CONTATO</h3>
         <div class="contact-info">
@@ -388,7 +375,6 @@
           </div>
         </div>
 
-        <!-- Redes Sociais -->
         <div class="social-links">
           <h4 class="social-title">SIGA-NOS</h4>
           <div class="social-icons">
@@ -401,12 +387,9 @@
         </div>
       </div>
 
-      <!-- Coluna 4: Google Maps -->
-      <!-- Coluna 4: Google Maps -->
       <div class="footer-col footer-map">
         <h3 class="footer-title">NOSSA LOCALIZAÇÃO</h3>
         <div class="map-container">
-          <!-- Embed do Google Maps -->
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15549.20512554383!2d-38.45883099999999!3d-13.003316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x716037d965171f9%3A0xab11181495e337a9!2sInfo%20Prime%20-%20Solu%C3%A7%C3%B5es%20em%20Tecnologia!5e0!3m2!1spt-BR!2sbr!4v1708281600000"
             width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
@@ -421,10 +404,9 @@
         </div>
       </div>
 
-      <!-- Rodapé inferior -->
       <div class="footer-bottom">
         <div class="footer-bottom-content">
-          <span>&copy; 2026 InfoPrime. Todos os direitos reservados.</span>
+          <span>© 2026 InfoPrime. Todos os direitos reservados.</span>
           <div class="footer-bottom-links">
             <p>Desenvolvido por <a href="https://github.com/guilhermez2006" target="_blank">Guilherme Lima</a></p>
           </div>

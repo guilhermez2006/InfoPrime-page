@@ -2,13 +2,31 @@
    SISTEMA DE RESPONSIVIDADE - INFO PRIME (ÓRBITA)
    ========================================================== */
 
+html {
+  scroll-behavior: smooth;
+}
+
+section[id],
+header[id],
+main[id],
+#Empresas,
+#Servicos,
+#NossoProposito {
+  scroll-margin-top: 90px;
+}
+
+@media (max-width: 768px) {
+  section[id] {
+    scroll-margin-top: 70px;
+  }
+}
+
 /* --- 1. FULL HD & ULTRA-WIDE (> 1551px) --- */
 @media (min-width: 1551px) {
   body header {
     height: 80px;
   }
 
-  /* Hero: Ajuste de centralização e descida */
   #H1Principal {
     font-size: 4.3rem;
     max-width: 800px;
@@ -32,7 +50,6 @@
     z-index: 1;
   }
 
-  /* Cards Orbitais */
   .servico-card-base {
     position: absolute;
     width: 280px;
@@ -61,7 +78,6 @@
     top: 670px;
   }
 
-  /* Footer & Seção Propósito */
   body footer {
     padding: 60px 8%;
   }
@@ -88,9 +104,7 @@
   }
 }
 
-/* --- 2. DESKTOP / LAPTOP PADRÃO (1400px até 1550px) --- */
 @media (min-width: 1400px) and (max-width: 1550px) {
-
   body header {
     height: 75px;
   }
@@ -173,7 +187,6 @@
 
 /* --- 3. TABLET E LAPTOPS PEQUENOS (769px até 1399px) --- */
 @media (min-width: 769px) and (max-width: 1399px) {
-
   body header {
     height: 70px;
     padding: 0 2%;
@@ -326,7 +339,6 @@
     width: 120%;
   }
 
-
   .servico-card-1 {
     right: 33%;
     top: 240px;
@@ -349,7 +361,6 @@
 
 /* --- AJUSTE IPAD (1024x768) - CLONE DO LAYOUT KLORE --- */
 @media (min-width: 769px) and (max-width: 1024px) {
-
   #H1Principal {
     font-size: 3.6rem;
     max-width: 520px;
@@ -380,13 +391,6 @@
 
   .btn-proposito {
     margin-left: 6%;
-  }
-
-  .botoes-container {
-    display: flex;
-    gap: 20px;
-    margin-left: 5%;
-    margin-top: 30px;
   }
 
   #FotoTIAzul {
@@ -498,7 +502,6 @@
     gap: 8px;
   }
 
-  /* Modais e Componentes */
   .modal-box {
     padding: 25px;
     max-width: 95%;
