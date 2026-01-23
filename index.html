@@ -5,6 +5,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>InfoPrime – Soluções e Tecnologia</title>
+  <meta name="description"
+    content="InfoPrime oferece serviços de TI para empresas com foco em segurança, suporte e qualidade. Mais de 10 anos protegendo negócios." />
 
   <link rel="shortcut icon" href="assets/img/logo infoprime padrao.png" type="image/x-icon" />
 
@@ -18,9 +20,29 @@
 
   <header>
     <nav>
-      <img src="assets/img/Logo_Site (3).png" alt="LogoSite" id="logoHeader" />
+      <img src="assets/img/Logo_Site (3).png" alt="InfoPrime Logo" id="logoHeader" />
 
-      <ul>
+      <!-- Menu hamburger para mobile -->
+      <button class="menu-hamburger" id="menuHamburger" aria-label="Abrir menu de navegação" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <!-- Overlay do menu mobile -->
+      <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <button class="menu-close" id="menuClose" aria-label="Fechar menu">×</button>
+        <ul class="mobile-nav-links">
+          <li><a href="#Home">Home</a></li>
+          <li><a href="#NossoProposito">Nosso Propósito</a></li>
+          <li><a href="#Empresas">Empresas</a></li>
+          <li><a href="#Servicos">Serviços</a></li>
+          <li><a href="https://wa.me/557187809733" target="_blank" class="mobile-contact-btn">Entre em Contato</a></li>
+        </ul>
+      </div>
+
+      <!-- Menu desktop -->
+      <ul class="desktop-nav-links">
         <li><a href="#Home">Home</a></li>
         <li><a href="#NossoProposito">Nosso Propósito</a></li>
         <li><a href="#Empresas">Empresas</a></li>
@@ -34,23 +56,22 @@
   <main class="main-container">
     <h1 id="H1Principal">
       <span style="color: #012a5aec">
-        Oferecemos serviços de TI
-        para as empresas,
+        Oferecemos serviços <br />
+        de TI para as empresas, <br />
       </span>
-      <br />
+
       <span style="color: #d6b407">
-        priorizando segurança,<br />
+        priorizando segurança, <br />
         suporte e qualidade.
       </span>
     </h1>
-
     <p id="pHeader">
       Possuímos conhecimento técnico <br />
       para cuidar da TI da sua empresa com segurança e eficiência.
     </p>
 
     <div class="luz-ti-back"></div>
-    <img src="assets/img/FotoTI_Azul_4K_Transparente.png" alt="Foto TI" id="FotoTIAzul" />
+    <img src="assets/img/FotoTI_Azul_4K_Transparente.png" alt="Ilustração de tecnologia" id="FotoTIAzul" />
     <div class="luz-ti-front"></div>
 
     <div id="cardsTI">
@@ -79,9 +100,7 @@
               <path d="M9.5 12.5l1.8 1.8L15 10.6"></path>
             </svg>
           </div>
-          <p class="titulo-servico-base">
-            Segurança e Monitoramento de Dados
-          </p>
+          <p class="titulo-servico-base">Segurança e Monitoramento de Dados</p>
         </div>
       </div>
 
@@ -94,9 +113,7 @@
               <polyline points="9 15 12 12 15 15"></polyline>
             </svg>
           </div>
-          <p class="titulo-servico-base">
-            Backup e Recuperação de Dados
-          </p>
+          <p class="titulo-servico-base">Backup e Recuperação de Dados</p>
         </div>
       </div>
     </div>
@@ -105,7 +122,7 @@
       <div class="proposito-wrapper">
         <div class="proposito-image">
           <div class="luz-dourada-sutil"></div>
-          <img src="assets/img/Personagem Malicioso 4K.png" alt="Nossa Tecnologia" id="FotoTIDourado" />
+          <img src="assets/img/Personagem Malicioso 4K.png" alt="Ilustração de segurança" id="FotoTIDourado" />
         </div>
 
         <div class="proposito-texto">
@@ -113,11 +130,11 @@
 
           <p id="pPROPOSITO1">
             Garantimos segurança total, disponibilidade contínua e proteção
-            avançada dos sistemas da sua empresa. <br>
+            avançada dos sistemas da sua empresa.
+          </p>
           <p id="pPROPOSITO2">
             Conosco, sua empresa estará sempre um passo à frente, com tecnologia
             que protege, otimiza e transforma seus resultados.
-          </p>
           </p>
 
           <a href="https://wa.me/557187809733" class="btn-proposito" target="_blank">
@@ -147,7 +164,7 @@
         <div class="servico-box servico-box-dividido">
           <div class="servico-divisoes">
             <div class="servico-parte" data-modal="modal-residencias">
-              <h4> Residências</h4>
+              <h4>Residências</h4>
               <p>
                 <strong>Wi-Fi Seguro • Redes Domésticas • Suporte Remoto</strong><br>
                 Proteção completa para seu home office e dispositivos pessoais.
@@ -155,7 +172,7 @@
             </div>
 
             <div class="servico-parte" data-modal="modal-empresas">
-              <h4> Empresas</h4>
+              <h4>Empresas</h4>
               <p>
                 <strong>Infraestrutura Corporativa • Servidores • Monitoramento 24/7</strong><br>
                 Soluções escaláveis para crescimento e segurança empresarial.
@@ -163,7 +180,7 @@
             </div>
 
             <div class="servico-parte" data-modal="modal-avulso">
-              <h4> Serviços Avulsos</h4>
+              <h4>Serviços Avulsos</h4>
               <p>
                 <strong>Emergências • Manutenção • Consultoria</strong><br>
                 Atendimento rápido para problemas técnicos e otimizações.
@@ -212,6 +229,7 @@
           </div>
         </div>
 
+        <!-- Modal: Residências -->
         <div class="modal-overlay" id="modal-residencias">
           <div class="modal-box">
             <span class="modal-close">×</span>
@@ -243,6 +261,7 @@
           </div>
         </div>
 
+        <!-- Modal: Empresas -->
         <div class="modal-overlay" id="modal-empresas">
           <div class="modal-box">
             <span class="modal-close">×</span>
@@ -287,6 +306,7 @@
           </div>
         </div>
 
+        <!-- Modal: Avulso -->
         <div class="modal-overlay" id="modal-avulso">
           <div class="modal-box">
             <span class="modal-close">×</span>
@@ -318,8 +338,8 @@
               </ul>
 
               <div class="modal-aviso">
-                <p>💡 <strong>Ideal para:</strong> Quem precisa de assistência técnica esporádica ou quer testar
-                  nossos serviços antes de se tornar cliente recorrente.</p>
+                <p>💡 <strong>Ideal para:</strong> Quem precisa de assistência técnica esporádica ou quer testar nossos
+                  serviços antes de se tornar cliente recorrente.</p>
               </div>
             </div>
 
@@ -379,8 +399,8 @@
           <h4 class="social-title">SIGA-NOS</h4>
           <div class="social-icons">
             <a href="https://www.instagram.com/infoprimetecnologia?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-              class="social-icon" title="LinkedIn" target="_blank">ig</a>
-            <a href="https://www.linkedin.com/company/info-prime-ti/" class="social-icon" title="Instagram"
+              class="social-icon" title="Instagram" target="_blank">ig</a>
+            <a href="https://www.linkedin.com/company/info-prime-ti/" class="social-icon" title="LinkedIn"
               target="_blank">in</a>
             <a href="https://wa.me/557187809733" class="social-icon whatsapp" title="WhatsApp" target="_blank">wa</a>
           </div>
@@ -393,7 +413,7 @@
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15549.20512554383!2d-38.45883099999999!3d-13.003316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x716037d965171f9%3A0xab11181495e337a9!2sInfo%20Prime%20-%20Solu%C3%A7%C3%B5es%20em%20Tecnologia!5e0!3m2!1spt-BR!2sbr!4v1708281600000"
             width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade" title="Localização da InfoPrime - Soluções em Tecnologia">
+            referrerpolicy="no-referrer-when-downgrade" title="Localização da InfoPrime">
           </iframe>
 
           <div class="map-links">
@@ -412,6 +432,7 @@
           </div>
         </div>
       </div>
+    </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>

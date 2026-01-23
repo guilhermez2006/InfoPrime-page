@@ -1,20 +1,21 @@
-/**
- * tsParticles - CONFIGURAÇÃO FINAL EQUILIBRADA
- * Base robusta, tamanho médio visível e descarte de cliques para poupar RAM.
- */
+/*
+   INFOPRIME - JAVASCRIPT PRINCIPAL
+*/
+
+/* Configuração tsParticles */
 tsParticles.load("particles-js", {
   fpsLimit: 60,
   particles: {
     number: {
-      value: 180, // Densidade alta para preencher a tela
-      limit: 250, // Teto máximo para não travar o PC
+      value: 180,
+      limit: 250,
       density: { enable: true, area: 800 }
     },
     color: { value: "#009eff" },
     shape: { type: "circle" },
     opacity: { value: 0.6 },
     size: {
-      value: { min: 1.5, max: 4 } // TAMANHO IDEAL: Nem invisível, nem gigante
+      value: { min: 1.5, max: 4 }
     },
     links: {
       enable: true,
@@ -42,17 +43,17 @@ tsParticles.load("particles-js", {
           size: { value: { min: 2, max: 5 } },
           move: {
             speed: 10,
-            outModes: "destroy" // Morrem ao tocar a borda
+            outModes: "destroy"
           },
           opacity: {
             value: { min: 0, max: 0.7 },
             animation: {
               enable: true,
-              speed: 1, // Desaparecem suavemente
+              speed: 1,
               minimumValue: 0,
               sync: true,
               startValue: "max",
-              destroy: "min" // OBRIGA A SAIR DA MEMÓRIA RAM
+              destroy: "min"
             }
           }
         }
@@ -72,11 +73,56 @@ tsParticles.load("particles-js", {
   detectRetina: true
 });
 
-/**
- * GESTÃO DE MODAIS
- */
+/*
+   MENU MOBILE HAMBURGER
+*/
+
+const menuHamburger = document.getElementById("menuHamburger");
+const mobileMenuOverlay = document.getElementById("mobileMenuOverlay");
+const menuClose = document.getElementById("menuClose");
+const mobileNavLinks = document.querySelectorAll(".mobile-nav-links a");
+
+function openMobileMenu() {
+  mobileMenuOverlay.classList.add("active");
+  menuHamburger.classList.add("active");
+  menuHamburger.setAttribute("aria-expanded", "true");
+  document.body.style.overflow = "hidden";
+}
+
+function closeMobileMenu() {
+  mobileMenuOverlay.classList.remove("active");
+  menuHamburger.classList.remove("active");
+  menuHamburger.setAttribute("aria-expanded", "false");
+  document.body.style.overflow = "auto";
+}
+
+menuHamburger.addEventListener("click", openMobileMenu);
+menuClose.addEventListener("click", closeMobileMenu);
+
+mobileNavLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    closeMobileMenu();
+  });
+});
+
+mobileMenuOverlay.addEventListener("click", (e) => {
+  if (e.target === mobileMenuOverlay) {
+    closeMobileMenu();
+  }
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && mobileMenuOverlay.classList.contains("active")) {
+    closeMobileMenu();
+  }
+});
+
+/* 
+   GESTÃO DE MODAIS
+*/
+
 document.querySelectorAll(".servico-parte").forEach(parte => {
-  parte.addEventListener("click", function() {
+  parte.addEventListener("click", function () {
     const modalId = this.getAttribute("data-modal");
     const modal = document.getElementById(modalId);
     if (modal) {
@@ -87,7 +133,7 @@ document.querySelectorAll(".servico-parte").forEach(parte => {
 });
 
 document.querySelectorAll(".modal-close").forEach(btn => {
-  btn.addEventListener("click", function() {
+  btn.addEventListener("click", function () {
     const modal = this.closest(".modal-overlay");
     if (modal) {
       modal.style.display = "none";
@@ -97,10 +143,21 @@ document.querySelectorAll(".modal-close").forEach(btn => {
 });
 
 document.querySelectorAll(".modal-overlay").forEach(modal => {
-  modal.addEventListener("click", function(e) {
+  modal.addEventListener("click", function (e) {
     if (e.target === this) {
       this.style.display = "none";
       document.body.style.overflow = "auto";
     }
   });
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    document.querySelectorAll(".modal-overlay").forEach(modal => {
+      if (modal.style.display === "flex") {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto";
+      }
+    });
+  }
 });
