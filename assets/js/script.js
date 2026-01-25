@@ -150,84 +150,58 @@ document.addEventListener('DOMContentLoaded', function() {
   // PARTICLES.JS CONFIG
   // ==========================================
   
-  if (typeof tsParticles !== 'undefined') {
-    tsParticles.load("particles-js", {
-      particles: {
-        number: {
-          value: 50,
-          density: {
-            enable: true,
-            value_area: 800
-          }
-        },
-        color: {
-          value: "#012a5a"
-        },
-        shape: {
-          type: "circle"
-        },
-        opacity: {
-          value: 0.15,
-          random: true,
-          animation: {
-            enable: true,
-            speed: 1,
-            minimumValue: 0.05,
-            sync: false
-          }
-        },
-        size: {
-          value: 3,
-          random: true,
-          animation: {
-            enable: true,
-            speed: 2,
-            minimumValue: 0.5,
-            sync: false
-          }
-        },
-        links: {
-          enable: true,
-          distance: 150,
-          color: "#012a5a",
-          opacity: 0.1,
-          width: 1
-        },
-        move: {
-          enable: true,
-          speed: 0.8,
-          direction: "none",
-          random: true,
-          straight: false,
-          outModes: {
-            default: "out"
-          }
-        }
-      },
-      interactivity: {
-        detectsOn: "canvas",
-        events: {
-          onHover: {
-            enable: true,
-            mode: "grab"
-          },
-          resize: true
-        },
-        modes: {
-          grab: {
-            distance: 140,
-            links: {
-              opacity: 0.3
-            }
-          }
-        }
-      },
-      detectRetina: true,
-      background: {
-        color: "transparent"
+/* Configuração tsParticles — VERSÃO QUE FUNCIONA */
+tsParticles.load("particles-js", {
+  fpsLimit: 60,
+  particles: {
+    number: {
+      value: 180,
+      limit: 170,
+      density: { enable: true, area: 800 }
+    },
+    color: { value: "#009eff" },
+    shape: { type: "circle" },
+    opacity: { value: 0.6 },
+    size: {
+      value: { min: 1.5, max: 4 }
+    },
+    links: {
+      enable: true,
+      distance: 150,
+      color: "#009eff",
+      opacity: 0.4,
+      width: 1.2
+    },
+    move: {
+      enable: true,
+      speed: 1.5,
+      outModes: "out"
+    }
+  },
+  interactivity: {
+    events: {
+      onHover: { enable: true, mode: "grab" },
+      onClick: { enable: true, mode: "push" }
+    },
+    modes: {
+      grab: { distance: 200, links: { opacity: 1 } },
+      push: {
+        quantity: 10
       }
-    });
-  }
+    }
+  },
+  responsive: [
+    {
+      maxWidth: 1024,
+      options: { particles: { number: { value: 80, limit: 120 } } }
+    },
+    {
+      maxWidth: 768,
+      options: { particles: { number: { value: 40, limit: 60 } } }
+    }
+  ],
+  detectRetina: true
+});
 
   // ==========================================
   // HEADER SCROLL EFFECT
