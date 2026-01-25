@@ -178,7 +178,7 @@ a#Contato:focus {
   width: 100%;
   height: 100vh;
   background: linear-gradient(180deg, #091b38 0%, #061429 100%);
-  z-index: 999;
+  z-index: 9998;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -208,6 +208,7 @@ a#Contato:focus {
   align-items: center;
   justify-content: center;
   transition: transform var(--transition-medium);
+  z-index: 9999;
 }
 
 .menu-close:hover {
@@ -270,7 +271,7 @@ a#Contato:focus {
   font-family: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   font-weight: 700;
   font-size: clamp(2rem, 3.3vw, 6rem);
-  line-height: 0.95;
+  line-height: 1.1;
   letter-spacing: -0.02em;
   color: #d7ff2f;
   margin-left: 3%;
@@ -467,8 +468,10 @@ a#Contato:focus {
 #FotoTIDourado {
   position: relative;
   width: 135%;
+  max-width: 100%;
   height: auto;
   left: -33%;
+  object-fit: contain;
 }
 
 .luz-dourada-sutil {
