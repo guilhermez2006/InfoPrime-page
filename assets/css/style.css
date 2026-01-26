@@ -178,7 +178,7 @@ a#Contato:focus {
   width: 100%;
   height: 100vh;
   background: linear-gradient(180deg, #091b38 0%, #061429 100%);
-  z-index: 9998;
+  z-index: 999;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -208,7 +208,6 @@ a#Contato:focus {
   align-items: center;
   justify-content: center;
   transition: transform var(--transition-medium);
-  z-index: 9999;
 }
 
 .menu-close:hover {
@@ -271,7 +270,7 @@ a#Contato:focus {
   font-family: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   font-weight: 700;
   font-size: clamp(2rem, 3.3vw, 6rem);
-  line-height: 1.1;
+  line-height: 0.95;
   letter-spacing: -0.02em;
   color: #d7ff2f;
   margin-left: 3%;
@@ -468,10 +467,8 @@ a#Contato:focus {
 #FotoTIDourado {
   position: relative;
   width: 135%;
-  max-width: 100%;
   height: auto;
   left: -33%;
-  object-fit: contain;
 }
 
 .luz-dourada-sutil {
@@ -735,93 +732,217 @@ a#Contato:focus {
   margin-bottom: 12px;
 }
 
-/* Cards Normais */
+/* Cards Normais - DESIGN PREMIUM */
 .servicos-container > .servico-box:not(.servico-box-dividido) {
   height: 420px;
   padding: 40px;
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid var(--navy-light);
-  border-radius: var(--radius-md);
+  background: linear-gradient(145deg, 
+    rgba(1, 42, 90, 0.95) 0%, 
+    rgba(7, 20, 40, 0.98) 50%,
+    rgba(1, 32, 60, 0.95) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(122, 209, 255, 0.15);
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  color: var(--navy);
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(122, 209, 255, 0.08),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Efeito de brilho no topo */
+.servicos-container > .servico-box:not(.servico-box-dividido)::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(122, 209, 255, 0.5) 50%, 
+    transparent 100%);
+}
+
+/* Efeito de glow no fundo */
+.servicos-container > .servico-box:not(.servico-box-dividido)::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle at 30% 20%,
+    rgba(7, 120, 180, 0.15) 0%,
+    transparent 50%
+  );
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.servicos-container > .servico-box:not(.servico-box-dividido):hover {
+  transform: translateY(-8px);
+  box-shadow: 
+    0 35px 70px -15px rgba(0, 0, 0, 0.6),
+    0 0 40px rgba(7, 120, 180, 0.2),
+    0 0 0 1px rgba(122, 209, 255, 0.2),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+  border-color: rgba(122, 209, 255, 0.3);
+}
+
+.servicos-container > .servico-box:not(.servico-box-dividido):hover::after {
+  opacity: 1;
 }
 
 .servicos-container > .servico-box:not(.servico-box-dividido) h3 {
   font-size: 1.6rem;
   margin-bottom: 16px;
-  color: var(--navy);
+  color: var(--white);
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-.servicos-container > .servico-box:not(.servico-box-dividido) p {
+.servicos-container > .servico-box:not(.servico-box-dividido) .servico-descricao {
   font-size: 1rem;
   line-height: 1.6;
-  color: var(--navy-light);
+  color: rgba(232, 243, 255, 0.9);
+  position: relative;
+  z-index: 2;
 }
 
-/* Lista de Serviços */
+/* Lista de Serviços - Premium */
 .servico-lista {
   list-style: none;
   padding: 0;
   margin: 20px 0;
   text-align: left;
+  position: relative;
+  z-index: 2;
 }
 
 .servico-lista li {
-  padding: 8px 0;
-  color: var(--navy-light);
-  font-size: 1rem;
+  padding: 10px 0;
+  color: rgba(232, 243, 255, 0.85);
+  font-size: 0.95rem;
   position: relative;
-  padding-left: 25px;
+  padding-left: 28px;
+  transition: all 0.3s ease;
+}
+
+.servico-lista li:hover {
+  color: var(--white);
+  transform: translateX(5px);
 }
 
 .servico-lista li:before {
-  content: "→";
+  content: "✓";
   position: absolute;
   left: 0;
   color: var(--gold);
   font-weight: bold;
+  font-size: 1rem;
+  text-shadow: 0 0 10px rgba(240, 200, 0, 0.4);
 }
 
-/* Diferenciais */
+/* Diferenciais - Premium */
 .diferenciais {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
+  gap: 12px;
   margin-top: 20px;
+  position: relative;
+  z-index: 2;
 }
 
 .diferencial-item {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 12px 15px;
-  background: rgba(1, 42, 90, 0.05);
-  border-radius: 10px;
-  transition: all var(--transition-medium);
-  border: 1px solid rgba(1, 42, 90, 0.1);
+  padding: 14px 16px;
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.08) 0%, 
+    rgba(255, 255, 255, 0.02) 100%);
+  border-radius: 12px;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(122, 209, 255, 0.1);
+  backdrop-filter: blur(10px);
 }
 
 .diferencial-item:hover {
-  transform: translateY(-3px);
-  background: rgba(1, 42, 90, 0.1);
-  border-color: rgba(214, 180, 7, 0.3);
-  box-shadow: 0 5px 15px rgba(1, 42, 90, 0.1);
+  transform: translateY(-4px) scale(1.02);
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.12) 0%, 
+    rgba(122, 209, 255, 0.08) 100%);
+  border-color: rgba(240, 200, 0, 0.4);
+  box-shadow: 
+    0 10px 30px -10px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(240, 200, 0, 0.1);
+}
+
+/* Card Header Premium */
+.card-header-premium {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 2;
+}
+
+.card-icon {
+  width: 42px;
+  height: 42px;
+  stroke: var(--gold);
+  filter: drop-shadow(0 0 8px rgba(240, 200, 0, 0.3));
+  flex-shrink: 0;
+}
+
+.card-header-premium .servico-titulo {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+/* Ícones SVG nos Diferenciais */
+.diferencial-icone-svg {
+  width: 26px;
+  height: 26px;
+  stroke: var(--gold);
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 6px rgba(240, 200, 0, 0.25));
+  transition: all 0.3s ease;
+}
+
+.diferencial-item:hover .diferencial-icone-svg {
+  stroke: var(--white);
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
 }
 
 .diferencial-icone {
-  font-size: 1.5rem;
-  min-width: 30px;
+  font-size: 1.6rem;
+  min-width: 35px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
 
 .diferencial-texto {
   font-size: 0.9rem;
-  color: var(--navy-light);
+  color: rgba(232, 243, 255, 0.9);
   font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.diferencial-item:hover .diferencial-texto {
+  color: var(--white);
 }
 
 /* ==========================================

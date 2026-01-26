@@ -47,6 +47,12 @@ main[id],
     z-index: 1;
   }
 
+  #FotoTIDourado {
+    position: relative;
+    width: 120%;
+    max-width: 130%;
+  }
+
   .servico-card-base {
     position: absolute;
     width: 280px;
@@ -272,30 +278,31 @@ main[id],
 
   #H1Principal {
     font-size: 3.1rem;
-    margin-left: 5%;
+    margin-left: 2.5%;
     max-width: 550px;
   }
 
   #pHeader {
     font-size: 1.1rem;
-    margin-left: 5%;
+    margin-left: 2.5%;
     max-width: 450px;
   }
 
   #FotoTIAzul {
-    right: 2%;
-    top: 150px;
-    width: 45%;
-    max-width: 480px;
+    margin-left: -10%;
+    top: 100px;
+    width: 65%;
+    max-width: 550px;
   }
-
-  /* Imagem Dourada - Responsiva entre 768px e 1200px */
+/* Imagem Dourada - Ajuste para iPad antes do hambúrguer */
   #FotoTIDourado {
-    width: 100%;
-    max-width: 150%;
-    left: 0;
+    position: relative;
+    width: 120% ;   /* Aumenta de 100% para 140% */
+    max-width: 750px ; /* Aumenta o limite de 800px para 950px */
+    left: -15% ;    /* Puxa para a esquerda para compensar o tamanho e não tampar o texto */
+    margin: 0 auto;
+    display: block;
   }
-
   .servico-card-base {
     width: 250px;
     min-width: auto;
@@ -433,11 +440,11 @@ main[id],
 
   /* ===== IMAGEM TI - CENTRALIZADA ===== */
   #FotoTIAzul {
-    position: relative ;
+    position: relative;
     left: auto;
     right: auto;
-    top: auto ;
-    transform: none ;
+    top: auto;
+    transform: none;
     width: 100%;
     max-width: 600px;
     margin: 0 auto 35px;
@@ -445,7 +452,7 @@ main[id],
     z-index: 5;
   }
 
-    #FotoTIDourado {
+  #FotoTIDourado {
     position: relative;
     width: 110%;
     max-width: 500px;
@@ -510,6 +517,12 @@ main[id],
   }
 
   /* ===== SEÇÃO PROPÓSITO ===== */
+
+  .proposito-section {
+    margin-top: 60px !important;
+    padding: 30px 20px;
+  }
+
   .proposito-section {
     margin-top: 60px !important;
     padding: 30px 20px;
@@ -706,11 +719,11 @@ main[id],
   /* ===== IMAGEM TI - VISÍVEL E CENTRALIZADA ===== */
   #FotoTIAzul {
     display: block;
-    position: relative ;
-    left: auto ;
+    position: relative;
+    left: auto;
     right: auto;
-    top: auto ;
-    transform: none ;
+    top: auto;
+    transform: none;
     width: 85%;
     max-width: 400px;
     margin: 0 auto 30px;
@@ -1036,3 +1049,4 @@ main[id],
     margin-top: 400px !important;
   }
 }
+
