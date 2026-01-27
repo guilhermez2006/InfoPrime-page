@@ -199,7 +199,7 @@ funcionando
 
 @media (min-width: 1024px) and (max-width: 1399px) {
   body header {
-    height: 70px;
+    height: 80px;
     padding: 0 2%;
     display: flex;
     align-items: center;
@@ -222,20 +222,20 @@ funcionando
   }
 
   body header .desktop-nav-links li a {
-    font-size: 13px;
+    font-size: 14px;
   }
 
   body a#Contato {
-    padding: 14px 18px;
-    font-size: 13px;
+    padding: 16px 18px;
+    font-size: 14px;
     margin: 0;
   }
 
   #H1Principal {
-    font-size: 3.7rem;
+    font-size: 3.5rem;
     max-width: 800px;
     margin-left: 2%;
-    margin-top: 9%;
+    margin-top: 7%;
     line-height: 1.1;
   }
 
@@ -249,7 +249,7 @@ funcionando
     left: 45%;
     top: 100px;
     width: 100%;
-    max-width: 680px;
+    max-width: 655px;
     min-width: 650px;
     z-index: 1;
   }
@@ -345,7 +345,52 @@ funcionando
     gap: 5px;
   }
 }
-
+/*
+   DESKTOP PEQUENO (1024px - 1199px) - ANTES DO HAMBÚRGUER
+*/
+@media (min-width: 1024px) and (max-width: 1199px) {
+  /* Copia TUDO do seu "TABLET E LAPTOPS" original aqui */
+  /* Mas ajusta ESTAS PROPRIEDADES: */
+  
+  #H1Principal {
+    font-size: 3rem;      /* ↓ REDUZIDO de 3.7rem */
+    max-width: 600px;     /* ↓ REDUZIDO de 800px */
+  }
+  
+  #pHeader {
+    font-size: 1.1rem;    /* ↓ REDUZIDO de 1.3rem */
+    max-width: 450px;     /* ↓ REDUZIDO de 550px */
+  }
+  
+  #FotoTIAzul {
+    left: 42%;            /* ↓ REDUZIDO de 45% */
+    width: 90%;           /* ↓ REDUZIDO de 100% */
+    max-width: 620px;     /* ↓ REDUZIDO de 680px */
+    min-width: 0;         /* ✗ REMOVE 650px */
+  }
+  
+  #FotoTIDourado {
+    width: 108%;          /* ↓ REDUZIDO de 110% */
+    min-width: 420px;     /* ↓ REDUZIDO de 450px */
+    left: -13%;           /* ↑ AJUSTADO de -15% */
+  }
+  
+  .servico-card-1 {
+    right: 21%;           /* ↑ AJUSTADO de 23% */
+    top: 155px;           /* ↓ REDUZIDO de 170px */
+  }
+  
+  .servico-card-2 {
+    top: 340px;           /* ↓ REDUZIDO de 370px */
+  }
+  
+  .servico-card-3 {
+    right: 23%;           /* ↑ AJUSTADO de 25% */
+    top: 485px;           /* ↓ REDUZIDO de 510px */
+  }
+  
+  /* Mantém TODO O RESTO igual ao "TABLET E LAPTOPS" */
+}
 /*
    =========================================== 
    TABLETS (769px - 1023px) - LAYOUT EMPILHADO
