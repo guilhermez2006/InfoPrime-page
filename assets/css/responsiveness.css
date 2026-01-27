@@ -15,11 +15,93 @@ main[id],
   scroll-margin-top: 90px;
 }
 
+
 /*
+funcionando
+   DESKTOP MÉDIO (1400px - 1599px)
+*/
+@media (min-width: 1400px) and (max-width: 1599px) {
+  body header {
+    height: 75px;
+  }
+
+  #H1Principal {
+    font-size: 3.8rem;
+    max-width: 700px;
+    margin-left: 3%;
+    margin-top: 8%;
+  }
+
+  #pHeader {
+    font-size: 1.2rem;
+    max-width: 500px;
+    margin-left: 3%;
+  }
+
+  #FotoTIAzul {
+    position: absolute;
+    left: 55%;
+    top: 160px;
+    width: 45%;
+    max-width: 650px;
+    z-index: 1;
+  }
+
+  #FotoTIDourado {
+    position: relative;
+    width: 110%;
+    max-width: 125%;
+  }
+
+  .servico-card-base {
+    position: absolute;
+    width: 270px;
+    z-index: 10;
+  }
+
+  .servico-card-inner {
+    padding: 15px 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .servico-card-1 {
+    right: 28%;
+    top: 220px;
+  }
+
+  .servico-card-2 {
+    right: 2%;
+    top: 430px;
+  }
+
+  .servico-card-3 {
+    right: 30%;
+    top: 580px;
+  }
+
+  .proposito-section {
+    margin-top: 500px !important;
+  }
+
+  body footer {
+    padding: 50px 6%;
+  }
+
+  body .footer-container {
+    max-width: 1400px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+}
+
+/*
+funcionando
    FULL HD & ULTRA-WIDE (> 1551px)
 */
 
-@media (min-width: 1551px) {
+@media (min-width: 1600px) {
   body header {
     height: 80px;
   }
@@ -27,7 +109,7 @@ main[id],
   #H1Principal {
     font-size: 4.3rem;
     max-width: 800px;
-    margin-left: 6%;
+    margin-left: 2%;
     margin-top: 9%;
     line-height: 1.1;
   }
@@ -35,12 +117,12 @@ main[id],
   #pHeader {
     font-size: 1.3rem;
     max-width: 550px;
-    margin-left: 6%;
+    margin-left: 2%;
   }
 
   #FotoTIAzul {
     position: absolute;
-    margin-right: -50%;
+    left: 60%;
     top: 180px;
     width: 38%;
     max-width: 750px;
@@ -60,25 +142,25 @@ main[id],
   }
 
   .servico-card-inner {
-    padding: 13px 8px;
+    padding: 17px 8px;
     display: flex;
     align-items: center;
     gap: 12px;
   }
 
   .servico-card-1 {
-    right: 32%;
+    right: 27%;
     top: 240px;
   }
 
   .servico-card-2 {
-    right: 5%;
-    top: 480px;
+    right: 1%;
+    top: 450px;
   }
 
   .servico-card-3 {
-    right: 32%;
-    top: 670px;
+    right: 29%;
+    top: 600px;
   }
 
   body footer {
@@ -107,142 +189,15 @@ main[id],
   }
 }
 
-/*
-   DESKTOP LARGE (1400px - 1550px)
-*/
 
-@media (min-width: 1400px) and (max-width: 1550px) {
-  body header {
-    height: 75px;
-  }
 
-  #FotoTIAzul {
-    position: absolute;
-    right: 5%;
-    top: 150px;
-    width: 42%;
-    max-width: 600px;
-    z-index: 1;
-  }
-
-  #FotoTIDourado {
-    position: relative;
-    margin-left: 10%;
-    width: 115%;
-    max-width: 100%;
-  }
-
-  .servico-card-base {
-    position: absolute;
-    width: 270px;
-    z-index: 10;
-  }
-
-  .servico-card-inner {
-    padding: 12px 8px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .titulo-servico-base {
-    font-size: 14px;
-    line-height: 1.1;
-    margin: 0;
-  }
-
-  .servico-card-1 {
-    right: 30%;
-    top: 200px;
-  }
-
-  .servico-card-2 {
-    right: 2%;
-    top: 420px;
-  }
-
-  .servico-card-3 {
-    right: 32%;
-    top: 560px;
-  }
-
-  #H1Principal {
-    font-size: 3.5rem;
-    max-width: 600px;
-    margin-left: 5%;
-    margin-top: 7%;
-  }
-
-  #pHeader {
-    font-size: 1.1rem;
-    max-width: 480px;
-    margin-left: 5%;
-  }
-
-  .proposito-section {
-    margin-top: 450px;
-  }
-
-  body footer {
-    padding: 40px 5%;
-  }
-
-  body .footer-container {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-  }
-}
 
 /*
-   AJUSTE 1680px
-*/
-
-@media (min-width: 1600px) and (max-width: 1700px) {
-  #H1Principal {
-    margin-left: 3%;
-    margin-top: 10%;
-  }
-
-  #pHeader {
-    margin-left: 3%;
-  }
-
-  #FotoTIAzul {
-    top: 170px;
-    width: 42%;
-  }
-
-  #FotoTIDourado {
-    position: relative;
-    width: 120%;
-    max-width: 100%;
-  }
-
-  .servico-card-1 {
-    right: 33%;
-    top: 240px;
-  }
-
-  .servico-card-2 {
-    right: 3%;
-    top: 450px;
-  }
-
-  .servico-card-3 {
-    right: 30%;
-    top: 670px;
-  }
-
-  .proposito-section {
-    margin-top: 550px !important;
-  }
-}
-
-/*
+funcionando
    TABLET E LAPTOPS (769px - 1399px)
 */
 
-@media (min-width: 769px) and (max-width: 1399px) {
+@media (min-width: 1024px) and (max-width: 1399px) {
   body header {
     height: 70px;
     padding: 0 2%;
@@ -277,32 +232,41 @@ main[id],
   }
 
   #H1Principal {
-    font-size: 3.1rem;
-    margin-left: 2.5%;
-    max-width: 550px;
+    font-size: 3.7rem;
+    max-width: 800px;
+    margin-left: 2%;
+    margin-top: 9%;
+    line-height: 1.1;
   }
 
   #pHeader {
-    font-size: 1.1rem;
-    margin-left: 2.5%;
-    max-width: 450px;
+    font-size: 1.3rem;
+    max-width: 550px;
+    margin-left: 2%;
   }
 
   #FotoTIAzul {
-    margin-left: -10%;
+    left: 45%;
     top: 100px;
-    width: 65%;
-    max-width: 550px;
+    width: 100%;
+    max-width: 680px;
+    min-width: 650px;
+    z-index: 1;
   }
-/* Imagem Dourada - Ajuste para iPad antes do hambúrguer */
+
+  /* Imagem Dourada - Ajuste para iPad antes do hambúrguer */
   #FotoTIDourado {
     position: relative;
-    width: 120% ;   /* Aumenta de 100% para 140% */
-    max-width: 750px ; /* Aumenta o limite de 800px para 950px */
-    left: -15% ;    /* Puxa para a esquerda para compensar o tamanho e não tampar o texto */
+    width: 110%;
+    /* Aumenta de 100% para 140% */
+    min-width: 450px;
+    /* Aumenta o limite de 800px para 950px */
+    left: -15%;
+    /* Puxa para a esquerda para compensar o tamanho e não tampar o texto */
     margin: 0 auto;
     display: block;
   }
+
   .servico-card-base {
     width: 250px;
     min-width: auto;
@@ -523,11 +487,6 @@ main[id],
     padding: 30px 20px;
   }
 
-  .proposito-section {
-    margin-top: 60px !important;
-    padding: 30px 20px;
-  }
-
   .proposito-wrapper {
     display: flex;
     flex-direction: column;
@@ -643,7 +602,8 @@ main[id],
 }
 
 /*
-   MOBILE (< 768px) - MENU HAMBURGER
+   MOBILEEEEEEEEEEEE
+   (< 768px) - MENU HAMBURGER
 */
 
 @media (max-width: 768px) {
@@ -1041,12 +1001,8 @@ main[id],
 }
 
 /*
-   AJUSTES GERAIS
+   AJUSTES GERAIS - REMOVIDO BLOCO CONFLITANTE
+   O bloco @media (min-width: 1025px) foi removido pois conflitava
+   com os blocos 1024px-1399px e 1400px-1550px acima.
+   Use os blocos específicos para ajustar .proposito-section margin-top.
 */
-
-@media (min-width: 1025px) {
-  .proposito-section {
-    margin-top: 400px !important;
-  }
-}
-
