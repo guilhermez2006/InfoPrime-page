@@ -345,52 +345,70 @@ funcionando
     gap: 5px;
   }
 }
+
 /*
    DESKTOP PEQUENO (1024px - 1199px) - ANTES DO HAMBÚRGUER
 */
 @media (min-width: 1024px) and (max-width: 1199px) {
   /* Copia TUDO do seu "TABLET E LAPTOPS" original aqui */
   /* Mas ajusta ESTAS PROPRIEDADES: */
-  
+
   #H1Principal {
-    font-size: 3rem;      /* ↓ REDUZIDO de 3.7rem */
-    max-width: 600px;     /* ↓ REDUZIDO de 800px */
+    font-size: 3rem;
+    /* ↓ REDUZIDO de 3.7rem */
+    max-width: 600px;
+    /* ↓ REDUZIDO de 800px */
   }
-  
+
   #pHeader {
-    font-size: 1.1rem;    /* ↓ REDUZIDO de 1.3rem */
-    max-width: 450px;     /* ↓ REDUZIDO de 550px */
+    font-size: 1.1rem;
+    /* ↓ REDUZIDO de 1.3rem */
+    max-width: 450px;
+    /* ↓ REDUZIDO de 550px */
   }
-  
+
   #FotoTIAzul {
-    left: 42%;            /* ↓ REDUZIDO de 45% */
-    width: 90%;           /* ↓ REDUZIDO de 100% */
-    max-width: 620px;     /* ↓ REDUZIDO de 680px */
-    min-width: 0;         /* ✗ REMOVE 650px */
+    left: 42%;
+    /* ↓ REDUZIDO de 45% */
+    width: 90%;
+    /* ↓ REDUZIDO de 100% */
+    max-width: 620px;
+    /* ↓ REDUZIDO de 680px */
+    min-width: 0;
+    /* ✗ REMOVE 650px */
   }
-  
+
   #FotoTIDourado {
-    width: 108%;          /* ↓ REDUZIDO de 110% */
-    min-width: 420px;     /* ↓ REDUZIDO de 450px */
-    left: -13%;           /* ↑ AJUSTADO de -15% */
+    width: 108%;
+    /* ↓ REDUZIDO de 110% */
+    min-width: 420px;
+    /* ↓ REDUZIDO de 450px */
+    left: -13%;
+    /* ↑ AJUSTADO de -15% */
   }
-  
+
   .servico-card-1 {
-    right: 21%;           /* ↑ AJUSTADO de 23% */
-    top: 155px;           /* ↓ REDUZIDO de 170px */
+    right: 21%;
+    /* ↑ AJUSTADO de 23% */
+    top: 155px;
+    /* ↓ REDUZIDO de 170px */
   }
-  
+
   .servico-card-2 {
-    top: 340px;           /* ↓ REDUZIDO de 370px */
+    top: 340px;
+    /* ↓ REDUZIDO de 370px */
   }
-  
+
   .servico-card-3 {
-    right: 23%;           /* ↑ AJUSTADO de 25% */
-    top: 485px;           /* ↓ REDUZIDO de 510px */
+    right: 23%;
+    /* ↑ AJUSTADO de 25% */
+    top: 485px;
+    /* ↓ REDUZIDO de 510px */
   }
-  
+
   /* Mantém TODO O RESTO igual ao "TABLET E LAPTOPS" */
 }
+
 /*
    =========================================== 
    TABLETS (769px - 1023px) - LAYOUT EMPILHADO
@@ -403,7 +421,6 @@ funcionando
   /* ===== HEADER - HAMBÚRGUER ===== */
   body header {
     height: 70px;
-    padding: 0 4%;
   }
 
   body #logoHeader {
@@ -428,9 +445,8 @@ funcionando
   }
 
   #H1Principal {
-    font-size: 2.8rem;
+    font-size: 3.2rem;
     max-width: 85%;
-    margin: 3% auto 0;
     text-align: center;
     line-height: 1.12;
     letter-spacing: -1px;
@@ -441,9 +457,9 @@ funcionando
   }
 
   #pHeader {
-    font-size: 1.05rem;
+    font-size: 1.2rem;
     max-width: 70%;
-    margin: 20px auto 35px;
+    margin: 10px auto 75px;
     text-align: center;
   }
 
@@ -480,9 +496,9 @@ funcionando
     flex-wrap: nowrap;
     justify-content: center;
     align-items: stretch;
-    gap: 18px;
+    gap: 25px;
     width: 95%;
-    max-width: 850px;
+    max-width: 700px;
     margin: 0 auto 50px;
   }
 
@@ -492,37 +508,31 @@ funcionando
     right: auto !important;
     top: auto !important;
     flex: 1;
-    max-width: 260px;
-    min-width: 150px;
+    max-width: 300px;
+    min-width: 230px;
     z-index: 6;
   }
 
-  .servico-card-1,
-  .servico-card-2,
-  .servico-card-3 {
-    position: relative !important;
-    left: auto !important;
-    right: auto !important;
-    top: auto !important;
-    bottom: auto !important;
-  }
-
   .servico-card-inner {
-    padding: 14px 16px;
+    padding: 20px 5px;
+    /* Reduzi o padding para ganhar espaço vertical */
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 8px;
+    gap: 0;
+    /* Removi o gap (era 8px) pois não tem mais ícone separando */
+  }
+
+    /* ↓ REDUZIDO de 370px */
+  
+  .icone-container-base {
+    display: none;
+    /* REGRA ÚNICA: Remove o ícone */
   }
 
   .titulo-servico-base {
-    font-size: 13px;
-  }
-
-  .icone-container-base {
-    width: 32px;
-    height: 32px;
+    font-size: 14px;
   }
 
   /* ===== SEÇÃO PROPÓSITO ===== */
@@ -773,21 +783,23 @@ funcionando
   }
 
   .servico-card-inner {
-    padding: 12px 10px;
+    padding: 8px 5px;
+    /* Reduzi o padding para ficar compacto no celular */
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 8px;
+    gap: 0;
+    /* Removi o gap para o texto subir */
+  }
+
+  .icone-container-base {
+    display: none;
+    /* REGRA ÚNICA: Remove o ícone */
   }
 
   .titulo-servico-base {
     font-size: 12px;
-  }
-
-  .icone-container-base {
-    width: 30px;
-    height: 30px;
   }
 
   /* Propósito Mobile */
@@ -1023,6 +1035,17 @@ funcionando
     font-size: 0.9rem;
   }
 
+  /* --- ADICIONE ESTAS REGRAS AQUI --- */
+  .servico-card-inner {
+    padding: 6px 4px; /* Padding ainda menor para telas bem pequenas */
+    gap: 0;
+  }
+
+  .icone-container-base {
+    display: none; /* Remove o ícone */
+  }
+  /* ---------------------------------- */
+
   .modal-box {
     padding: 20px 15px;
   }
@@ -1044,10 +1067,3 @@ funcionando
     height: 70px;
   }
 }
-
-/*
-   AJUSTES GERAIS - REMOVIDO BLOCO CONFLITANTE
-   O bloco @media (min-width: 1025px) foi removido pois conflitava
-   com os blocos 1024px-1399px e 1400px-1550px acima.
-   Use os blocos específicos para ajustar .proposito-section margin-top.
-*/
