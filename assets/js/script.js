@@ -156,7 +156,7 @@ tsParticles.load("particles-js", {
   particles: {
     number: {
       value: 180,
-      limit: 170,
+      limit: 120,
       density: { enable: true, area: 800 }
     },
     color: { value: "#009eff" },
