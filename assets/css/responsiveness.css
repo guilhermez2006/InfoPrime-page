@@ -14,6 +14,253 @@ main[id],
 #NossoProposito {
   scroll-margin-top: 90px;
 }
+/* ==========================================
+   MODAIS RESPONSIVOS - TODAS AS TELAS
+   ========================================== */
+
+/* DESKTOP GRANDE (>1200px) - Modal ocupa área dos 3 cards */
+@media (min-width: 1200px) {
+  .servico-box-dividido {
+    position: relative;
+  }
+
+  .servico-box-dividido .modal-overlay {
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    z-index: 100;
+  }
+
+  .servico-box-dividido .modal-overlay.active {
+    display: flex;
+  }
+
+  .servico-box-dividido .modal-box {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    border-radius: 20px;
+    padding: 35px 40px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+
+  .servico-box-dividido .modal-box h2 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+  }
+
+  .servico-box-dividido .modal-subtitulo {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+
+  .servico-box-dividido .modal-conteudo {
+    flex: 1;
+    overflow-y: auto;
+    margin: 10px 0;
+  }
+
+  .servico-box-dividido .modal-conteudo h3 {
+    font-size: 1.2rem;
+    margin: 15px 0 10px;
+  }
+
+  .servico-box-dividido .modal-lista li {
+    padding: 6px 0 6px 25px;
+    font-size: 0.9rem;
+  }
+
+  .servico-box-dividido .modal-aviso {
+    margin: 15px 0;
+  }
+
+  .servico-box-dividido .modal-aviso p {
+    font-size: 0.85rem;
+  }
+
+  .servico-box-dividido .modal-btn {
+    margin-top: 15px;
+    padding: 14px 25px;
+    font-size: 1rem;
+  }
+
+  .servico-box-dividido .modal-close {
+    top: 12px;
+    right: 15px;
+    font-size: 24px;
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* TABLET (769px - 1199px) - Modal tela cheia suave */
+@media (min-width: 769px) and (max-width: 1199px) {
+  .modal-overlay {
+    padding: 30px;
+  }
+
+  .modal-box {
+    max-width: 90%;
+    width: 700px;
+    max-height: 85vh;
+    padding: 35px;
+  }
+
+  .modal-box h2 {
+    font-size: 1.9rem;
+  }
+
+  .modal-subtitulo {
+    font-size: 1rem;
+  }
+
+  .modal-conteudo h3 {
+    font-size: 1.25rem;
+  }
+
+  .modal-lista li {
+    font-size: 0.95rem;
+    padding: 8px 0 8px 28px;
+  }
+
+  .modal-btn {
+    padding: 16px 28px;
+    font-size: 1.05rem;
+  }
+
+  .modal-close {
+    top: 15px;
+    right: 18px;
+    font-size: 26px;
+  }
+}
+
+/* MOBILE (<768px) - Modal fullscreen adaptado */
+@media (max-width: 768px) {
+  .modal-overlay {
+    padding: 15px;
+    align-items: flex-start;
+    padding-top: 80px;
+  }
+
+  .modal-box {
+    width: 100%;
+    max-width: 100%;
+    max-height: calc(100vh - 100px);
+    border-radius: 16px;
+    padding: 25px 20px;
+    margin: 0;
+  }
+
+  .modal-box h2 {
+    font-size: 1.5rem;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .modal-subtitulo {
+    font-size: 0.95rem;
+    margin-bottom: 18px;
+  }
+
+  .modal-conteudo {
+    margin: 15px 0;
+  }
+
+  .modal-conteudo h3 {
+    font-size: 1.15rem;
+    margin: 18px 0 12px;
+    padding-bottom: 6px;
+  }
+
+  .modal-lista li {
+    font-size: 0.88rem;
+    padding: 8px 0 8px 22px;
+    line-height: 1.4;
+  }
+
+  .modal-lista li:before {
+    font-size: 1rem;
+  }
+
+  .modal-aviso {
+    padding: 12px;
+    border-radius: 10px;
+    background: rgba(7, 120, 180, 0.08);
+    border-left: 3px solid var(--blue-accent);
+    margin: 15px 0;
+  }
+
+  .modal-aviso p {
+    font-size: 0.85rem;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .modal-btn {
+    padding: 15px 20px;
+    font-size: 1rem;
+    margin-top: 20px;
+    border-radius: 40px;
+  }
+
+  .modal-close {
+    top: 12px;
+    right: 12px;
+    font-size: 24px;
+    width: 36px;
+    height: 36px;
+    background: rgba(1, 42, 90, 0.08);
+    border-radius: 50%;
+  }
+
+  .modal-close:hover {
+    background: rgba(1, 42, 90, 0.15);
+  }
+}
+
+/* MOBILE PEQUENO (<480px) */
+@media (max-width: 480px) {
+  .modal-overlay {
+    padding: 10px;
+    padding-top: 70px;
+  }
+
+  .modal-box {
+    padding: 20px 15px;
+    max-height: calc(100vh - 85px);
+  }
+
+  .modal-box h2 {
+    font-size: 1.3rem;
+  }
+
+  .modal-subtitulo {
+    font-size: 0.9rem;
+  }
+
+  .modal-conteudo h3 {
+    font-size: 1.05rem;
+  }
+
+  .modal-lista li {
+    font-size: 0.82rem;
+    padding: 6px 0 6px 20px;
+  }
+
+  .modal-aviso p {
+    font-size: 0.8rem;
+  }
+
+  .modal-btn {
+    padding: 14px 18px;
+    font-size: 0.95rem;
+  }
+}
 
 /* ==========================================================================
    ULTRA WIDE / 2K DESKTOPS (2560px)
