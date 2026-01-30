@@ -1,7 +1,3 @@
-/*
-   INFOPRIME - RESPONSIVIDADE
-*/
-
 html {
   scroll-behavior: smooth;
 }
@@ -14,11 +10,1029 @@ main[id],
 #NossoProposito {
   scroll-margin-top: 90px;
 }
-/* ==========================================
-   MODAIS RESPONSIVOS - TODAS AS TELAS
-   ========================================== */
 
-/* DESKTOP GRANDE (>1200px) - Modal ocupa área dos 3 cards */
+/* Ultra Wide / 2K (2560px+) */
+@media (min-width: 2000px) {
+  #H1Principal {
+    position: relative;
+    font-size: 5.5rem;
+    max-width: 1100px;
+    left: 4%;
+    margin-top: 10%;
+    line-height: 1.1;
+  }
+
+  #pHeader {
+    position: relative;
+    font-size: 1.6rem;
+    max-width: 700px;
+    left: 4%;
+  }
+
+  #FotoTIAzul {
+    position: absolute;
+    left: 62%;
+    top: 220px;
+    width: 35%;
+    max-width: 900px;
+    z-index: 2;
+  }
+
+  .luz-ti-front,
+  .luz-ti-back {
+    position: absolute;
+    top: 400px;
+    left: 62%;
+    width: 600px;
+    height: 600px;
+    margin-top: 0;
+    transform: translate(5%, 0);
+    z-index: 1;
+  }
+
+  .servico-card-base {
+    position: absolute;
+    width: 320px;
+    z-index: 10;
+  }
+
+  .servico-card-inner {
+    padding: 22px 12px;
+  }
+
+  .servico-card-1 {
+    margin-right: 1%;
+    margin-top: 1%;
+  }
+
+  .servico-card-2 {
+    left: 80%;
+    top: 550px;
+    min-width: 310px;
+  }
+
+  .servico-card-3 {
+    right: 30%;
+    top: 780px;
+  }
+
+  .proposito-section {
+    margin-top: 750px !important;
+    padding: 100px 0;
+  }
+
+  #FotoTIDourado {
+    width: 130%;
+    max-width: 1100px;
+  }
+
+  #H1PROPOSITO {
+    font-size: 3.5rem;
+  }
+
+  #pPROPOSITO1,
+  #pPROPOSITO2 {
+    font-size: 1.5rem;
+    max-width: 800px;
+  }
+
+  body footer {
+    padding: 80px 10%;
+  }
+
+  body .footer-container {
+    max-width: 2200px;
+    gap: 60px;
+  }
+}
+
+/* Full HD 1920x1080 */
+@media (min-width: 1600px) {
+  body header {
+    height: 80px;
+  }
+
+  #H1Principal {
+    font-size: 4.3rem;
+    max-width: 800px;
+    margin-left: 3%;
+    margin-top: 9%;
+    line-height: 1.1;
+  }
+
+  #pHeader {
+    font-size: 1.3rem;
+    max-width: 550px;
+    margin-left: 3%;
+  }
+
+  #FotoTIAzul {
+    position: absolute;
+    left: 60%;
+    top: 180px;
+    width: 38%;
+    max-width: 750px;
+    z-index: 1;
+  }
+
+  #FotoTIDourado {
+    position: relative;
+    width: 120%;
+    max-width: 130%;
+  }
+
+  .servico-card-base {
+    position: absolute;
+    width: 280px;
+    z-index: 10;
+  }
+
+  .servico-card-inner {
+    padding: 17px 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .servico-card-1 {
+    right: 27%;
+    top: 240px;
+  }
+
+  .servico-card-2 {
+    right: 1%;
+    top: 450px;
+  }
+
+  .servico-card-3 {
+    right: 29%;
+    top: 600px;
+  }
+
+  .luz-ti-front,
+  .luz-ti-back {
+    margin-left: 5%;
+    height: 25%;
+  }
+
+  body footer {
+    padding: 60px 8%;
+  }
+
+  body .footer-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+  }
+
+  body .footer-col .logo-title {
+    font-size: 26px;
+  }
+
+  body .footer-title {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .proposito-section {
+    margin-top: 600px !important;
+  }
+}
+
+/* 1680x1050 */
+@media (min-width: 1400px) and (max-width: 1599px) {
+  body header {
+    height: 75px;
+  }
+
+  #H1Principal {
+    font-size: 3.4rem;
+    max-width: 700px;
+    margin-left: 3%;
+    margin-top: 9%;
+    line-height: 1.2;
+  }
+
+  #pHeader {
+    font-size: 1.2rem;
+    max-width: 500px;
+    margin-left: 3%;
+  }
+
+  #FotoTIAzul {
+    position: absolute;
+    left: 55%;
+    top: 160px;
+    width: 45%;
+    max-width: 650px;
+    z-index: 1;
+  }
+
+  #FotoTIDourado {
+    position: relative;
+    width: 110%;
+    max-width: 125%;
+  }
+
+  .servico-card-base {
+    position: absolute;
+    width: 270px;
+    z-index: 10;
+  }
+
+  .servico-card-inner {
+    padding: 15px 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .servico-card-1 {
+    right: 28%;
+    top: 220px;
+  }
+
+  .servico-card-2 {
+    right: 2%;
+    top: 430px;
+  }
+
+  .servico-card-3 {
+    right: 30%;
+    top: 580px;
+  }
+
+  .luz-ti-front,
+  .luz-ti-back {
+    margin-top: -20%;
+  }
+
+  .proposito-section {
+    margin-top: 500px !important;
+  }
+
+  body footer {
+    padding: 50px 6%;
+  }
+
+  body .footer-container {
+    max-width: 1400px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+}
+
+/* Laptops (1024px - 1399px) */
+@media (min-width: 1024px) and (max-width: 1399px) {
+  body header {
+    height: 80px;
+    padding: 0 2%;
+    display: flex;
+    align-items: center;
+  }
+
+  body header nav {
+    max-width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  body #logoHeader {
+    height: 45px;
+    margin: 0;
+  }
+
+  body header .desktop-nav-links {
+    gap: 15px;
+    padding: 0;
+  }
+
+  body header .desktop-nav-links li a {
+    font-size: 14px;
+  }
+
+  body a#Contato {
+    padding: 16px 18px;
+    font-size: 14px;
+    margin: 0;
+  }
+
+  #H1Principal {
+    font-size: 3rem;
+    max-width: 800px;
+    margin-left: 2%;
+    margin-top: 11%;
+    line-height: 1.2;
+  }
+
+  #pHeader {
+    font-size: 1.2rem;
+    max-width: 535px;
+    margin-left: 2%;
+  }
+
+  #FotoTIAzul {
+    position: absolute;
+    right: 2%;
+    left: auto;
+    top: 100px;
+    width: min(46vw, 600px);
+    max-width: 600px;
+    min-width: 0;
+    z-index: 1;
+  }
+
+  #FotoTIDourado {
+    position: relative;
+    width: min(105%, 900px);
+    max-width: 105%;
+    min-width: 400px;
+    left: -20%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  #H1PROPOSITO {
+    margin-left: -18%;
+    font-size: 2.5rem;
+  }
+
+  #pPROPOSITO1,
+  #pPROPOSITO2 {
+    margin-left: -18%;
+    font-size: 1.3rem;
+  }
+
+  .servico-card-base {
+    width: 250px;
+    min-width: auto;
+  }
+
+  .servico-card-inner {
+    padding: 13px 5px;
+  }
+
+  .titulo-servico-base {
+    font-size: 14px;
+  }
+
+  .servico-card-base {
+    position: absolute;
+    min-width: 250px;
+    z-index: 3;
+  }
+
+  .servico-card-inner {
+    padding: clamp(5px, 1.2vw, 14px) 6px;
+  }
+
+  .titulo-servico-base {
+    font-size: clamp(13px, 1vw, 14px);
+  }
+
+  .servico-card-1 {
+    right: clamp(1%, 26vw, 27%);
+    top: clamp(100px, 20vw, 240px);
+  }
+
+  .servico-card-2 {
+    right: clamp(2%, 3vw, 4%);
+    top: clamp(320px, 38vw, 10px);
+    padding: clamp(10px, 1.0vw, 19px) 6px;
+  }
+
+  .servico-card-3 {
+    right: clamp(28%, 30vw, 2%);
+    top: clamp(400px, 50vw, 440px);
+  }
+
+  .luz-ti-front,
+  .luz-ti-back {
+    margin-top: -25%;
+    margin-left: -5%;
+    height: 15%;
+    width: 60%;
+  }
+
+  .proposito-section {
+    margin-top: 300px;
+    width: min(95vw, 1200px);
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+  }
+
+  body .footer-container {
+    max-width: 95%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 55px;
+    padding: 0 20px;
+  }
+
+  body .footer-col .logo-title {
+    font-size: 20px;
+  }
+
+  body .footer-title {
+    font-size: 16px;
+  }
+
+  body .footer-col p,
+  body .footer-col li a {
+    font-size: 13px;
+  }
+
+  body .footer-col iframe {
+    width: 100%;
+    height: 150px;
+  }
+}
+
+/* Tablets (769px - 1023px) */
+@media (max-width: 1023px) and (min-width: 769px) {
+  body header {
+    height: 70px;
+  }
+
+  body #logoHeader {
+    height: 44px;
+  }
+
+  .desktop-nav-links,
+  a#Contato {
+    display: none !important;
+  }
+
+  .menu-hamburger {
+    display: flex;
+  }
+
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 5%;
+  }
+
+  #H1Principal {
+    font-size: 3.2rem;
+    max-width: 85%;
+    text-align: center;
+    line-height: 1.12;
+    letter-spacing: -1px;
+  }
+
+  #H1Principal br {
+    display: inline;
+  }
+
+  #pHeader {
+    font-size: 1.2rem;
+    max-width: 70%;
+    margin: 10px auto 75px;
+    text-align: center;
+  }
+
+  #FotoTIAzul {
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    transform: none;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 35px;
+    display: block;
+    z-index: 5;
+  }
+
+  #FotoTIDourado {
+    position: relative;
+    width: 110%;
+    max-width: 500px;
+    left: 0;
+  }
+
+  .luz-ti-front,
+  .luz-ti-back {
+    margin-top: 15%;
+    margin-left: -30%;
+    width: 60%;
+    height: 25%;
+  }
+
+  .luz-dourada-sutil {
+    width: 40%;
+    margin-left: 35%;
+  }
+
+  #cardsTI {
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    width: 95%;
+    max-width: 700px;
+    margin: 0 auto 50px;
+  }
+
+  .servico-card-base {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    flex: 1;
+    max-width: 300px;
+    min-width: 230px;
+    z-index: 6;
+  }
+
+  .servico-card-inner {
+    padding: 20px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0;
+  }
+
+  .icone-container-base {
+    display: none;
+  }
+
+  .titulo-servico-base {
+    font-size: 14px;
+  }
+
+  .proposito-section {
+    margin-top: 60px !important;
+    padding: 30px 20px;
+  }
+
+  .proposito-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .proposito-image {
+    order: 1;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .proposito-texto {
+    order: 2;
+    text-align: center;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  #H1PROPOSITO {
+    text-align: center;
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  #pPROPOSITO1,
+  #pPROPOSITO2 {
+    text-align: center;
+    margin: 0;
+  }
+
+  .btn-proposito {
+    margin: 20px auto;
+  }
+
+  .empresas-section {
+    margin-top: 60px;
+  }
+
+  .empresas-title {
+    font-size: 1.6rem;
+  }
+
+  .empresas-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+
+  .empresa-card {
+    width: 100px;
+    height: 100px;
+  }
+
+  .servicos-section {
+    padding: 60px 20px;
+  }
+
+  .servicos-container {
+    gap: 20px;
+  }
+
+  .servico-box-dividido {
+    height: auto;
+  }
+
+  .servico-divisoes {
+    grid-template-columns: 1fr;
+  }
+
+  .servico-parte {
+    min-height: 180px;
+    padding: 25px 20px;
+  }
+
+  .servico-parte:not(:last-child) {
+    border-right: none;
+    border-bottom: 1px solid var(--navy-light);
+  }
+
+  body .footer-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 25px;
+  }
+
+  body .footer-col {
+    width: 100%;
+    align-items: center;
+  }
+
+  .footer-logo .logo-wrapper {
+    justify-content: center;
+  }
+
+  .footer-slogan {
+    text-align: center;
+  }
+
+  body .footer-col iframe {
+    max-width: 90%;
+    height: 200px;
+  }
+}
+
+/* Mobile (<768px) */
+@media (max-width: 768px) {
+  section[id] {
+    scroll-margin-top: 70px;
+  }
+
+  body header {
+    height: auto;
+    min-height: 60px;
+    padding: 12px 15px;
+    position: fixed;
+  }
+
+  body header nav {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+  }
+
+  body #logoHeader {
+    height: 38px;
+    margin: 0;
+  }
+
+  .desktop-nav-links,
+  a#Contato {
+    display: none !important;
+  }
+
+  .menu-hamburger {
+    display: flex;
+  }
+
+  body {
+    padding-top: 70px;
+  }
+
+  #H1Principal {
+    display: block;
+    font-size: clamp(1.9rem, 6vw, 2.5rem);
+    line-height: 1.20;
+    letter-spacing: -1px;
+    width: 95%;
+    margin: 0 auto;
+    margin-left: 6%;
+    max-width: 650px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  #H1Principal br {
+    display: none;
+  }
+
+  #H1Principal span {
+    display: inline;
+  }
+
+  #pHeader {
+    font-size: 1.2rem;
+    max-width: 70%;
+    margin: 0px auto 75px;
+    text-align: center;
+  }
+
+  #FotoTIAzul {
+    display: block;
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    transform: none;
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto 30px;
+    z-index: 5;
+  }
+
+  .luz-ti-front,
+  .luz-ti-back {
+    margin-top: -10%;
+    margin-left: -38%;
+    width: 60%;
+    height: 30%;
+  }
+
+  .luz-dourada-sutil {
+    width: 40%;
+    margin-left: 35%;
+  }
+
+  #cardsTI {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    width: 92%;
+    max-width: 500px;
+    margin: 30px auto;
+  }
+
+  .servico-card-base {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 70px;
+    z-index: 6;
+  }
+
+  .servico-card-inner {
+    padding: 10px 5px;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .titulo-servico-base {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .servico-card-3 {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 60% !important;
+    min-width: 180px;
+  }
+
+  .icone-container-base {
+    display: none;
+  }
+
+  .proposito-section {
+    margin-top: 80px !important;
+    padding: 20px;
+  }
+
+  .proposito-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .proposito-image {
+    order: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  #FotoTIDourado {
+    position: relative;
+    width: 90%;
+    left: 0;
+    max-width: 400px;
+  }
+
+  .proposito-texto {
+    order: 2;
+    justify-self: center;
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  #H1PROPOSITO {
+    white-space: normal;
+    text-align: center;
+    font-size: 1.8rem;
+    margin: 0;
+  }
+
+  #pPROPOSITO1,
+  #pPROPOSITO2 {
+    text-align: center;
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  .btn-proposito {
+    margin: 20px auto;
+    font-size: 0.9rem;
+    padding: 14px 24px;
+  }
+
+  .empresas-section {
+    margin-top: 60px;
+    margin-bottom: 80px;
+    padding: 0 15px;
+  }
+
+  .empresas-title {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .empresas-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .empresa-card {
+    width: 80px;
+    height: 80px;
+  }
+
+  .servicos-section {
+    padding: 60px 15px;
+  }
+
+  .servico-titulo {
+    font-size: 1.5rem;
+  }
+
+  .servico-box-dividido {
+    height: auto;
+    min-height: auto;
+  }
+
+  .servico-divisoes {
+    grid-template-columns: 1fr;
+  }
+
+  .servico-parte {
+    min-height: 200px;
+    padding: 30px 20px;
+  }
+
+  .servico-parte:not(:last-child) {
+    border-right: none;
+    border-bottom: 1px solid var(--navy-light);
+  }
+
+  .servico-parte h4 {
+    font-size: 1.2rem;
+  }
+
+  .servico-parte p {
+    opacity: 1;
+    transform: none;
+    font-size: 0.9rem;
+  }
+
+  .servicos-container>.servico-box:not(.servico-box-dividido) {
+    height: auto;
+    padding: 30px 20px;
+  }
+
+  .servico-lista li {
+    font-size: 0.9rem;
+    padding: 6px 0 6px 20px;
+  }
+
+  .diferenciais {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .diferencial-item {
+    padding: 10px 12px;
+  }
+
+  .modal-box {
+    padding: 25px;
+    max-width: 95%;
+  }
+
+  .modal-box h2 {
+    font-size: 1.8rem;
+  }
+
+  .modal-subtitulo {
+    font-size: 1rem;
+  }
+
+  .modal-conteudo h3 {
+    font-size: 1.2rem;
+  }
+
+  .modal-lista li {
+    font-size: 0.9rem;
+    padding: 8px 0 8px 25px;
+  }
+
+  body .footer-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 0 15px;
+  }
+
+  body .footer-col {
+    width: 100%;
+    align-items: center;
+  }
+
+  body .footer-title,
+  body .footer-col h3 {
+    margin: 20px auto 10px;
+  }
+
+  body .footer-links {
+    text-align: center;
+  }
+
+  body .footer-bottom-links {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .footer-logo .logo-wrapper {
+    justify-content: center;
+  }
+
+  .footer-slogan {
+    text-align: center;
+  }
+
+  .contact-info {
+    align-items: center;
+  }
+
+  .contact-item {
+    align-items: center;
+    text-align: center;
+  }
+
+  .social-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-map {
+    width: 100%;
+  }
+
+  .map-container iframe {
+    height: 180px;
+  }
+}
+
+/* Modal Desktop (>1200px) */
 @media (min-width: 1200px) {
   .servico-box-dividido {
     position: relative;
@@ -97,7 +1111,7 @@ main[id],
   }
 }
 
-/* TABLET (769px - 1199px) - Modal tela cheia suave */
+/* Modal Tablet (769px - 1199px) */
 @media (min-width: 769px) and (max-width: 1199px) {
   .modal-overlay {
     padding: 30px;
@@ -139,7 +1153,7 @@ main[id],
   }
 }
 
-/* MOBILE (<768px) - Modal fullscreen adaptado */
+/* Modal Mobile (<768px) */
 @media (max-width: 768px) {
   .modal-overlay {
     padding: 15px;
@@ -223,7 +1237,7 @@ main[id],
   }
 }
 
-/* MOBILE PEQUENO (<480px) */
+/* Mobile Pequeno (<480px) */
 @media (max-width: 480px) {
   .modal-overlay {
     padding: 10px;
@@ -259,1139 +1273,5 @@ main[id],
   .modal-btn {
     padding: 14px 18px;
     font-size: 0.95rem;
-  }
-}
-
-/* ==========================================================================
-   ULTRA WIDE / 2K DESKTOPS (2560px)
-   Ajustado para preencher o espaço e travar elementos na vertical
-   ========================================================================== 
-*/
-@media (min-width: 2000px) {
-
-  #H1Principal {
-    position: relative; 
-    font-size: 5.5rem;
-    /* Aumentado para a tela gigante */
-    max-width: 1100px;
-    left: 4%;
-    margin-top: 10%;
-    line-height: 1.1;
-  }
-
-  #pHeader {
-    position: relative; /* ADICIONE ISSO */
-    font-size: 1.6rem;
-    max-width: 700px;
-    left: 4%;
-  }
-
-  /* FOTO AZUL - Travada com TOP para não descer na altura */
-  #FotoTIAzul {
-    position: absolute;
-    left: 62%;
-    top: 220px;
-    width: 35%;
-    max-width: 900px;
-    z-index: 2;
-  }
-
-  /* LUZES AZUIS - Travadas no mesmo TOP da foto */
-  .luz-ti-front,
-  .luz-ti-back {
-    position: absolute;
-    top: 400px;
-    left: 62%;
-    width: 600px;
-    height: 600px;
-    margin-top: 0;
-    /* Remove a porcentagem que quebra na altura */
-    transform: translate(5%, 0);
-    z-index: 1;
-  }
-
-  /* CARDS - Posicionamento escalado */
-  .servico-card-base {
-    position: absolute;
-    width: 320px;
-    /* Cards maiores para ler melhor */
-    z-index: 10;
-  }
-
-  .servico-card-inner {
-    padding: 22px 12px;
-  }
-
-  .servico-card-1 {
-    margin-right: 1%;
-    margin-top: 1%;
-  }
-
-  .servico-card-2 {
-    left: 80%;
-    top: 550px;
-    min-width: 310px;
-    /* Evita as 3 linhas no texto */
-  }
-
-  .servico-card-3 {
-    right: 30%;
-    top: 780px;
-  }
-
-  /* SEÇÃO PROPÓSITO 2K */
-  .proposito-section {
-    margin-top: 750px !important;
-    padding: 100px 0;
-  }
-
-  #FotoTIDourado {
-    width: 130%;
-    max-width: 1100px;
-  }
-
-  #H1PROPOSITO {
-    font-size: 3.5rem;
-  }
-
-  #pPROPOSITO1,
-  #pPROPOSITO2 {
-    font-size: 1.5rem;
-    max-width: 800px;
-  }
-
-  body footer {
-    padding: 80px 10%;
-  }
-
-  body .footer-container {
-    max-width: 2200px;
-    gap: 60px;
-  }
-}
-
-/*
-funcionando
-   FULL HD 1920 x 1080px
-*/
-
-@media (min-width: 1600px) {
-  body header {
-    height: 80px;
-  }
-
-  #H1Principal {
-    font-size: 4.3rem;
-    max-width: 800px;
-    margin-left: 3%;
-    margin-top: 9%;
-    line-height: 1.1;
-  }
-
-  #pHeader {
-    font-size: 1.3rem;
-    max-width: 550px;
-    margin-left: 3%;
-  }
-
-  #FotoTIAzul {
-    position: absolute;
-    left: 60%;
-    top: 180px;
-    width: 38%;
-    max-width: 750px;
-    z-index: 1;
-  }
-
-  #FotoTIDourado {
-    position: relative;
-    width: 120%;
-    max-width: 130%;
-  }
-
-  .servico-card-base {
-    position: absolute;
-    width: 280px;
-    z-index: 10;
-  }
-
-  .servico-card-inner {
-    padding: 17px 8px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .servico-card-1 {
-    right: 27%;
-    top: 240px;
-  }
-
-  .servico-card-2 {
-    right: 1%;
-    top: 450px;
-  }
-
-  .servico-card-3 {
-    right: 29%;
-    top: 600px;
-  }
-
-
-  .luz-ti-front,
-  .luz-ti-back {
-    margin-left: 5%;
-    height: 25%;
-  }
-
-  body footer {
-    padding: 60px 8%;
-  }
-
-  body .footer-container {
-    max-width: 1600px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
-  }
-
-  body .footer-col .logo-title {
-    font-size: 26px;
-  }
-
-  body .footer-title {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-
-  .proposito-section {
-    margin-top: 600px !important;
-  }
-}
-
-/*
-funcionando
-   Resoluções entre 1680 x 1050px
-*/
-@media (min-width: 1400px) and (max-width: 1599px) {
-  body header {
-    height: 75px;
-  }
-
-  #H1Principal {
-    font-size: 3.4rem;
-    max-width: 700px;
-    margin-left: 3%;
-    margin-top: 9%;
-    line-height: 1.2;
-  }
-
-  #pHeader {
-    font-size: 1.2rem;
-    max-width: 500px;
-    margin-left: 3%;
-  }
-
-  #FotoTIAzul {
-    position: absolute;
-    left: 55%;
-    top: 160px;
-    width: 45%;
-    max-width: 650px;
-    z-index: 1;
-  }
-
-  #FotoTIDourado {
-    position: relative;
-    width: 110%;
-    max-width: 125%;
-  }
-
-  .servico-card-base {
-    position: absolute;
-    width: 270px;
-    z-index: 10;
-  }
-
-  .servico-card-inner {
-    padding: 15px 8px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .servico-card-1 {
-    right: 28%;
-    top: 220px;
-  }
-
-  .servico-card-2 {
-    right: 2%;
-    top: 430px;
-  }
-
-  .servico-card-3 {
-    right: 30%;
-    top: 580px;
-  }
-
-  .luz-ti-front,
-  .luz-ti-back {
-    margin-top: -20%;
-  }
-
-  .proposito-section {
-    margin-top: 500px !important;
-  }
-
-  body footer {
-    padding: 50px 6%;
-  }
-
-  body .footer-container {
-    max-width: 1400px;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-  }
-}
-
-
-
-/* ==========================================================================
-   LAPTOPS E DESKTOPS PEQUENOS (1024px - 1399px)
-   Ajuste final para manter o layout idêntico à foto de referência
-   ========================================================================== */
-@media (min-width: 1024px) and (max-width: 1399px) {
-
-  body header {
-    height: 80px;
-    padding: 0 2%;
-    display: flex;
-    align-items: center;
-  }
-
-  body header nav {
-    max-width: 100%;
-    justify-content: space-between;
-    gap: 10px;
-  }
-
-  body #logoHeader {
-    height: 45px;
-    margin: 0;
-  }
-
-  body header .desktop-nav-links {
-    gap: 15px;
-    padding: 0;
-  }
-
-  body header .desktop-nav-links li a {
-    font-size: 14px;
-  }
-
-  body a#Contato {
-    padding: 16px 18px;
-    font-size: 14px;
-    margin: 0;
-  }
-
-  #H1Principal {
-    font-size: 3rem;
-    max-width: 800px;
-    margin-left: 2%;
-    margin-top: 11%;
-    line-height: 1.2;
-  }
-
-  #pHeader {
-    font-size: 1.2rem;
-    max-width: 535px;
-    margin-left: 2%;
-  }
-
-  #FotoTIAzul {
-    position: absolute;
-    right: 2%;
-    /* troca left por right */
-    left: auto;
-    top: 100px;
-    width: min(46vw, 600px);
-    max-width: 600px;
-    min-width: 0;
-    /* REMOVE o min-width de 550px */
-    z-index: 1;
-  }
-
-
-  #FotoTIDourado {
-    position: relative;
-    width: min(105%, 900px);
-    /* nunca ultrapassa o container */
-    max-width: 105%;
-    min-width: 400px;
-    /* REMOVE o min-width de 450px */
-    left: -20%;
-    /* REMOVE o left: -15% */
-    margin: 0 auto;
-    display: block;
-  }
-
-
-  #H1PROPOSITO {
-    margin-left: -18%;
-    font-size: 2.5rem;
-  }
-
-  #pPROPOSITO1,
-  #pPROPOSITO2 {
-    margin-left: -18%;
-    font-size: 1.3rem;
-  }
-
-  .servico-card-base {
-    width: 250px;
-    min-width: auto;
-  }
-
-  .servico-card-inner {
-    padding: 13px 5px;
-  }
-
-  .titulo-servico-base {
-    font-size: 14px;
-  }
-
-  /* Ajuste na base para todos os cards */
-  .servico-card-base {
-    position: absolute;
-    /* Largura mínima para o texto não espremer */
-    min-width: 250px;
-    z-index: 3;
-  }
-
-  .servico-card-inner {
-    padding: clamp(5px, 1.2vw, 14px) 6px;
-  }
-
-  .titulo-servico-base {
-    font-size: clamp(13px, 1vw, 14px);
-  }
-
-  /* CARD 1 */
-  .servico-card-1 {
-    right: clamp(1%, 26vw, 27%);
-    top: clamp(100px, 20vw, 240px);
-  }
-
-  /* CARD 2 */
-  .servico-card-2 {
-    right: clamp(2%, 3vw, 4%);
-    top: clamp(320px, 38vw, 10px);
-    padding: clamp(10px, 1.0vw, 19px) 6px;
-  }
-
-  /* CARD 3 */
-  .servico-card-3 {
-    right: clamp(28%, 30vw, 2%);
-    top: clamp(400px, 50vw, 440px);
-  }
-
-  .luz-ti-front,
-  .luz-ti-back {
-    margin-top: -25%;
-    margin-left: -5%;
-    height: 15%;
-    width: 60%;
-  }
-
-  .proposito-section {
-    margin-top: 300px;
-    width: min(95vw, 1200px);
-    /* nunca passa de 100vw */
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    overflow: hidden;
-    /* segura qualquer filho rebelde */
-  }
-
-  /* 6. RODAPÉ (Corrigindo o "tudo dentro do outro")
-     Mantemos as 4 colunas, mas reduzimos as fontes e gaps
-  */
-  body .footer-container {
-    max-width: 95%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    /* Mantém 4 colunas */
-    gap: 55px;
-    /* Reduz espaço entre elas */
-    padding: 0 20px;
-  }
-
-  body .footer-col .logo-title {
-    font-size: 20px;
-    /* Fonte menor para caber */
-  }
-
-  body .footer-title {
-    font-size: 16px;
-  }
-
-  body .footer-col p,
-  body .footer-col li a {
-    font-size: 13px;
-    /* Texto do rodapé menor */
-  }
-
-  /* Mapa no rodapé ajustado */
-  body .footer-col iframe {
-    width: 100%;
-    height: 150px;
-  }
-}
-
-/*
-   =========================================== 
-   TABLETS (769px - 1023px) - LAYOUT EMPILHADO
-   Hambúrguer + Título centro + Imagem centro + 3 cards em linha
-   ===========================================
-*/
-
-@media (max-width: 1023px) and (min-width: 769px) {
-
-  /* ===== HEADER - HAMBÚRGUER ===== */
-  body header {
-    height: 70px;
-  }
-
-  body #logoHeader {
-    height: 44px;
-  }
-
-  .desktop-nav-links,
-  a#Contato {
-    display: none !important;
-  }
-
-  .menu-hamburger {
-    display: flex;
-  }
-
-  /* ===== HERO - LAYOUT VERTICAL EMPILHADO ===== */
-  .main-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 5%;
-  }
-
-  #H1Principal {
-    font-size: 3.2rem;
-    max-width: 85%;
-    text-align: center;
-    line-height: 1.12;
-    letter-spacing: -1px;
-  }
-
-  #H1Principal br {
-    display: inline;
-  }
-
-  #pHeader {
-    font-size: 1.2rem;
-    max-width: 70%;
-    margin: 10px auto 75px;
-    text-align: center;
-  }
-
-  /* ===== IMAGEM TI - CENTRALIZADA ===== */
-  #FotoTIAzul {
-    position: relative;
-    left: auto;
-    right: auto;
-    top: auto;
-    transform: none;
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto 35px;
-    display: block;
-    z-index: 5;
-  }
-
-  #FotoTIDourado {
-    position: relative;
-    width: 110%;
-    max-width: 500px;
-    left: 0;
-  }
-
-  .luz-ti-front,
-  .luz-ti-back {
-    margin-top: 15%;
-    margin-left: -30%;
-    width: 60%;
-    height: 25%;
-  }
-
-  .luz-dourada-sutil {
-    width: 40%;
-    margin-left: 35%;
-  }
-
-  /* ===== CARDS - 3 EM LINHA HORIZONTAL ===== */
-  #cardsTI {
-    display: flex !important;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: stretch;
-    gap: 25px;
-    width: 95%;
-    max-width: 700px;
-    margin: 0 auto 50px;
-  }
-
-  .servico-card-base {
-    position: relative !important;
-    left: auto !important;
-    right: auto !important;
-    top: auto !important;
-    flex: 1;
-    max-width: 300px;
-    min-width: 230px;
-    z-index: 6;
-  }
-
-  .servico-card-inner {
-    padding: 20px 5px;
-    /* Reduzi o padding para ganhar espaço vertical */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 0;
-    /* Removi o gap (era 8px) pois não tem mais ícone separando */
-  }
-
-  /* ↓ REDUZIDO de 370px */
-
-  .icone-container-base {
-    display: none;
-    /* REGRA ÚNICA: Remove o ícone */
-  }
-
-  .titulo-servico-base {
-    font-size: 14px;
-  }
-
-  /* ===== SEÇÃO PROPÓSITO ===== */
-
-  .proposito-section {
-    margin-top: 60px !important;
-    padding: 30px 20px;
-  }
-
-  .proposito-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .proposito-image {
-    order: 1;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .proposito-texto {
-    order: 2;
-    text-align: center;
-    align-items: center;
-    max-width: 100%;
-  }
-
-  #H1PROPOSITO {
-    text-align: center;
-    font-size: 2rem;
-    margin: 0;
-  }
-
-  #pPROPOSITO1,
-  #pPROPOSITO2 {
-    text-align: center;
-    margin: 0;
-  }
-
-  .btn-proposito {
-    margin: 20px auto;
-  }
-
-  /* ===== EMPRESAS ===== */
-  .empresas-section {
-    margin-top: 60px;
-  }
-
-  .empresas-title {
-    font-size: 1.6rem;
-  }
-
-  .empresas-container {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-  }
-
-  .empresa-card {
-    width: 100px;
-    height: 100px;
-  }
-
-  /* ===== SERVIÇOS ===== */
-  .servicos-section {
-    padding: 60px 20px;
-  }
-
-  .servicos-container {
-    gap: 20px;
-  }
-
-  .servico-box-dividido {
-    height: auto;
-  }
-
-  .servico-divisoes {
-    grid-template-columns: 1fr;
-  }
-
-  .servico-parte {
-    min-height: 180px;
-    padding: 25px 20px;
-  }
-
-  .servico-parte:not(:last-child) {
-    border-right: none;
-    border-bottom: 1px solid var(--navy-light);
-  }
-
-  /* ===== FOOTER ===== */
-  body .footer-container {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    gap: 25px;
-  }
-
-  body .footer-col {
-    width: 100%;
-    align-items: center;
-  }
-
-  .footer-logo .logo-wrapper {
-    justify-content: center;
-  }
-
-  .footer-slogan {
-    text-align: center;
-  }
-
-  body .footer-col iframe {
-    max-width: 90%;
-    height: 200px;
-  }
-}
-
-/*
-   MOBILEEEEEEEEEEEE
-   (< 768px) - MENU HAMBURGER
-*/
-
-@media (max-width: 768px) {
-  section[id] {
-    scroll-margin-top: 70px;
-  }
-
-  /* Header Mobile */
-  body header {
-    height: auto;
-    min-height: 60px;
-    padding: 12px 15px;
-    position: fixed;
-  }
-
-  body header nav {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0;
-  }
-
-  body #logoHeader {
-    height: 38px;
-    margin: 0;
-  }
-
-  /* Esconde menu desktop e botão contato em mobile */
-  .desktop-nav-links,
-  a#Contato {
-    display: none !important;
-  }
-
-  /* Mostra hamburger */
-  .menu-hamburger {
-    display: flex;
-  }
-
-  /* Hero Mobile */
-  body {
-    padding-top: 70px;
-  }
-
-  #H1Principal {
-    display: block;
-    font-size: clamp(1.9rem, 6vw, 2.5rem);
-    line-height: 1.20;
-    letter-spacing: -1px;
-
-    /* AJUSTE AQUI: */
-    width: 95%;
-    /* Garante 5% de respiro de cada lado */
-    margin: 0 auto;
-    /* Centraliza o bloco na tela */
-    margin-left: 6%;
-    max-width: 650px;
-    text-align: center;
-    /* Centraliza o texto dentro do bloco */
-
-    box-sizing: border-box;
-  }
-
-  #H1Principal br {
-    display: none;
-  }
-
-  #H1Principal br {
-    display: none;
-    /* [4] Esconde quebras manuais para o texto fluir naturalmente */
-  }
-
-  #H1Principal span {
-    display: inline;
-  }
-
-  #pHeader {
-    font-size: 1.2rem;
-    max-width: 70%;
-    margin: 0px auto 75px;
-    text-align: center;
-  }
-
-  /* ===== IMAGEM TI - VISÍVEL E CENTRALIZADA ===== */
-  #FotoTIAzul {
-    display: block;
-    position: relative;
-    left: auto;
-    right: auto;
-    top: auto;
-    transform: none;
-    width: 100%;
-    max-width: 550px;
-    margin: 0 auto 30px;
-    z-index: 5;
-  }
-
-  .luz-ti-front,
-  .luz-ti-back {
-    margin-top: -10%;
-    margin-left: -38%;
-    width: 60%;
-    height: 30%;
-  }
-
-  .luz-dourada-sutil {
-    width: 40%;
-    margin-left: 35%;
-  }
-
-  /* ===== CARDS TI - 2 EM CIMA, 1 EMBAIXO ===== */
-  #cardsTI {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr);
-    /* 2 colunas iguais */
-    gap: 12px;
-    width: 92%;
-    /* Quase a tela toda para não espremer o texto interno */
-    max-width: 500px;
-    /* Mas não deixa esticar infinito em tablets */
-    margin: 30px auto;
-  }
-
-  .servico-card-base {
-    position: relative !important;
-    top: auto !important;
-    right: auto !important;
-    left: auto !important;
-    width: 100% !important;
-    height: auto !important;
-    min-height: 70px;
-    /* Garante que o retângulo tenha corpo */
-    z-index: 6;
-  }
-
-  .servico-card-inner {
-    padding: 10px 5px;
-    height: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .titulo-servico-base {
-    font-size: 14px;
-    /* Fonte legível */
-    font-weight: 600;
-    line-height: 1.2;
-    text-align: center;
-  }
-
-  .servico-card-3 {
-    grid-column: 1 / -1;
-    /* Centraliza o terceiro embaixo */
-    justify-self: center;
-    width: 60% !important;
-    /* O de baixo fica levemente menor e mais elegante */
-    min-width: 180px;
-  }
-
-  .icone-container-base {
-    display: none;
-    /* Regra do None que você pediu */
-  }
-
-  .icone-container-base {
-    display: none;
-    /* REGRA ÚNICA: Remove o ícone */
-  }
-
-  .titulo-servico-base {
-    font-size: 14px;
-  }
-
-  /* Propósito Mobile */
-  .proposito-section {
-    margin-top: 80px !important;
-    padding: 20px;
-  }
-
-  .proposito-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .proposito-image {
-    order: 1;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  #FotoTIDourado {
-    position: relative;
-    width: 90%;
-    left: 0;
-    max-width: 400px;
-  }
-
-  .proposito-texto {
-    order: 2;
-    justify-self: center;
-    align-items: center;
-    text-align: center;
-    max-width: 100%;
-  }
-
-  #H1PROPOSITO {
-    white-space: normal;
-    text-align: center;
-    font-size: 1.8rem;
-    margin: 0;
-  }
-
-  #pPROPOSITO1,
-  #pPROPOSITO2 {
-    text-align: center;
-    margin: 0;
-    font-size: 1rem;
-  }
-
-  .btn-proposito {
-    margin: 20px auto;
-    font-size: 0.9rem;
-    padding: 14px 24px;
-  }
-
-  /* Empresas Mobile */
-  .empresas-section {
-    margin-top: 60px;
-    margin-bottom: 80px;
-    padding: 0 15px;
-  }
-
-  .empresas-title {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-  }
-
-  .empresas-container {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-  }
-
-  .empresa-card {
-    width: 80px;
-    height: 80px;
-  }
-
-  /* Serviços Mobile */
-  .servicos-section {
-    padding: 60px 15px;
-  }
-
-  .servico-titulo {
-    font-size: 1.5rem;
-  }
-
-  .servico-box-dividido {
-    height: auto;
-    min-height: auto;
-  }
-
-  .servico-divisoes {
-    grid-template-columns: 1fr;
-  }
-
-  .servico-parte {
-    min-height: 200px;
-    padding: 30px 20px;
-  }
-
-  .servico-parte:not(:last-child) {
-    border-right: none;
-    border-bottom: 1px solid var(--navy-light);
-  }
-
-  .servico-parte h4 {
-    font-size: 1.2rem;
-  }
-
-  .servico-parte p {
-    opacity: 1;
-    transform: none;
-    font-size: 0.9rem;
-  }
-
-  .servicos-container>.servico-box:not(.servico-box-dividido) {
-    height: auto;
-    padding: 30px 20px;
-  }
-
-  .servico-lista li {
-    font-size: 0.9rem;
-    padding: 6px 0 6px 20px;
-  }
-
-  .diferenciais {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-
-  .diferencial-item {
-    padding: 10px 12px;
-  }
-
-  /* Modais Mobile */
-  .modal-box {
-    padding: 25px;
-    max-width: 95%;
-  }
-
-  .modal-box h2 {
-    font-size: 1.8rem;
-  }
-
-  .modal-subtitulo {
-    font-size: 1rem;
-  }
-
-  .modal-conteudo h3 {
-    font-size: 1.2rem;
-  }
-
-  .modal-lista li {
-    font-size: 0.9rem;
-    padding: 8px 0 8px 25px;
-  }
-
-  /* Footer Mobile */
-  body .footer-container {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    padding: 0 15px;
-  }
-
-  body .footer-col {
-    width: 100%;
-    align-items: center;
-  }
-
-  body .footer-title,
-  body .footer-col h3 {
-    margin: 20px auto 10px;
-  }
-
-  body .footer-links {
-    text-align: center;
-  }
-
-  body .footer-bottom-links {
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .footer-logo .logo-wrapper {
-    justify-content: center;
-  }
-
-  .footer-slogan {
-    text-align: center;
-  }
-
-  .contact-info {
-    align-items: center;
-  }
-
-  .contact-item {
-    align-items: center;
-    text-align: center;
-  }
-
-  .social-links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .footer-map {
-    width: 100%;
-  }
-
-  .map-container iframe {
-    height: 180px;
   }
 }
