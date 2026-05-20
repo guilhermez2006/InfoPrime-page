@@ -86,7 +86,9 @@ nav {
   color: #e8f3ff;
   text-decoration: none;
   display: inline-block;
-  transition: transform var(--transition-fast), color var(--transition-fast);
+  transition:
+    transform var(--transition-fast),
+    color var(--transition-fast);
   white-space: nowrap;
 }
 
@@ -100,12 +102,19 @@ a#Contato {
   margin-left: auto;
   margin-right: 3%;
   border-radius: var(--radius);
-  background: linear-gradient(180deg, rgba(2, 124, 231, 0.86), rgba(0, 17, 34, 0.8));
+  background: linear-gradient(
+    180deg,
+    rgba(2, 124, 231, 0.86),
+    rgba(0, 17, 34, 0.8)
+  );
   color: #f8fafc;
   font-weight: 550;
   font-family: "Montserrat", "Poppins", sans-serif;
   text-decoration: none;
-  transition: transform 0.12s ease, box-shadow 0.18s ease, filter 0.12s ease;
+  transition:
+    transform 0.12s ease,
+    box-shadow 0.18s ease,
+    filter 0.12s ease;
   white-space: nowrap;
   flex-shrink: 0;
 }
@@ -175,7 +184,9 @@ a#Contato:focus {
   align-items: center;
   opacity: 0;
   visibility: hidden;
-  transition: opacity var(--transition-medium), visibility var(--transition-medium);
+  transition:
+    opacity var(--transition-medium),
+    visibility var(--transition-medium);
 }
 
 .mobile-menu-overlay.active {
@@ -215,7 +226,9 @@ a#Contato:focus {
   margin: 30px 0;
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
 }
 
 .mobile-menu-overlay.active .mobile-nav-links li {
@@ -268,7 +281,14 @@ a#Contato:focus {
 
 /* Hero */
 #H1Principal {
-  font-family: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-family:
+    "Nunito",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial;
   font-weight: 700;
   font-size: clamp(2rem, 3.3vw, 6rem);
   line-height: 0.95;
@@ -283,7 +303,15 @@ a#Contato:focus {
 }
 
 #pHeader {
-  font-family: "Inter", "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-family:
+    "Inter",
+    "Nunito",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial;
   font-weight: 400;
   font-size: clamp(0.95rem, 1.6vw, 1.325rem);
   line-height: 1.5;
@@ -311,14 +339,16 @@ a#Contato:focus {
 .luz-ti-front {
   position: absolute;
   left: clamp(56%, 58%, 60%);
-  top: clamp(32%, 35%, 35%);
+  top: min(35vh, 40px);
   width: clamp(200px, 30vw, 450px);
   height: clamp(240px, 24vh, 320px);
-  background: radial-gradient(ellipse at 30% 20%,
-      rgba(0, 107, 238, 0.842) 0%,
-      rgba(2, 65, 120, 0.479) 40%,
-      rgba(0, 38, 85, 0.329) 70%,
-      transparent 80%);
+  background: radial-gradient(
+    ellipse at 30% 20%,
+    rgba(0, 107, 238, 0.842) 0%,
+    rgba(2, 65, 120, 0.479) 40%,
+    rgba(0, 38, 85, 0.329) 70%,
+    transparent 80%
+  );
   filter: blur(40px) brightness(1.3);
   mix-blend-mode: screen;
   animation: luzPulseFront 6s ease-in-out infinite;
@@ -328,21 +358,22 @@ a#Contato:focus {
 .luz-ti-back {
   position: absolute;
   left: clamp(70%, 65%, 68%);
-  top: clamp(0%, 90%, 50%);
+  top: min(50vh, 350px);
   width: clamp(200px, 36vw, 500px);
   height: clamp(300px, 28vh, 400px);
-  background: radial-gradient(ellipse at 25% 15%,
-      rgba(0, 102, 226, 0.815) 0%,
-      rgba(0, 68, 136, 0.514) 50%,
-      rgba(1, 40, 73, 0.178) 75%,
-      transparent 85%);
+  background: radial-gradient(
+    ellipse at 25% 15%,
+    rgba(0, 102, 226, 0.815) 0%,
+    rgba(0, 68, 136, 0.514) 50%,
+    rgba(1, 40, 73, 0.178) 75%,
+    transparent 85%
+  );
   filter: blur(65px) brightness(1.2);
   animation: luzPulseBack 7.5s ease-in-out infinite;
   z-index: 2;
 }
 
 @keyframes luzPulseBack {
-
   0%,
   100% {
     opacity: 0.45;
@@ -356,7 +387,6 @@ a#Contato:focus {
 }
 
 @keyframes luzPulseFront {
-
   0%,
   100% {
     opacity: 0.35;
@@ -381,11 +411,15 @@ a#Contato:focus {
   gap: 10px;
   padding: 10px 16px;
   box-sizing: border-box;
-  background: linear-gradient(180deg, rgba(2, 124, 231, 0.86), rgba(0, 17, 34, 0.8)), rgba(2, 64, 120, 0.86);
+  background:
+    linear-gradient(180deg, rgba(1, 117, 219, 0.938), rgba(0, 17, 34, 0.795)),
+    rgba(2, 65, 120, 0);
   backdrop-filter: blur(6px) saturate(110%);
   -webkit-backdrop-filter: blur(6px) saturate(110%);
   border-radius: var(--radius-sm);
-  box-shadow: var(--shadow-md), inset 0 1px 0 rgba(255, 255, 255, 0.02);
+  box-shadow:
+    var(--shadow-md),
+    inset 0 1px 0 rgba(255, 255, 255, 0.02);
   transition: transform var(--transition-slow);
   transform: translateZ(0);
   will-change: transform;
@@ -420,7 +454,14 @@ a#Contato:focus {
 .titulo-servico-base {
   color: #f8fafc;
   font-size: clamp(14px, 2vw, 16px);
-  font-family: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-family:
+    "Nunito",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial;
   font-weight: 600;
   margin: 0;
   flex: 1;
@@ -486,10 +527,12 @@ a#Contato:focus {
   left: 0%;
   width: 90%;
   height: 75%;
-  background: radial-gradient(ellipse at center,
-      rgba(240, 200, 0, 0.37) 0%,
-      rgba(207, 159, 0, 0.336) 50%,
-      transparent 70%);
+  background: radial-gradient(
+    ellipse at center,
+    rgba(240, 200, 0, 0.37) 0%,
+    rgba(207, 159, 0, 0.336) 50%,
+    transparent 70%
+  );
   filter: blur(40px);
   z-index: 1;
   pointer-events: none;
@@ -497,7 +540,6 @@ a#Contato:focus {
 }
 
 @keyframes pulseDourado {
-
   0%,
   100% {
     opacity: 0.6;
@@ -563,7 +605,10 @@ a#Contato:focus {
   border-radius: var(--radius);
   text-decoration: none;
   margin-bottom: 10%;
-  transition: transform var(--transition-fast), box-shadow var(--transition-medium), filter var(--transition-fast);
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-medium),
+    filter var(--transition-fast);
 }
 
 .btn-proposito:hover {
@@ -580,7 +625,13 @@ a#Contato:focus {
 }
 
 .empresas-title {
-  font-family: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  font-family:
+    "Nunito",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    Arial;
   font-weight: 700;
   font-size: clamp(1.6rem, 3vw, 2.6rem);
   letter-spacing: -0.02em;
@@ -631,7 +682,13 @@ a#Contato:focus {
 }
 
 .servico-titulo {
-  font-family: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  font-family:
+    "Nunito",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    Arial;
   font-weight: 700;
   font-size: clamp(1.6rem, 2vw, 2.8rem);
   letter-spacing: -0.02em;
@@ -702,7 +759,7 @@ a#Contato:focus {
   background: rgba(1, 42, 88, 0.65);
 }
 
-.servico-parte>* {
+.servico-parte > * {
   justify-content: flex-start;
   padding: 28px;
   position: relative;
@@ -752,13 +809,15 @@ a#Contato:focus {
 }
 
 /* Cards Premium */
-.servicos-container>.servico-box:not(.servico-box-dividido) {
+.servicos-container > .servico-box:not(.servico-box-dividido) {
   height: 420px;
   padding: 40px;
-  background: linear-gradient(145deg,
-      rgba(1, 42, 90, 0.95) 0%,
-      rgba(7, 20, 40, 0.98) 50%,
-      rgba(1, 32, 60, 0.95) 100%);
+  background: linear-gradient(
+    145deg,
+    rgba(1, 42, 90, 0.95) 0%,
+    rgba(7, 20, 40, 0.98) 50%,
+    rgba(1, 32, 60, 0.95) 100%
+  );
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(122, 209, 255, 0.15);
@@ -777,35 +836,39 @@ a#Contato:focus {
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.servicos-container>.servico-box:not(.servico-box-dividido)::before {
-  content: '';
+.servicos-container > .servico-box:not(.servico-box-dividido)::before {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg,
-      transparent 0%,
-      rgba(122, 209, 255, 0.5) 50%,
-      transparent 100%);
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(122, 209, 255, 0.5) 50%,
+    transparent 100%
+  );
 }
 
-.servicos-container>.servico-box:not(.servico-box-dividido)::after {
-  content: '';
+.servicos-container > .servico-box:not(.servico-box-dividido)::after {
+  content: "";
   position: absolute;
   top: -50%;
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle at 30% 20%,
-      rgba(7, 120, 180, 0.15) 0%,
-      transparent 50%);
+  background: radial-gradient(
+    circle at 30% 20%,
+    rgba(7, 120, 180, 0.15) 0%,
+    transparent 50%
+  );
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.4s ease;
 }
 
-.servicos-container>.servico-box:not(.servico-box-dividido):hover {
+.servicos-container > .servico-box:not(.servico-box-dividido):hover {
   transform: translateY(-8px);
   box-shadow:
     0 35px 70px -15px rgba(0, 0, 0, 0.6),
@@ -815,11 +878,11 @@ a#Contato:focus {
   border-color: rgba(122, 209, 255, 0.3);
 }
 
-.servicos-container>.servico-box:not(.servico-box-dividido):hover::after {
+.servicos-container > .servico-box:not(.servico-box-dividido):hover::after {
   opacity: 1;
 }
 
-.servicos-container>.servico-box:not(.servico-box-dividido) h3 {
+.servicos-container > .servico-box:not(.servico-box-dividido) h3 {
   font-size: 1.6rem;
   margin-bottom: 16px;
   color: var(--white);
@@ -828,7 +891,9 @@ a#Contato:focus {
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-.servicos-container>.servico-box:not(.servico-box-dividido) .servico-descricao {
+.servicos-container
+  > .servico-box:not(.servico-box-dividido)
+  .servico-descricao {
   font-size: 1rem;
   line-height: 1.6;
   color: rgba(232, 243, 255, 0.9);
@@ -884,9 +949,11 @@ a#Contato:focus {
   align-items: center;
   gap: 10px;
   padding: 14px 16px;
-  background: linear-gradient(135deg,
-      rgba(255, 255, 255, 0.08) 0%,
-      rgba(255, 255, 255, 0.02) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
   border-radius: 12px;
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   border: 1px solid rgba(122, 209, 255, 0.1);
@@ -895,9 +962,11 @@ a#Contato:focus {
 
 .diferencial-item:hover {
   transform: translateY(-4px) scale(1.02);
-  background: linear-gradient(135deg,
-      rgba(255, 255, 255, 0.12) 0%,
-      rgba(122, 209, 255, 0.08) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.12) 0%,
+    rgba(122, 209, 255, 0.08) 100%
+  );
   border-color: rgba(240, 200, 0, 0.4);
   box-shadow:
     0 10px 30px -10px rgba(0, 0, 0, 0.4),

@@ -264,11 +264,6 @@ main[id],
     top: 580px;
   }
 
-  .luz-ti-front,
-  .luz-ti-back {
-    margin-top: -20%;
-  }
-
   .proposito-section {
     margin-top: 500px !important;
   }
@@ -400,7 +395,7 @@ main[id],
   .servico-card-2 {
     right: clamp(2%, 3vw, 4%);
     top: clamp(320px, 38vw, 10px);
-    padding: clamp(10px, 1.0vw, 19px) 6px;
+    padding: clamp(10px, 1vw, 19px) 6px;
   }
 
   .servico-card-3 {
@@ -410,7 +405,6 @@ main[id],
 
   .luz-ti-front,
   .luz-ti-back {
-    margin-top: -25%;
     margin-left: -5%;
     height: 15%;
     width: 60%;
@@ -724,7 +718,7 @@ main[id],
   #H1Principal {
     display: block;
     font-size: clamp(1.9rem, 6vw, 2.5rem);
-    line-height: 1.20;
+    line-height: 1.2;
     letter-spacing: -1px;
     width: 95%;
     margin: 0 auto;
@@ -932,7 +926,7 @@ main[id],
     font-size: 0.9rem;
   }
 
-  .servicos-container>.servico-box:not(.servico-box-dividido) {
+  .servicos-container > .servico-box:not(.servico-box-dividido) {
     height: auto;
     padding: 30px 20px;
   }
@@ -1234,6 +1228,12 @@ main[id],
 
   .modal-close:hover {
     background: rgba(1, 42, 90, 0.15);
+  }
+  .luz-ti-front,
+  .luz-ti-back {
+    margin-top: 60%;
+    height: 40%;
+    width: 90%;
   }
 }
 
