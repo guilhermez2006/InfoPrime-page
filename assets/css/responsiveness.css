@@ -513,10 +513,7 @@ main[id],
 
   .luz-ti-front,
   .luz-ti-back {
-    margin-top: 15%;
-    margin-left: -30%;
-    width: 60%;
-    height: 25%;
+    display: none;
   }
 
   .luz-dourada-sutil {
@@ -758,12 +755,11 @@ main[id],
 
   .luz-ti-front,
   .luz-ti-back {
-    margin-top: -10%;
-    margin-left: -38%;
-    width: 60%;
-    height: 30%;
+    display: none;
   }
-
+  titulo-servico-base {
+    transform: none;
+  }
   .luz-dourada-sutil {
     width: 40%;
     margin-left: 35%;
@@ -1149,6 +1145,9 @@ main[id],
 
 /* Modal Mobile (<768px) */
 @media (max-width: 768px) {
+  .servico-card-base:hover .servico-card-inner {
+  transform: none;
+}
   .modal-overlay {
     padding: 15px;
     align-items: flex-start;
@@ -1239,6 +1238,7 @@ main[id],
 
 /* Mobile Pequeno (<480px) */
 @media (max-width: 480px) {
+
   .modal-overlay {
     padding: 10px;
     padding-top: 70px;
