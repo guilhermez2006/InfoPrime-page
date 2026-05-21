@@ -1173,6 +1173,11 @@ main[id],
 
 /* Modal Tablet (769px - 1199px) */
 @media (min-width: 769px) and (max-width: 1199px) {
+  .btn-proposito {
+  width: auto;
+  min-height: auto;
+  display: inline-block;
+}
   .modal-overlay {
     padding: 30px;
   }
@@ -1215,6 +1220,17 @@ main[id],
 
 /* Modal Mobile (<768px) */
 @media (max-width: 768px) {
+  .btn-proposito {
+    display: block;
+    width: 100%;
+    min-height: 60px;
+    line-height: 60px;
+    padding: 0 24px;
+    text-align: center;
+    box-sizing: border-box;
+    margin-bottom: 0;
+  }
+  
   #btsHome {
     justify-content: center;
     margin-left: 0;
@@ -1226,14 +1242,7 @@ main[id],
     font-size: 0.9rem;
     padding: 13px 22px;
   }
-.btn-proposito {
-  width: 100%;
-  min-height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-}
+
   .servico-card-base:hover .servico-card-inner {
     transform: none;
   }
@@ -1324,7 +1333,18 @@ main[id],
     width: 90%;
   }
 }
-
+@media (max-width: 640px) {
+  .btn-proposito {
+    display: block;
+    width: 100%;
+    min-height: 60px;
+    line-height: 60px;
+    padding: 0 24px;
+    text-align: center;
+    box-sizing: border-box;
+    margin-bottom: 0;
+  }
+}
 /* Mobile Pequeno (<480px) */
 @media (max-width: 480px) {
   .modal-overlay {
