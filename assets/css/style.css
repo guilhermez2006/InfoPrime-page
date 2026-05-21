@@ -336,6 +336,58 @@ a#Contato:focus {
   z-index: 5;
 }
 
+#btsHome {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  gap: 16px;
+  margin-left: 3%;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+#btnContatoHome {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(180deg, rgba(2, 124, 231, 0.86), rgba(0, 17, 34, 0.8));
+  color: #f8fafc;
+  font-family: "Montserrat", "Poppins", sans-serif;
+  font-weight: 600;
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: transform 0.12s ease, box-shadow 0.18s ease, filter 0.12s ease;
+}
+
+#btnContatoHome:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 10px 20px rgba(10, 91, 167, 0.37);
+  filter: brightness(0.95);
+}
+#btnContatoHome,
+#btLeiaMaisHome {
+  padding: clamp(14px, 1.2vw, 20px) clamp(24px, 2.5vw, 48px);
+  font-size: clamp(0.9rem, 1.1vw, 1.15rem);
+}
+#btLeiaMaisHome {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #f8cf00 0%, #ffc400 100%);
+  color: var(--navy-dark);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: transform var(--transition-fast), box-shadow var(--transition-medium), filter var(--transition-fast);
+}
+
+#btLeiaMaisHome:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(240, 200, 0, 0.45);
+  filter: brightness(1.05);
+}
+
 .luz-ti-front {
   position: absolute;
   left: clamp(56%, 58%, 60%);
