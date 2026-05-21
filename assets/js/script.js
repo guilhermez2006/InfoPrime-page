@@ -160,7 +160,7 @@ document.addEventListener("DOMContentLoaded", function () {
         maxWidth: 1024,
         options: {
           particles: {
-            number: { value: 30, limit: 35 },
+            number: { value: 35, limit: 40 },
             links: { distance: 100 },
           },
         },
