@@ -150,7 +150,6 @@ main[id],
     gap: 20px;
     margin-bottom: 50px;
   }
-
   #btnContatoHome,
   #btLeiaMaisHome {
     padding: 20px 48px;
@@ -249,11 +248,6 @@ main[id],
     position: relative;
     width: 110%;
     max-width: 125%;
-  }
-  #btnContatoHome,
-  #btLeiaMaisHome {
-    padding: 18px 42px;
-    font-size: 1.05rem;
   }
   .servico-card-base {
     position: absolute;
@@ -381,7 +375,11 @@ main[id],
   #btsHome {
     margin-left: 2%;
   }
-
+  #btnContatoHome,
+  #btLeiaMaisHome {
+    padding: 17px 38px;
+    font-size: 1rem;
+  }
   .servico-card-base {
     width: 250px;
     min-width: auto;
@@ -543,6 +541,12 @@ main[id],
   }
   #btLeiaMaisHome {
     width: 150px !important;
+  }
+  #btnContatoHome,
+  #btLeiaMaisHome {
+    padding: 18px 24px;
+    font-size: 1rem;
+    justify-content: center;
   }
   .luz-ti-front,
   .luz-ti-back {
@@ -814,7 +818,7 @@ main[id],
   #btnContatoHome,
   #btLeiaMaisHome {
     width: 100%;
-    min-height: 60px; 
+    min-height: 60px;
     justify-content: center;
     font-size: 1rem;
     padding: 16px 24px;
@@ -1350,62 +1354,5 @@ main[id],
   .modal-btn {
     padding: 14px 18px;
     font-size: 0.95rem;
-  }
-}
-/* 2K+ */
-@media (min-width: 2000px) {
-  #btnContatoHome,
-  #btLeiaMaisHome {
-    padding: 22px 56px;
-    font-size: 1.3rem;
-  }
-}
-
-/* Full HD */
-@media (min-width: 1600px) {
-  #btnContatoHome,
-  #btLeiaMaisHome {
-    padding: 20px 48px;
-    font-size: 1.15rem;
-  }
-}
-
-/* 1400-1599 */
-@media (min-width: 1400px) and (max-width: 1599px) {
-  #btnContatoHome,
-  #btLeiaMaisHome {
-    padding: 18px 42px;
-    font-size: 1.05rem;
-  }
-}
-
-/* Laptop */
-@media (min-width: 1024px) and (max-width: 1399px) {
-  #btnContatoHome,
-  #btLeiaMaisHome {
-    padding: 16px 36px;
-    font-size: 1rem;
-  }
-}
-
-/* Tablet */
-@media (max-width: 1023px) and (min-width: 769px) {
-  #btnContatoHome,
-  #btLeiaMaisHome {
-    padding: 18px 24px;
-    font-size: 1rem;
-    width: 100%;
-    justify-content: center;
-  }
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  #btnContatoHome,
-  #btLeiaMaisHome {
-    padding: 16px 24px;
-    font-size: 1rem;
-    width: 100%;
-    justify-content: center;
   }
 }
