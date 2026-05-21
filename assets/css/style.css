@@ -350,13 +350,20 @@ a#Contato:focus {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: linear-gradient(180deg, rgba(2, 124, 231, 0.86), rgba(0, 17, 34, 0.8));
+  background: linear-gradient(
+    180deg,
+    rgba(2, 124, 231, 0.86),
+    rgba(0, 17, 34, 0.8)
+  );
   color: #f8fafc;
   font-family: "Montserrat", "Poppins", sans-serif;
   font-weight: 600;
   border-radius: var(--radius);
   text-decoration: none;
-  transition: transform 0.12s ease, box-shadow 0.18s ease, filter 0.12s ease;
+  transition:
+    transform 0.12s ease,
+    box-shadow 0.18s ease,
+    filter 0.12s ease;
 }
 
 #btnContatoHome:hover {
@@ -374,12 +381,15 @@ a#Contato:focus {
   align-items: center;
   gap: 10px;
   background: linear-gradient(135deg, #f8cf00 0%, #ffc400 100%);
-  color: var(--navy-dark);
+  color: #0e2b57;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   border-radius: var(--radius);
   text-decoration: none;
-  transition: transform var(--transition-fast), box-shadow var(--transition-medium), filter var(--transition-fast);
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-medium),
+    filter var(--transition-fast);
 }
 
 #btLeiaMaisHome:hover {
@@ -650,7 +660,7 @@ a#Contato:focus {
   display: inline-block;
   padding: 16px 28px;
   background: linear-gradient(135deg, #f8cf00 0%, #ffc400 100%);
-  color: var(--navy-dark);
+  color: #0e2b57;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 1rem;
