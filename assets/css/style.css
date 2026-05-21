@@ -98,27 +98,25 @@ nav {
 }
 
 a#Contato {
-  padding: 15px 20px;
   margin-left: auto;
   margin-right: 3%;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding: 16px 36px;
+  background: linear-gradient(135deg, rgba(2, 124, 231, 0.86) 0%, rgba(0, 17, 34, 0.8) 100%);
   border-radius: var(--radius);
-  background: linear-gradient(
-    180deg,
-    rgba(2, 124, 231, 0.86),
-    rgba(0, 17, 34, 0.8)
-  );
   color: #f8fafc;
-  font-weight: 550;
-  font-family: "Montserrat", "Poppins", sans-serif;
   text-decoration: none;
+  font-family: "Montserrat", "Poppins", sans-serif;
+  font-weight: 550;
+  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
   transition:
     transform 0.12s ease,
     box-shadow 0.18s ease,
     filter 0.12s ease;
-  white-space: nowrap;
-  flex-shrink: 0;
 }
-
 a#Contato:hover,
 a#Contato:focus {
   transform: translateY(-3px);
@@ -194,26 +192,7 @@ a#Contato:focus {
   visibility: visible;
 }
 
-.menu-close {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background: transparent;
-  border: none;
-  color: #e8f3ff;
-  font-size: 40px;
-  cursor: pointer;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform var(--transition-medium);
-}
 
-.menu-close:hover {
-  transform: rotate(90deg);
-}
 
 .mobile-nav-links {
   list-style: none;
@@ -267,16 +246,6 @@ a#Contato:focus {
 
 .mobile-nav-links li a:hover {
   color: var(--gold);
-}
-
-.mobile-contact-btn {
-  display: inline-block;
-  padding: 16px 32px;
-  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
-  color: var(--navy-dark) !important;
-  border-radius: var(--radius);
-  font-size: 1.2rem !important;
-  font-weight: 700 !important;
 }
 
 /* Hero */
