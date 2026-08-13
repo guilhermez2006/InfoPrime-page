@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
     fpsLimit: 60,
     particles: {
       number: {
-        value: 120, 
+        value: 120,
         limit: 120,
         density: { enable: true, area: 800 },
       },
@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       modes: {
         grab: { distance: 200, links: { opacity: 1 } },
-        push: { quantity: 4 }, 
+        push: { quantity: 4 },
       },
     },
     responsive: [
