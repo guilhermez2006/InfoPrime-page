@@ -11,7 +11,9 @@ main[id],
   scroll-margin-top: 90px;
 }
 
-/* Ultra Wide / 2K (2560px+) */
+/* ============================================================
+   ULTRA WIDE / 2K (2560px+)
+   ============================================================ */
 @media (min-width: 2000px) {
   #H1Principal {
     position: relative;
@@ -95,6 +97,7 @@ main[id],
     font-size: 1.5rem;
     max-width: 800px;
   }
+
   #btsHome {
     position: relative;
     left: 7%;
@@ -112,7 +115,9 @@ main[id],
   }
 }
 
-/* Full HD 1920x1080 */
+/* ============================================================
+   FULL HD (1920x1080)
+   ============================================================ */
 @media (min-width: 1600px) {
   body header {
     height: 80px;
@@ -146,15 +151,18 @@ main[id],
     width: 120%;
     max-width: 130%;
   }
+
   #btsHome {
     gap: 20px;
     margin-bottom: 50px;
   }
+
   #btnContatoHome,
   #btLeiaMaisHome {
     padding: 20px 48px;
     font-size: 1.15rem;
   }
+
   .servico-card-base {
     position: absolute;
     width: 280px;
@@ -215,7 +223,9 @@ main[id],
   }
 }
 
-/* 1680x1050 */
+/* ============================================================
+   MONITORES MÉDIOS (1680x1050)
+   ============================================================ */
 @media (min-width: 1400px) and (max-width: 1599px) {
   body header {
     height: 75px;
@@ -249,6 +259,7 @@ main[id],
     width: 110%;
     max-width: 125%;
   }
+
   .servico-card-base {
     position: absolute;
     width: 270px;
@@ -292,7 +303,9 @@ main[id],
   }
 }
 
-/* Laptops (1024px - 1399px) */
+/* ============================================================
+   LAPTOPS (1024px até 1399px)
+   ============================================================ */
 @media (min-width: 1024px) and (max-width: 1399px) {
   body header {
     height: 80px;
@@ -372,14 +385,17 @@ main[id],
     margin-left: -18%;
     font-size: 1.3rem;
   }
+
   #btsHome {
     margin-left: 2%;
   }
+
   #btnContatoHome,
   #btLeiaMaisHome {
     padding: 17px 38px;
     font-size: 1rem;
   }
+
   .servico-card-base {
     width: 250px;
     min-width: auto;
@@ -466,7 +482,9 @@ main[id],
   }
 }
 
-/* Tablets (769px - 1023px) */
+/* ============================================================
+   TABLETS (769px até 1023px)
+   ============================================================ */
 @media (max-width: 1023px) and (min-width: 769px) {
   body header {
     height: 70px;
@@ -530,24 +548,29 @@ main[id],
     max-width: 500px;
     left: 0;
   }
+
   #btsHome {
     flex-direction: row;
     align-items: center;
     justify-content: center;
     margin-left: 0;
   }
+
   #btnContatoHome {
     width: 200px !important;
   }
+
   #btLeiaMaisHome {
     width: 150px !important;
   }
+
   #btnContatoHome,
   #btLeiaMaisHome {
     padding: 18px 24px;
     font-size: 1rem;
     justify-content: center;
   }
+
   .luz-ti-front,
   .luz-ti-back {
     display: none;
@@ -710,6 +733,9 @@ main[id],
   }
 }
 
+/* ============================================================
+   AJUSTE DE BOTÕES (641px até 768px)
+   ============================================================ */
 @media (min-width: 641px) and (max-width: 768px) {
   #btsHome {
     flex-direction: row !important;
@@ -721,13 +747,16 @@ main[id],
     width: 200px !important;
     height: 55px;
   }
+
   #btLeiaMaisHome {
     width: 150px !important;
     height: 55px;
   }
 }
 
-/* Mobile (<768px) */
+/* ============================================================
+   MOBILE (<768px)
+   ============================================================ */
 @media (max-width: 768px) {
   section[id] {
     scroll-margin-top: 70px;
@@ -806,6 +835,7 @@ main[id],
     margin: 0 auto 30px;
     z-index: 5;
   }
+
   #btsHome {
     flex-direction: column;
     align-items: center;
@@ -823,13 +853,16 @@ main[id],
     font-size: 1rem;
     padding: 16px 24px;
   }
+
   .luz-ti-front,
   .luz-ti-back {
     display: none;
   }
-  titulo-servico-base {
+
+  .titulo-servico-base {
     transform: none;
   }
+
   .luz-dourada-sutil {
     width: 40%;
     margin-left: 35%;
@@ -1092,17 +1125,24 @@ main[id],
   }
 }
 
-/* Modal Desktop (>1200px) */
-@media (min-width: 1200px) {
+/* ============================================================
+   SISTEMA DE MODAIS
+   ============================================================ */
+
+/* --- 1. DESKTOP E LAPTOPS (769px até 1440px) --- */
+@media (min-width: 769px) {
   .servico-box-dividido {
     position: relative;
+    min-height: 480px;
   }
 
   .servico-box-dividido .modal-overlay {
+    display: none;
     position: absolute;
     inset: 0;
     border-radius: 20px;
     z-index: 100;
+    background: #ffffff;
   }
 
   .servico-box-dividido .modal-overlay.active {
@@ -1110,276 +1150,210 @@ main[id],
   }
 
   .servico-box-dividido .modal-box {
+    position: relative;
     width: 100%;
     max-width: 100%;
     height: 100%;
     max-height: 100%;
     border-radius: 20px;
-    padding: 35px 40px;
+    padding: 28px 32px;
     margin: 0;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
+    box-sizing: border-box;
+    background: #ffffff;
+  }
+
+  .servico-box-dividido .modal-close {
+    position: absolute;
+    top: 22px;
+    right: 24px;
+    font-size: 22px;
+    color: #012a5a;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 999;
+    line-height: 1;
+    transition:
+      transform 0.2s ease,
+      opacity 0.2s ease;
+  }
+
+  .servico-box-dividido .modal-close:hover {
+    background: transparent;
+    transform: scale(1.15);
+    opacity: 0.75;
   }
 
   .servico-box-dividido .modal-box h2 {
-    font-size: 1.8rem;
-    margin-bottom: 8px;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 4px;
+    padding-right: 40px;
+    line-height: 1.25;
   }
 
   .servico-box-dividido .modal-subtitulo {
-    font-size: 1rem;
-    margin-bottom: 15px;
+    font-size: 0.92rem;
+    margin-bottom: 12px;
+    padding-right: 40px;
+    opacity: 0.85;
   }
 
   .servico-box-dividido .modal-conteudo {
-    flex: 1;
-    overflow-y: auto;
-    margin: 10px 0;
+    flex: 1 0 auto;
+    margin: 5px 0 12px 0;
+  }
+
+  .servico-box-dividido .modal-conteudo h3 {
+    font-size: 1.05rem;
+    margin: 8px 0 6px 0;
+  }
+
+  .servico-box-dividido .modal-lista li {
+    font-size: 0.92rem;
+    padding: 5px 0 5px 22px;
+    line-height: 1.35;
+  }
+
+  .servico-box-dividido .modal-btn {
+    flex-shrink: 0;
+    margin-top: auto;
+    padding: 14px 24px;
+    font-size: 0.95rem;
+  }
+}
+
+/* --- 2. TELAS GRANDES (Acima de 1440px) --- */
+@media (min-width: 1441px) {
+  .servico-box-dividido .modal-box {
+    padding: 34px 42px;
+  }
+
+  .servico-box-dividido .modal-close {
+    top: 24px;
+    right: 28px;
+    font-size: 24px;
+  }
+
+  .servico-box-dividido .modal-box h2 {
+    font-size: 1.75rem;
+    margin-bottom: 6px;
+    padding-right: 45px;
+  }
+
+  .servico-box-dividido .modal-subtitulo {
+    font-size: 1.05rem;
+    margin-bottom: 14px;
+    padding-right: 45px;
   }
 
   .servico-box-dividido .modal-conteudo h3 {
     font-size: 1.2rem;
-    margin: 15px 0 10px;
+    margin: 10px 0 8px 0;
   }
 
   .servico-box-dividido .modal-lista li {
-    padding: 6px 0 6px 25px;
-    font-size: 0.9rem;
-  }
-
-  .servico-box-dividido .modal-aviso {
-    margin: 15px 0;
-  }
-
-  .servico-box-dividido .modal-aviso p {
-    font-size: 0.85rem;
+    font-size: 1.05rem;
+    padding: 6px 0 6px 26px;
   }
 
   .servico-box-dividido .modal-btn {
-    margin-top: 15px;
-    padding: 14px 25px;
-    font-size: 1rem;
+    font-size: 1.05rem;
+    padding: 16px 28px;
+  }
+}
+
+/* --- 3. MODAL MOBILE TOTAL (até 768px) --- */
+@media (max-width: 768px) {
+  .servico-box-dividido .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: #ffffff;
+    z-index: 99999;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .servico-box-dividido .modal-overlay.active {
+    display: flex;
+  }
+
+  .servico-box-dividido .modal-box {
+    position: relative;
+    width: 100vw;
+    max-width: 100vw;
+    height: 100%;
+    max-height: 100%;
+    background: #ffffff;
+    border-radius: 0;
+    padding: 50px 20px 25px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    margin: 0;
   }
 
   .servico-box-dividido .modal-close {
-    top: 12px;
-    right: 15px;
+    position: fixed;
+    top: 14px;
+    right: 16px;
     font-size: 24px;
-    width: 35px;
-    height: 35px;
-  }
-}
-
-/* Modal Tablet (769px - 1199px) */
-@media (min-width: 769px) and (max-width: 1199px) {
-  .btn-proposito {
-  width: auto;
-  min-height: auto;
-  display: inline-block;
-}
-  .modal-overlay {
-    padding: 30px;
+    color: #012a5a;
+    background: transparent;
+    border: none;
+    z-index: 999999;
+    cursor: pointer;
+    transition:
+      transform 0.2s ease,
+      opacity 0.2s ease;
   }
 
-  .modal-box {
-    max-width: 90%;
-    width: 700px;
-    max-height: 85vh;
-    padding: 35px;
+  .servico-box-dividido .modal-close:hover {
+    background: transparent;
+    transform: scale(1.15);
+    opacity: 0.75;
   }
 
-  .modal-box h2 {
-    font-size: 1.9rem;
+  .servico-box-dividido .modal-box h2 {
+    font-size: 1.35rem;
+    margin-top: 0;
+    margin-bottom: 4px;
+    padding-right: 0;
+    line-height: 1.25;
   }
 
-  .modal-subtitulo {
-    font-size: 1rem;
-  }
-
-  .modal-conteudo h3 {
-    font-size: 1.25rem;
-  }
-
-  .modal-lista li {
-    font-size: 0.95rem;
-    padding: 8px 0 8px 28px;
-  }
-
-  .modal-btn {
-    padding: 16px 28px;
-    font-size: 1.05rem;
-  }
-
-  .modal-close {
-    top: 15px;
-    right: 18px;
-    font-size: 26px;
-  }
-}
-
-/* Modal Mobile (<768px) */
-@media (max-width: 768px) {
-  .btn-proposito {
-    display: block;
-    width: 100%;
-    min-height: 60px;
-    line-height: 60px;
-    padding: 0 24px;
-    text-align: center;
-    box-sizing: border-box;
-    margin-bottom: 0;
-  }
-  
-  #btsHome {
-    justify-content: center;
-    margin-left: 0;
-    margin-bottom: 30px;
-  }
-
-  #btnContatoHome,
-  #btLeiaMaisHome {
-    font-size: 0.9rem;
-    padding: 13px 22px;
-  }
-
-  .servico-card-base:hover .servico-card-inner {
-    transform: none;
-  }
-
-  .modal-overlay {
-    padding: 15px;
-    align-items: flex-start;
-    padding-top: 80px;
-  }
-  .modal-box {
-    width: 100%;
-    max-width: 100%;
-    max-height: calc(100vh - 100px);
-    border-radius: 16px;
-    padding: 25px 20px;
-    margin: 0;
-  }
-
-  .modal-box h2 {
-    font-size: 1.5rem;
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-
-  .modal-subtitulo {
-    font-size: 0.95rem;
-    margin-bottom: 18px;
-  }
-
-  .modal-conteudo {
-    margin: 15px 0;
-  }
-
-  .modal-conteudo h3 {
-    font-size: 1.15rem;
-    margin: 18px 0 12px;
-    padding-bottom: 6px;
-  }
-
-  .modal-lista li {
+  .servico-box-dividido .modal-subtitulo {
     font-size: 0.88rem;
-    padding: 8px 0 8px 22px;
-    line-height: 1.4;
+    margin-bottom: 10px;
   }
 
-  .modal-lista li:before {
+  .servico-box-dividido .modal-conteudo {
+    flex: 1 0 auto;
+    margin: 8px 0;
+  }
+
+  .servico-box-dividido .modal-conteudo h3 {
     font-size: 1rem;
+    margin: 6px 0;
   }
 
-  .modal-aviso {
-    padding: 12px;
-    border-radius: 10px;
-    background: rgba(7, 120, 180, 0.08);
-    border-left: 3px solid var(--blue-accent);
-    margin: 15px 0;
+  .servico-box-dividido .modal-lista li {
+    font-size: 0.88rem;
+    padding: 6px 0 6px 22px;
   }
 
-  .modal-aviso p {
-    font-size: 0.85rem;
-    margin: 0;
-    line-height: 1.5;
-  }
-
-  .modal-btn {
-    padding: 15px 20px;
-    font-size: 1rem;
-    margin-top: 20px;
+  .servico-box-dividido .modal-btn {
+    padding: 14px 20px;
+    font-size: 0.98rem;
+    margin-top: 12px;
+    margin-bottom: 10px;
     border-radius: 40px;
-  }
-
-  .modal-close {
-    top: 12px;
-    right: 12px;
-    font-size: 24px;
-    width: 36px;
-    height: 36px;
-    background: rgba(1, 42, 90, 0.08);
-    border-radius: 50%;
-  }
-
-  .modal-close:hover {
-    background: rgba(1, 42, 90, 0.15);
-  }
-  .luz-ti-front,
-  .luz-ti-back {
-    margin-top: 60%;
-    height: 40%;
-    width: 90%;
-  }
-}
-@media (max-width: 640px) {
-  .btn-proposito {
-    display: block;
-    width: 100%;
-    min-height: 60px;
-    line-height: 60px;
-    padding: 0 24px;
-    text-align: center;
-    box-sizing: border-box;
-    margin-bottom: 0;
-  }
-}
-/* Mobile Pequeno (<480px) */
-@media (max-width: 480px) {
-  .modal-overlay {
-    padding: 10px;
-    padding-top: 70px;
-  }
-
-  .modal-box {
-    padding: 20px 15px;
-    max-height: calc(100vh - 85px);
-  }
-
-  .modal-box h2 {
-    font-size: 1.3rem;
-  }
-
-  .modal-subtitulo {
-    font-size: 0.9rem;
-  }
-
-  .modal-conteudo h3 {
-    font-size: 1.05rem;
-  }
-
-  .modal-lista li {
-    font-size: 0.82rem;
-    padding: 6px 0 6px 20px;
-  }
-
-  .modal-aviso p {
-    font-size: 0.8rem;
-  }
-
-  .modal-btn {
-    padding: 14px 18px;
-    font-size: 0.95rem;
+    flex-shrink: 0;
   }
 }
